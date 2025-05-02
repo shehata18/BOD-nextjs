@@ -3,13 +3,16 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import StatCounter from "@/components/about/StatCounter";
+import AnimationObserver from "@/components/AnimationObserver";
 import "@/app/styles/about.css";
 
 export default function About() {
   const t = useTranslations("about");
 
-    return (
+  return (
     <>
+      <AnimationObserver />
+
       {/* Page Banner */ }
       <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
         {/* Background Image with Overlay */ }
@@ -251,7 +254,7 @@ export default function About() {
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-800 text-center mb-4">{ t("milestones_title") }</h2>
-          <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-16">Our journey of growth and innovation through the years</p>
+          <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-16">{ t("milestones_subtitle") }</p>
 
           {/* Timeline container */ }
           <div className="timeline-container relative max-w-5xl mx-auto">

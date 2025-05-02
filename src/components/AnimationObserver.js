@@ -4,40 +4,35 @@ import { useEffect } from 'react';
 
 export default function AnimationObserver() {
     useEffect(() => {
-        const handleIntersection = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Stop observing once visible
-                }
-            });
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
         };
 
-        // Create observer
-        const observer = new IntersectionObserver(handleIntersection, {
-            root: null, // viewport
-            rootMargin: '0px',
-            threshold: 0.1, // Trigger when 10% of the element is visible
-        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
 
         // Observe all elements with animation classes
         const animatedElements = document.querySelectorAll(
-            '.fade-in-left, .fade-in-right, .fade-in-up, .stagger-animation > div'
+            '.fade-in-up, .fade-in-left, .fade-in-right, .scale-up, .stagger-animation'
         );
+        
+        animatedElements.forEach(element => observer.observe(element));
 
-        animatedElements.forEach(el => {
-            observer.observe(el);
-        });
-
-        // Clean up
         return () => {
-            if (observer) {
-                animatedElements.forEach(el => {
-                    observer.unobserve(el);
-                });
+            // Cleanup the observer when component unmounts
+            if (animatedElements.length > 0) {
+                animatedElements.forEach(element => observer.unobserve(element));
             }
         };
     }, []);
 
-    return null; // This component doesn't render anything
+    return null;
 }

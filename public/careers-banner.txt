@@ -1,0 +1,6 @@
+This is a placeholder for the careers-banner.jpg image.
+The actual image should be a high-quality photo that represents professional office environments,
+collaboration, or business settings that would appeal to job seekers.
+
+Please replace this text file with an actual JPG image file named "careers-banner.jpg"
+in the public directory for production use. 

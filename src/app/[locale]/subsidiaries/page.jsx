@@ -82,6 +82,90 @@ export default function Subsidiaries() {
                 <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent"></div>
             </section>
 
+            {/* Filters Section */ }
+            <section className="py-8 border-b border-gray-200 sticky top-0 bg-white z-20 shadow-md">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-wrap justify-center gap-3">
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "all" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => filterSubsidiaries("all") }
+                        >
+                            { t("filter_all") }
+                        </button>
+
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "technology" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("technology");
+                                document.getElementById("technology")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_technology") }
+                        </button>
+
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "finance" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("finance");
+                                document.getElementById("finance")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_finance") }
+                        </button>
+
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "manufacturing" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("manufacturing");
+                                document.getElementById("manufacturing")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_manufacturing") }
+                        </button>
+
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "healthcare" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("healthcare");
+                                document.getElementById("healthcare")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_healthcare") }
+                        </button>
+
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "services" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("services");
+                                document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_services") }
+                        </button>
+
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "automotive" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("automotive");
+                                document.getElementById("automotive")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_automotive") }
+                        </button>
+
+                        <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "hospitality" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("hospitality");
+                                document.getElementById("hospitality")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_hospitality") }
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             {/* Introduction */ }
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
@@ -98,91 +182,24 @@ export default function Subsidiaries() {
                         <p className="text-gray-600 text-lg">{ t("portfolio_desc") }</p>
                     </div>
 
-                    {/* Filter Tabs */ }
-                    <div className="flex flex-wrap justify-center gap-3 mb-12">
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "all"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("all") }
-                        >
-                            { t("filter_all") }
-                        </button>
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "technology"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("technology") }
-                        >
-                            { t("filter_technology") }
-                        </button>
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "finance"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("finance") }
-                        >
-                            { t("filter_finance") }
-                        </button>
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "manufacturing"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("manufacturing") }
-                        >
-                            { t("filter_manufacturing") }
-                        </button>
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "healthcare"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("healthcare") }
-                        >
-                            { t("filter_healthcare") }
-                        </button>
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "services"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("services") }
-                        >
-                            { t("filter_services") }
-                        </button>
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "automotive"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("automotive") }
-                        >
-                            { t("filter_automotive") }
-                        </button>
-                        <button
-                            className={ `filter-btn px-6 py-2.5 rounded-full font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5 ${activeFilter === "hospitality"
-                                ? "bg-blue-800 text-white"
-                                : "bg-gray-100 text-gray-800 hover:bg-blue-800 hover:text-white"
-                                }` }
-                            onClick={ () => filterSubsidiaries("hospitality") }
-                        >
-                            { t("filter_hospitality") }
-                        </button>
-                    </div>
-
                     {/* Subsidiaries Grid */ }
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* LO Uniforms */ }
                         <div
+                            id="manufacturing"
                             className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
                             style={ { display: activeFilter === "all" || activeFilter === "manufacturing" ? "block" : "none" } }
                         >
                             <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img src="/images/subsidiaries/lo-uniforms.jpg" alt="LO Uniforms" className="w-full h-full object-cover" />
+                                <img
+                                    src="/images/LO%20Company.jpg"
+                                    alt="LO Uniforms"
+                                    className="w-full h-full object-cover"
+                                    onError={ (e) => {
+                                        e.target.onerror = null;
+                                        e.target.src = "https://images.unsplash.com/photo-1514866747592-c2d279258a78?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80";
+                                    } }
+                                />
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-4">
@@ -202,7 +219,7 @@ export default function Subsidiaries() {
                                     </ul>
                                 </div>
                                 <Link
-                                    href="/subsidiaries/lo-uniforms"
+                                    href="/subsidiaries/louniform"
                                     className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
                                 >
                                     { t("learn_more") }
@@ -212,11 +229,20 @@ export default function Subsidiaries() {
 
                         {/* ASAP Maintenance */ }
                         <div
+                            id="services"
                             className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
                             style={ { display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" } }
                         >
                             <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img src="/images/subsidiaries/asap-maintenance.jpg" alt="ASAP Maintenance & Operations" className="w-full h-full object-cover" />
+                                <img
+                                    src="/images/ASAP%20Comapny.jpg"
+                                    alt="ASAP Maintenance & Operations"
+                                    className="w-full h-full object-cover"
+                                    onError={ (e) => {
+                                        e.target.onerror = null;
+                                        e.target.src = "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80";
+                                    } }
+                                />
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-4">
@@ -237,7 +263,7 @@ export default function Subsidiaries() {
                                     </ul>
                                 </div>
                                 <Link
-                                    href="/subsidiaries/asap-maintenance"
+                                    href="/subsidiaries/asap"
                                     className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
                                 >
                                     { t("learn_more") }
@@ -247,11 +273,16 @@ export default function Subsidiaries() {
 
                         {/* Graston Medical Clinics */ }
                         <div
+                            id="healthcare"
                             className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
                             style={ { display: activeFilter === "all" || activeFilter === "healthcare" ? "block" : "none" } }
                         >
                             <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img src="/images/subsidiaries/graston-clinics.jpg" alt="Graston Medical Clinics" className="w-full h-full object-cover" />
+                                <img
+                                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                                    alt="Graston Medical Clinics"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-4">
@@ -282,11 +313,20 @@ export default function Subsidiaries() {
 
                         {/* PowerMark Auto */ }
                         <div
+                            id="automotive"
                             className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
                             style={ { display: activeFilter === "all" || activeFilter === "automotive" ? "block" : "none" } }
                         >
                             <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img src="/images/subsidiaries/powermark-auto.jpg" alt="PowerMark Auto" className="w-full h-full object-cover" />
+                                <img
+                                    src="/images/Power%20Mark%20company%20for%20cars.jpg"
+                                    alt="PowerMark Auto"
+                                    className="w-full h-full object-cover"
+                                    onError={ (e) => {
+                                        e.target.onerror = null;
+                                        e.target.src = "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80";
+                                    } }
+                                />
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-4">
@@ -317,11 +357,16 @@ export default function Subsidiaries() {
 
                         {/* Ramadan Restaurants */ }
                         <div
+                            id="hospitality"
                             className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
                             style={ { display: activeFilter === "all" || activeFilter === "hospitality" ? "block" : "none" } }
                         >
                             <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img src="/images/subsidiaries/ramadan-restaurants.jpg" alt="Ramadan Restaurants" className="w-full h-full object-cover" />
+                                <img
+                                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                                    alt="Ramadan Restaurants"
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-4">
