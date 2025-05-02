@@ -42,5 +42,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 4-axios server configration
 
 
-## Vervcel deployed project
+## Vercel deployed project
 https://bod-nextjs-hh6nxj1uo-shehata18s-projects.vercel.app/en
