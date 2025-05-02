@@ -1,0 +1,198 @@
+/* Blur effect for decorative elements */
+.blur-3xl {
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur);
+}
+
+/* Blob animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* For stats counter animation */
+.counter {
+  display: inline-block;
+  animation: countUp 2s forwards;
+  opacity: 0;
+}
+
+@keyframes countUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline styles */
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Remove the forced RTL style that puts everything on one side */
+/* html[dir="rtl"] .timeline-content {
+  margin-right: calc(50% + 20px);
+  margin-left: auto;
+  width: calc(50% - 20px);
+} */
+
+.timeline-circle {
+  box-shadow: 0 0 0 4px #fff;
+  transition: all 0.3s ease;
+}
+
+/* Timeline animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced hover card effect */
+.hover-card {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+  border-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Timeline circle pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(30, 64, 175, 0.7), 0 0 0 4px #fff;
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(30, 64, 175, 0), 0 0 0 4px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(30, 64, 175, 0), 0 0 0 4px #fff;
+  }
+}
+
+/* Add stagger delay for milestones to create a sequential animation */
+.timeline-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.timeline-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.timeline-item:nth-child(4) {
+  transition-delay: 0.7s;
+}
+
+/* Add hover effects to timeline circles */
+.timeline-circle {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.timeline-item:hover .timeline-circle {
+  transform: scale(1.15);
+  animation: pulse 2s infinite;
+}
+
+/* Year styling */
+.milestone-year {
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 30px;
+}
+
+/* Add connecting lines with gradient */
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  width: 30px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.8));
+  z-index: 1;
+}
+
+/* RTL support for connecting lines */
+html[dir="ltr"] .timeline-item:nth-child(odd) .timeline-content::before {
+  right: -30px;
+}
+
+html[dir="ltr"] .timeline-item:nth-child(even) .timeline-content::before {
+  left: -30px;
+}
+
+html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-content::before {
+  left: -30px;
+  background: linear-gradient(270deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.8));
+}
+
+html[dir="rtl"] .timeline-item:nth-child(even) .timeline-content::before {
+  right: -30px;
+  background: linear-gradient(270deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.8));
+}
+
+/* Mobile view adjustment */
+@media (max-width: 768px) {
+  .timeline-content {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    max-width: 400px;
+  }
+  
+  .timeline-content::before {
+    display: none;
+  }
+  
+  .milestone-decoration {
+    opacity: 0.03 !important;
+  }
+}
+
+/* Enhance content cards */
+.timeline-content .bg-white {
+  border-radius: 12px;
+  border: 1px solid rgba(30, 64, 175, 0.1);
+} 

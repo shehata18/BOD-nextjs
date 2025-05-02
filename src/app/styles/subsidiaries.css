@@ -1,0 +1,144 @@
+/* Parallax and zoom animations */
+@keyframes slow-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s infinite alternate ease-in-out;
+}
+
+/* Fade in animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+/* Blob animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.2);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.8);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 15s infinite ease-in-out;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.blur-3xl {
+  --tw-blur: blur(100px);
+  filter: var(--tw-blur);
+}
+
+/* Shine animations */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+.animate-shine {
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  animation: shine 6s infinite;
+}
+
+/* Background grid pattern */
+.bg-grid-white {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+/* Filter button animations */
+.filter-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 64, 175, 0.9);
+  border-radius: 9999px;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.filter-btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Card hover effects */
+.subsidiary-card {
+  transition: all 0.3s ease;
+}
+
+.subsidiary-card:hover {
+  transform: translateY(-8px);
+}
+
+/* RTL support for animations and effects */
+html[dir="rtl"] .filter-btn::after {
+  transform-origin: left;
+}
+
+html[dir="rtl"] .filter-btn:hover::after {
+  transform-origin: right;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .blur-3xl {
+    --tw-blur: blur(50px);
+  }
+  
+  .animate-blob {
+    animation-duration: 20s;
+  }
+} 

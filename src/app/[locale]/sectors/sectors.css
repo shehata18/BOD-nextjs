@@ -1,0 +1,87 @@
+/* Blob animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.floating-icon {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Blur effects */
+.blur-3xl {
+  --tw-blur: blur(100px);
+  filter: var(--tw-blur);
+}
+
+/* Hover transitions */
+.transition-scale {
+  transition: transform 0.5s ease;
+}
+
+.transition-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Layer fix for relative positioning */
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blur-3xl {
+    --tw-blur: blur(50px);
+  }
+  
+  .animate-blob {
+    animation-duration: 10s;
+  }
+  
+  .floating-icon {
+    display: none;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .floating-icon {
+  transform-origin: center center;
+} 
