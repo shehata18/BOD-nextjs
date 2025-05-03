@@ -59,6 +59,13 @@
     "key_services": "Key Services",
     "key_offerings": "Key Offerings",
     "learn_more": "Learn More",
+    "peak_time_logistics_name": "Peak Time Logistics",
+    "peak_time_logistics_desc": "Reliable delivery services and exceptional customer support solutions for businesses across various industries, with a focus on food delivery through platforms like Hunger Station.",
+    "peak_time_logistics_service1": "Food Delivery Services",
+    "peak_time_logistics_service2": "Customer Service Support",
+    "peak_time_logistics_service3": "Logistics Solutions",
+    "peak_time_logistics_service4": "Route Optimization",
+    "peak_time_logistics_service5": "Call Center Services",
     "lo_uniforms_name": "LO Uniforms",
     "lo_uniforms_desc": "A leading uniform design and manufacturing company specializing in high-quality apparel for various industries. LO Uniforms combines elegance, comfort, and functionality to provide distinguished uniform solutions for businesses.",
     "lo_uniforms_service1": "Custom Uniform Design",
@@ -322,7 +329,257 @@
         "title": "Logistics",
         "desc": "Warehouses and distribution centers"
       }
-    }
+    },
+    "graston": {
+      "title": "Graston Medical Clinics",
+      "subtitle": "Specialized Physical Therapy & Rehabilitation Centers",
+      "explore_services": "Explore Our Services",
+      
+      "about_title": "About Graston Medical Clinics",
+      "about_p1": "Graston Medical Clinics is REACH Holding's premium healthcare subsidiary, providing specialized physical therapy and rehabilitation services with the latest medical technologies and evidence-based treatment approaches.",
+      "about_p2": "With multiple state-of-the-art facilities across the Middle East, our clinics offer patients access to board-certified therapists and medical specialists who work together to deliver personalized care plans for optimal recovery and health outcomes.",
+      
+      "core_services_title": "Our Core Services",
+      "service1": "Physical Therapy & Rehabilitation",
+      "service2": "Sports Medicine & Recovery",
+      "service3": "Orthopedic Therapy",
+      "service4": "Neurological Rehabilitation",
+      "service5": "Pain Management Solutions",
+      
+      "specialized_services_title": "Our Specialized Services",
+      
+      "service_graston_title": "Graston Technique®",
+      "service_graston_desc": "A specialized approach to soft tissue mobilization that helps break down scar tissue and fascial restrictions using stainless steel instruments.",
+      
+      "service_sports_title": "Sports Rehabilitation",
+      "service_sports_desc": "Customized recovery programs for athletes of all levels, focusing on quick, safe return to sports activities with improved performance.",
+      
+      "service_orthopedic_title": "Orthopedic Therapy",
+      "service_orthopedic_desc": "Specialized treatment for conditions affecting bones, joints, ligaments, tendons, and muscles using evidence-based protocols.",
+      
+      "service_neurological_title": "Neurological Rehabilitation",
+      "service_neurological_desc": "Comprehensive therapy for patients recovering from stroke, brain injury, and other neurological conditions to regain function and independence.",
+      
+      "service_functional_title": "Functional Movement",
+      "service_functional_desc": "Assessment and treatment focusing on restoring natural movement patterns to prevent injury and improve overall physical performance.",
+      
+      "service_pain_title": "Pain Management",
+      "service_pain_desc": "Multidisciplinary approach to chronic pain management using physical modalities, manual therapy and exercise to reduce reliance on medication.",
+      
+      "approach_title": "Our Therapeutic Approach",
+      "patient_centered_title": "Patient-Centered Care",
+      "patient_centered_desc": "Our approach places each patient at the center of their treatment journey. We recognize that every individual has unique needs and goals, and we tailor our therapy plans accordingly.",
+      
+      "approach_assessment_title": "Comprehensive Assessment",
+      "approach_assessment_desc": "Our treatment begins with a thorough evaluation to identify the root causes of your condition, not just the symptoms.",
+      
+      "approach_treatment_title": "Personalized Treatment Plans",
+      "approach_treatment_desc": "We create customized therapy programs that address your specific needs, lifestyle factors, and recovery goals.",
+      
+      "approach_monitoring_title": "Continuous Progress Monitoring",
+      "approach_monitoring_desc": "We regularly assess your improvement and adjust treatment approaches to optimize your recovery timeline.",
+      
+      "approach_education_title": "Patient Education",
+      "approach_education_desc": "We empower you with knowledge and self-management techniques to maintain progress between sessions and after discharge.",
+      
+      "team_title": "Our Expert Team",
+      "team_desc": "Our clinics are staffed with highly qualified healthcare professionals dedicated to providing exceptional care.",
+      
+      "team_therapists_title": "Licensed Physical Therapists",
+      "team_therapists_desc": "Board-certified therapists with advanced training in various specialties and therapeutic techniques.",
+      
+      "team_specialists_title": "Medical Specialists",
+      "team_specialists_desc": "Orthopedic and neurological specialists who collaborate with our therapists to ensure comprehensive care.",
+      
+      "team_support_title": "Support Staff",
+      "team_support_desc": "Dedicated administrators and assistants who ensure a smooth, comfortable experience throughout your treatment.",
+      
+      "join_team_btn": "Join Our Team",
+      
+      "tech_title": "Our Advanced Technologies",
+      "tech_desc": "We utilize the latest therapeutic technologies to enhance treatment effectiveness and accelerate recovery.",
+      
+      "tech_graston_title": "Graston Instrument-Assisted Therapy",
+      "tech_graston_desc": "Specialized stainless steel instruments to effectively treat soft tissue restrictions and improve recovery outcomes.",
+      "tech_graston_feature1": "Reduces treatment time and improves outcomes",
+      "tech_graston_feature2": "Increases range of motion and function",
+      "tech_graston_feature3": "Targets deep tissue restrictions effectively",
+      
+      "tech_electro_title": "Electrotherapy Systems",
+      "tech_electro_desc": "Advanced electrical stimulation technologies for pain management and muscle rehabilitation.",
+      "tech_electro_feature1": "Non-invasive pain relief solutions",
+      "tech_electro_feature2": "Promotes tissue healing and regeneration",
+      "tech_electro_feature3": "Targets specific muscle groups effectively",
+      
+      "tech_ultrasound_title": "Therapeutic Ultrasound",
+      "tech_ultrasound_desc": "High-frequency sound waves that promote healing by increasing blood flow and reducing inflammation.",
+      "tech_ultrasound_feature1": "Deep tissue heating and increased circulation",
+      "tech_ultrasound_feature2": "Reduces inflammation and swelling",
+      "tech_ultrasound_feature3": "Accelerates the healing process",
+      
+      "testimonials_title": "Patient Success Stories",
+      "testimonials_desc": "Hear from patients who have experienced significant improvements through our therapy programs.",
+      
+      "testimonial1": "After my sports injury, I thought my running days were over. The team at Graston not only got me back on my feet but helped me achieve better performance than before my injury.",
+      "testimonial1_name": "Sara Martinez",
+      "testimonial1_title": "Marathon Runner",
+      
+      "testimonial2": "The chronic back pain I suffered for years was resolved in just two months of specialized treatment. The Graston Technique made all the difference when nothing else worked.",
+      "testimonial2_name": "Ahmed Al-Farsi",
+      "testimonial2_title": "Business Executive",
+      
+      "testimonial3": "Following my stroke, I was unable to perform basic daily activities. The neurological rehabilitation program at Graston helped me regain my independence and confidence.",
+      "testimonial3_name": "Elizabeth Chen",
+      "testimonial3_title": "Stroke Recovery Patient",
+      
+      "cta_title": "Start Your Healing Journey Today",
+      "cta_desc": "Our expert team is ready to help you overcome pain, recover from injury, and achieve optimal physical function.",
+      "cta_appointment_btn": "Schedule an Appointment",
+      "cta_contact_btn": "Contact Us"
+    },
+    "powermark": {
+      "title": "PowerMark Auto",
+      "subtitle": "Your Trusted Partner in Vehicle Care and Excellence",
+      "explore_services": "Explore Our Services",
+      "contact_us": "Contact Us",
+      
+      "excellence_title": "Excellence in Automotive Care",
+      "excellence_desc": "At PowerMark Auto, we combine cutting-edge technology with expert craftsmanship to deliver unparalleled automotive care. Our state-of-the-art facility and certified technicians ensure your vehicle receives the highest standard of service.",
+      "years_experience": "15+ Years",
+      "of_excellence": "of Excellence",
+      "expert_technicians_title": "Expert Technicians",
+      "expert_technicians_desc": "Factory-trained professionals with years of experience",
+      "quality_guaranteed_title": "Quality Guaranteed",
+      "quality_guaranteed_desc": "Industry-leading warranty on all our services",
+      
+      "services_title": "Our Premium Services",
+      "services_subtitle": "Comprehensive automotive solutions tailored to your vehicle's needs",
+      
+      "service1_title": "Routine Maintenance",
+      "service1_desc": "Keep your vehicle running smoothly with our comprehensive maintenance services.",
+      "service1_feature1": "Oil & Filter Changes",
+      "service1_feature2": "Fluid Services",
+      "service1_feature3": "Multi-Point Inspection",
+      
+      "service2_title": "Express Service",
+      "service2_desc": "Quick and efficient service when you're short on time.",
+      "service2_feature1": "30-Minute Oil Change",
+      "service2_feature2": "Quick Tire Service",
+      "service2_feature3": "Battery Check & Replace",
+      
+      "service3_title": "Mechanical Repairs",
+      "service3_desc": "Expert diagnosis and repair for all mechanical components.",
+      "service3_feature1": "Engine Diagnostics",
+      "service3_feature2": "Transmission Service",
+      "service3_feature3": "Brake System Repairs",
+      
+      "service4_title": "Performance Upgrades",
+      "service4_desc": "Enhance your vehicle's performance with our expert tuning services.",
+      "service4_feature1": "Engine Tuning",
+      "service4_feature2": "Suspension Upgrades",
+      "service4_feature3": "Performance Testing",
+      
+      "service5_title": "Diagnostic Services",
+      "service5_desc": "Advanced computer diagnostics for precise problem identification.",
+      "service5_feature1": "Computer Diagnostics",
+      "service5_feature2": "Error Code Analysis",
+      "service5_feature3": "Sensor Testing",
+      
+      "service6_title": "Preventive Maintenance",
+      "service6_desc": "Regular maintenance to prevent future problems and extend vehicle life.",
+      "service6_feature1": "Scheduled Maintenance",
+      "service6_feature2": "Safety Inspections",
+      "service6_feature3": "Component Testing",
+      
+      "why_choose_title": "Why Choose PowerMark",
+      "why_choose_subtitle": "Experience the difference of premium automotive care backed by expertise, technology, and dedication.",
+      
+      "feature1_title": "Expert Team",
+      "feature1_desc": "Our certified technicians bring decades of combined experience and continuous training to every service.",
+      "feature1_point1": "Factory-Trained Technicians",
+      "feature1_point2": "Continuous Professional Development",
+      "feature1_point3": "Specialized Expertise",
+      
+      "feature2_title": "Advanced Technology",
+      "feature2_desc": "State-of-the-art diagnostic equipment and tools for precise service and repairs.",
+      "feature2_point1": "Modern Diagnostic Equipment",
+      "feature2_point2": "Digital Service Records",
+      "feature2_point3": "Real-time Updates",
+      
+      "feature3_title": "Quality Guarantee",
+      "feature3_desc": "We stand behind our work with comprehensive service warranties and satisfaction guarantee.",
+      "feature3_point1": "Service Warranty",
+      "feature3_point2": "Genuine Parts",
+      "feature3_point3": "Satisfaction Guaranteed",
+      
+      "stat1_value": "15+",
+      "stat1_title": "Years Experience",
+      "stat2_value": "10K+",
+      "stat2_title": "Happy Customers",
+      "stat3_value": "50+",
+      "stat3_title": "Expert Technicians",
+      "stat4_value": "24/7",
+      "stat4_title": "Support Available",
+      
+      "trust_badge1": "Certified Service Center",
+      "trust_badge2": "Professional Equipment",
+      "trust_badge3": "Guaranteed Work",
+      
+      "customization_title": "Customization Studio",
+      "customization_subtitle": "Transform your vehicle into a personalized masterpiece with our expert customization services",
+      
+      "customization_showcase_title": "Featured Custom Builds",
+      "customization_showcase_desc": "Discover our most impressive vehicle transformations and imagine the possibilities for your own ride",
+      "view_gallery": "View Gallery",
+      
+      "customization_option1_title": "Exterior Styling",
+      "customization_option1_desc": "Custom paint finishes, body kits, wraps, and graphics that transform your vehicle's appearance",
+      "customization_option1_feature1": "Premium Paint & Wraps",
+      "customization_option1_feature2": "Custom Body Modifications",
+      
+      "customization_option2_title": "Interior Design",
+      "customization_option2_desc": "Luxury upholstery, custom dashboards, and personalized cabin features for ultimate comfort",
+      "customization_option2_feature1": "Premium Materials",
+      "customization_option2_feature2": "Bespoke Interior Elements",
+      
+      "customization_option3_title": "Audio & Electronics",
+      "customization_option3_desc": "State-of-the-art sound systems, lighting, and entertainment technology for a superior experience",
+      "customization_option3_feature1": "Premium Sound Systems",
+      "customization_option3_feature2": "Custom Lighting Solutions",
+      
+      "customization_option4_title": "Performance Enhancements",
+      "customization_option4_desc": "Upgrades that boost power, handling, and overall performance while maintaining reliability",
+      "customization_option4_feature1": "Engine Modifications",
+      "customization_option4_feature2": "Suspension & Brake Upgrades",
+      
+      "customization_process_title": "Our Customization Process",
+      
+      "customization_step1_title": "Consultation & Design",
+      "customization_step1_desc": "Meet with our design specialists to discuss your vision and explore possibilities for your vehicle",
+      
+      "customization_step2_title": "Detailed Proposal",
+      "customization_step2_desc": "Receive a comprehensive plan including designs, materials, timeline, and investment details",
+      
+      "customization_step3_title": "Expert Craftsmanship",
+      "customization_step3_desc": "Our skilled technicians execute your customization with precision and attention to detail",
+      
+      "customization_step4_title": "Final Reveal",
+      "customization_step4_desc": "Experience the unveiling of your transformed vehicle and enjoy your personalized masterpiece",
+      
+      "customization_cta_button": "Start Your Custom Project",
+      "customization_cta_desc": "Book a consultation with our design team to begin bringing your vision to life",
+      
+      "cta_title": "Ready for Premium Auto Service?",
+      "cta_desc": "Experience the difference at PowerMark Auto. Schedule your appointment today.",
+      "cta_button1": "Book an Appointment",
+      "cta_button2": "Call Us Now"
+    },
+    "bod_united_name": "BOD United",
+    "bod_united_desc": "The flagship technology company of BOD Holdings, specializing in cutting-edge solutions including AI, mobile applications, digital marketing, and immersive technologies.",
+    "bod_united_service1": "Application Development",
+    "bod_united_service2": "Artificial Intelligence",
+    "bod_united_service3": "Digital Marketing",
+    "bod_united_service4": "Virtual & Augmented Reality"
   },
   "about": {
     "page_title": "About BOD Holdings",
@@ -384,26 +641,30 @@
     "stat4_title": "Customers Served"
   },
   "home": {
-    "hero_title": "Building Success Through Diverse Investments",
+    "hero_title": "Building Success Through Diversified Investments",
     "hero_subtitle": "A leading investment company managing multiple successful subsidiaries across diverse sectors",
     "learn_more": "Learn More",
     "contact_us": "Contact Us",
     "about_title": "About BOD Holdings",
-    "about_desc1": "BOD is a prestigious holding company that manages and oversees a diverse portfolio of subsidiaries across multiple sectors. With a strategic vision and commitment to excellence, we've established ourselves as leaders in the market.",
-    "about_desc2": "Our mission is to create sustainable value for our stakeholders through strategic investments, operational excellence, and responsible business practices.",
+    "about_desc1": "BOD is a prestigious holding company that manages and oversees a diverse portfolio of subsidiaries across multiple sectors. Through our strategic vision and commitment to excellence, we have established ourselves as market leaders.",
+    "about_desc2": "Our mission is to create sustainable value for stakeholders through strategic investments, operational excellence, and responsible business practices.",
     "more_about_us": "More About Us",
     "subsidiaries_title": "Our Subsidiaries",
     "subsidiaries_desc": "BOD Holdings manages a diverse portfolio of successful companies across multiple industries, each contributing to our collective growth and success.",
     "subsidiary1_name": "LO Uniforms",
-    "subsidiary1_desc": "Specializing in high-quality uniform design, manufacturing and supply for various industries including hospitality and healthcare.",
+    "subsidiary1_desc": "Specialists in designing, manufacturing, and supplying high-quality uniforms for various industries including hospitality and healthcare.",
     "subsidiary2_name": "ASAP Maintenance & Operations",
-    "subsidiary2_desc": "Providing swift and reliable maintenance and operation services for commercial, residential, and industrial facilities.",
+    "subsidiary2_desc": "Providing rapid and reliable maintenance and operations services for commercial, residential, and industrial facilities.",
     "subsidiary3_name": "Graston Medical Clinics",
-    "subsidiary3_desc": "Specialized physical therapy and rehabilitation centers offering innovative, evidence-based treatment for optimal recovery and wellness.",
+    "subsidiary3_desc": "Specialized physical therapy and rehabilitation centers providing innovative, evidence-based treatment for optimal recovery and wellness.",
     "subsidiary4_name": "PowerMark Auto",
-    "subsidiary4_desc": "Premium automotive sales, service, and parts with a focus on luxury and performance vehicles.",
+    "subsidiary4_desc": "Luxury automobile sales, services, and parts with a focus on high-end and performance vehicles.",
     "subsidiary5_name": "Ramadan Restaurants",
-    "subsidiary5_desc": "A premier restaurant chain specializing in authentic Pakistani, Turkish, and traditional cuisine with multiple locations.",
+    "subsidiary5_desc": "Distinguished restaurant chain specializing in authentic Pakistani, Turkish, and traditional cuisine with multiple locations.",
+    "subsidiary6_name": "BOD United",
+    "subsidiary6_desc": "Our flagship technology company specializing in AI, mobile applications, and immersive technologies.",
+    "subsidiary7_name": "Peak Time Logistics",
+    "subsidiary7_desc": "Reliable delivery services and exceptional customer support solutions for businesses across various industries.",
     "view_all_subsidiaries": "View All Subsidiaries",
     "sectors_title": "Our Business Sectors",
     "sectors_desc": "BOD Holdings operates across multiple key industries, leveraging expertise and innovation to create sustainable value.",
@@ -747,5 +1008,65 @@
     "faq3_answer": "BOD Holdings manages a diverse portfolio of subsidiaries across multiple sectors including real estate, technology, finance, manufacturing, and more. Visit our Subsidiaries page for detailed information about each company in our portfolio.",
     "faq4_question": "Are there job opportunities at BOD Holdings?",
     "faq4_answer": "Yes, we regularly have openings across our various subsidiaries and corporate offices. Visit our Careers page to see current openings and submit your application. You can also send your resume to careers@bodholdings.com for future opportunities."
+  },
+  "peak-time-logistics": {
+    "hero_title": "Peak Time Logistics",
+    "hero_subtitle": "Reliable delivery services and exceptional customer support solutions.",
+    "about_title": "About Peak Time Logistics",
+    "about_desc1": "Peak Time Logistics is a leading provider of delivery services and customer support solutions in the Kingdom of Saudi Arabia. We specialize in offering tailored logistics solutions that meet the unique needs of businesses across various industries.",
+    "about_desc2": "Our commitment to excellence, reliability, and customer satisfaction has established us as a trusted partner for businesses seeking to optimize their delivery operations and enhance their customer service experience.",
+    "core_services": "Core Services",
+    "service1": "Food Delivery",
+    "service2": "Customer Support",
+    "service3": "Delivery Management",
+    "service4": "Logistics Solutions",
+    "service5": "Call Center Services",
+    "services_title": "Our Services",
+    "services_subtitle": "Comprehensive Logistics Solutions",
+    "services_desc": "We offer a wide range of delivery services and logistics solutions tailored to meet the unique needs of our clients.",
+    "food_delivery_title": "Food Delivery Services",
+    "food_delivery_desc": "Specialized delivery services for restaurants and food establishments through Hunger Station and other food delivery platforms, ensuring timely and quality delivery experiences.",
+    "customer_service_title": "Customer Service",
+    "customer_service_desc": "Professional customer support solutions including call center services, complaint resolution, and customer satisfaction management to enhance client relationships.",
+    "general_logistics_title": "General Logistics",
+    "general_logistics_desc": "Comprehensive logistics solutions including last-mile delivery, package tracking, and delivery management for retail businesses and e-commerce platforms.",
+    "route_optimization_title": "Route Optimization",
+    "route_optimization_desc": "Advanced route planning and optimization services that improve delivery efficiency, reduce transit times, and minimize operational costs for delivery fleets.",
+    "analytics_title": "Performance Analytics",
+    "analytics_desc": "Detailed reporting and analytics services that provide insights into delivery performance, customer satisfaction metrics, and operational efficiency indicators.",
+    "staff_management_title": "Delivery Staff Management",
+    "staff_management_desc": "Comprehensive recruitment, training, and management of delivery personnel to ensure professional service standards and operational excellence.",
+    "partnership_tag": "Strategic Partnership",
+    "partnership_title": "Hunger Station Delivery Partnership",
+    "partnership_desc": "We are a proud delivery partner of Hunger Station, providing reliable and efficient delivery services for the leading food delivery platform in Saudi Arabia.",
+    "partnership_benefits_title": "Partnership Benefits",
+    "partnership_benefits_desc": "Our partnership with Hunger Station allows us to offer enhanced delivery services and benefits to our clients and their customers.",
+    "feature1_title": "Efficient Delivery Network",
+    "feature1_desc": "Access to a wide network of trained delivery personnel covering major cities and regions across Saudi Arabia.",
+    "feature2_title": "Real-time Tracking",
+    "feature2_desc": "Advanced tracking systems that provide real-time updates on delivery status and location for enhanced transparency.",
+    "feature3_title": "Quality Assurance",
+    "feature3_desc": "Strict quality control measures to ensure that deliveries are handled with care and arrive in optimal condition.",
+    "feature4_title": "Timely Deliveries",
+    "feature4_desc": "Optimized routing and scheduling to ensure on-time deliveries and minimize waiting times for customers.",
+    "customer_service_tag": "Customer Support",
+    "customer_service_excellence_title": "Customer Service Excellence",
+    "customer_service_excellence_desc": "We pride ourselves on providing exceptional customer service through dedicated support teams and advanced communication systems.",
+    "support_247_title": "24/7 Support",
+    "support_247_desc": "Round-the-clock customer service ensuring that customer queries and concerns are addressed promptly at any time of day or night.",
+    "trained_professionals_title": "Trained Professionals",
+    "trained_professionals_desc": "Our customer service team undergoes rigorous training in communication, problem-solving, and service excellence to deliver exceptional support.",
+    "multilingual_support_title": "Multilingual Support",
+    "multilingual_support_desc": "Support available in multiple languages to ensure clear communication and excellent service for all customers regardless of language preference.",
+    "stats_tag": "Our Impact",
+    "stats_title": "Key Performance Metrics",
+    "stats_desc": "A glimpse into our operational excellence and commitment to delivering exceptional service.",
+    "stat1_title": "Deliveries Completed",
+    "stat2_title": "Customer Satisfaction",
+    "stat3_title": "Service Availability",
+    "stat4_title": "Partner Restaurants",
+    "cta_title": "Enhance Your Delivery Experience",
+    "cta_desc": "Partner with Peak Time Logistics to provide exceptional delivery and customer service experiences for your business and customers.",
+    "cta_button": "Partner With Us"
   }
 }

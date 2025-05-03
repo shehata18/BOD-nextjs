@@ -303,7 +303,7 @@ export default function Subsidiaries() {
                                     </ul>
                                 </div>
                                 <Link
-                                    href="/subsidiaries/graston-clinics"
+                                    href="/subsidiaries/graston"
                                     className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
                                 >
                                     { t("learn_more") }
@@ -347,7 +347,7 @@ export default function Subsidiaries() {
                                     </ul>
                                 </div>
                                 <Link
-                                    href="/subsidiaries/powermark-auto"
+                                    href="/subsidiaries/powermark"
                                     className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
                                 >
                                     { t("learn_more") }
@@ -387,7 +387,87 @@ export default function Subsidiaries() {
                                     </ul>
                                 </div>
                                 <Link
-                                    href="/subsidiaries/ramadan-restaurants"
+                                    href="/subsidiaries/ramadan"
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                >
+                                    { t("learn_more") }
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Peak Time Logistics */ }
+                        <div
+                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            style={ { display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" } }
+                        >
+                            <div className="h-48 bg-gray-200 flex items-center justify-center">
+                                <img
+                                    src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2070&auto=format&fit=crop"
+                                    alt="Peak Time Logistics"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800">{ t("peak_time_logistics_name") }</h3>
+                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                        { t("services") }
+                                    </span>
+                                </div>
+                                <p className="text-gray-600 mb-6">{ t("peak_time_logistics_desc") }</p>
+                                <div className="mb-6">
+                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
+                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <li>{ t("peak_time_logistics_service1") }</li>
+                                        <li>{ t("peak_time_logistics_service2") }</li>
+                                        <li>{ t("peak_time_logistics_service3") }</li>
+                                        <li>{ t("peak_time_logistics_service4") }</li>
+                                        <li>{ t("peak_time_logistics_service5") }</li>
+                                    </ul>
+                                </div>
+                                <Link
+                                    href="/subsidiaries/peak-time-logistics"
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                >
+                                    { t("learn_more") }
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* BOD United */ }
+                        <div
+                            id="technology"
+                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            style={ { display: activeFilter === "all" || activeFilter === "technology" ? "block" : "none" } }
+                        >
+                            <div className="h-48 bg-gray-200 flex items-center justify-center">
+                                <img
+                                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                                    alt="BOD United"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800">{ t("bod_united_name") }</h3>
+                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                        { t("technology") }
+                                    </span>
+                                </div>
+                                <p className="text-gray-600 mb-6">
+                                    { t("bod_united_desc") }
+                                </p>
+                                <div className="mb-6">
+                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
+                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <li>{ t("bod_united_service1") }</li>
+                                        <li>{ t("bod_united_service2") }</li>
+                                        <li>{ t("bod_united_service3") }</li>
+                                        <li>{ t("bod_united_service4") }</li>
+                                    </ul>
+                                </div>
+                                <Link
+                                    href="/subsidiaries/bod-united"
                                     className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
                                 >
                                     { t("learn_more") }

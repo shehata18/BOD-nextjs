@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
+    domains: ['images.unsplash.com', 'source.unsplash.com', 'cdn-icons-png.flaticon.com', 'cdn.hungerstation.com'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -14,6 +14,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'source.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn-icons-png.flaticon.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.hungerstation.com',
       }
     ]
   }

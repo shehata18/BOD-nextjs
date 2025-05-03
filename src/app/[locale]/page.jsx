@@ -178,7 +178,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   { t('subsidiary3_desc') }
                 </p>
-                <Link href="/subsidiaries/graston-clinics" className="text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/subsidiaries/graston" className="text-blue-600 hover:text-blue-800 font-medium">
                   { t('learn_more') } →
                 </Link>
               </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   { t('subsidiary4_desc') }
                 </p>
-                <Link href="/subsidiaries/powermark-auto" className="text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/subsidiaries/powermark" className="text-blue-600 hover:text-blue-800 font-medium">
                   { t('learn_more') } →
                 </Link>
               </div>
@@ -222,7 +222,47 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-4">
                   { t('subsidiary5_desc') }
                 </p>
-                <Link href="/subsidiaries/ramadan-restaurants" className="text-blue-600 hover:text-blue-800 font-medium">
+                <Link href="/subsidiaries/ramadan" className="text-blue-600 hover:text-blue-800 font-medium">
+                  { t('learn_more') } →
+                </Link>
+              </div>
+            </div>
+
+            {/* Subsidiary 6 - BOD United */ }
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                  alt="BOD United"
+                  className="max-h-48 w-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary6_name') }</h3>
+                <p className="text-gray-600 mb-4">
+                  { t('subsidiary6_desc') }
+                </p>
+                <Link href="/subsidiaries/bod-united" className="text-blue-600 hover:text-blue-800 font-medium">
+                  { t('learn_more') } →
+                </Link>
+              </div>
+            </div>
+
+            {/* Subsidiary 7 - Peak Time Logistics */ }
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2070&auto=format&fit=crop"
+                  alt="Peak Time Logistics"
+                  className="max-h-48 w-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary7_name') }</h3>
+                <p className="text-gray-600 mb-4">
+                  { t('subsidiary7_desc') }
+                </p>
+                <Link href="/subsidiaries/peak-time-logistics" className="text-blue-600 hover:text-blue-800 font-medium">
                   { t('learn_more') } →
                 </Link>
               </div>
