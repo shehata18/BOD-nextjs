@@ -28,20 +28,24 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <div className={`${inter.className} ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
-        <Script 
-          src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
-          strategy="lazyOnload"
-        />
-        <Script 
-          src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
-          strategy="lazyOnload"
-        />
-        <AosInit />
-        <Header />
-        {children}
-        <Footer />
-      </div>
+      <html lang={locale} style={{ overflowX: 'hidden' }}>
+        <body style={{ overflowX: 'hidden', maxWidth: '100vw' }} className={`${inter.className} ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
+          <Script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+            strategy="lazyOnload"
+          />
+          <Script 
+            src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+            strategy="lazyOnload"
+          />
+          <AosInit />
+          <Header />
+          <div className="overflow-x-hidden w-full">
+            {children}
+          </div>
+          <Footer />
+        </body>
+      </html>
     </NextIntlClientProvider>
   );
 }

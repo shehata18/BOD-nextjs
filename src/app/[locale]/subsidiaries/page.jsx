@@ -154,6 +154,16 @@ export default function Subsidiaries() {
                         </button>
 
                         <button
+                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "retail" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
+                            onClick={ () => {
+                                filterSubsidiaries("retail");
+                                document.getElementById("retail")?.scrollIntoView({ behavior: "smooth" });
+                            } }
+                        >
+                            { t("filter_retail") }
+                        </button>
+
+                        <button
                             className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "hospitality" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
                             onClick={ () => {
                                 filterSubsidiaries("hospitality");
@@ -468,6 +478,82 @@ export default function Subsidiaries() {
                                 </div>
                                 <Link
                                     href="/subsidiaries/bod-united"
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                >
+                                    { t("learn_more") }
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Seven-Eleven Grocery Supplies */ }
+                        <div
+                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            style={ { display: activeFilter === "all" || activeFilter === "retail" ? "block" : "none" } }
+                        >
+                            <div className="h-48 bg-gray-200 flex items-center justify-center">
+                                <img
+                                    src="https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg"
+                                    alt="Seven-Eleven Grocery Supplies"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800">{ t("seven_eleven_name") }</h3>
+                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                        { t("retail") }
+                                    </span>
+                                </div>
+                                <p className="text-gray-600 mb-6">{ t("seven_eleven_desc") }</p>
+                                <div className="mb-6">
+                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_offerings") }:</h4>
+                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <li>{ t("seven_eleven_offering1") }</li>
+                                        <li>{ t("seven_eleven_offering2") }</li>
+                                        <li>{ t("seven_eleven_offering3") }</li>
+                                        <li>{ t("seven_eleven_offering4") }</li>
+                                    </ul>
+                                </div>
+                                <Link
+                                    href="/subsidiaries/seven-eleven"
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                >
+                                    { t("learn_more") }
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* Alrawaq Alfareed */ }
+                        <div
+                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            style={ { display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" } }
+                        >
+                            <div className="h-48 bg-gray-200 flex items-center justify-center">
+                                <img
+                                    src="https://images.pexels.com/photos/8850709/pexels-photo-8850709.jpeg"
+                                    alt="Alrawaq Alfareed"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800">{ t("alrawaq_alfareed_name") }</h3>
+                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                        { t("services") }
+                                    </span>
+                                </div>
+                                <p className="text-gray-600 mb-6">{ t("alrawaq_alfareed_desc") }</p>
+                                <div className="mb-6">
+                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
+                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <li>{ t("alrawaq_alfareed_service1") }</li>
+                                        <li>{ t("alrawaq_alfareed_service2") }</li>
+                                        <li>{ t("alrawaq_alfareed_service3") }</li>
+                                        <li>{ t("alrawaq_alfareed_service4") }</li>
+                                    </ul>
+                                </div>
+                                <Link
+                                    href="/subsidiaries/alrawaq-alfareed"
                                     className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
                                 >
                                     { t("learn_more") }

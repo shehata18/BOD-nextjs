@@ -267,6 +267,70 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+
+            {/* Subsidiary 8 - Completed Tasks */ }
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="/images/CT%20Company.jpg"
+                  alt="Completed Tasks"
+                  className="max-h-48 w-full object-cover"
+                  onError={ (e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://images.unsplash.com/photo-1507679799987-c456f719a1fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80";
+                  } }
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary8_name') }</h3>
+                <p className="text-gray-600 mb-4">
+                  { t('subsidiary8_desc') }
+                </p>
+                <Link href="/subsidiaries/completed-tasks" className="text-blue-600 hover:text-blue-800 font-medium">
+                  { t('learn_more') } →
+                </Link>
+              </div>
+            </div>
+
+            {/* Subsidiary 9 - Seven-Eleven */ }
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg"
+                  alt="Seven-Eleven Grocery Supplies"
+                  className="max-h-48 w-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary9_name') }</h3>
+                <p className="text-gray-600 mb-4">
+                  { t('subsidiary9_desc') }
+                </p>
+                <Link href="/subsidiaries/seven-eleven" className="text-blue-600 hover:text-blue-800 font-medium">
+                  { t('learn_more') } →
+                </Link>
+              </div>
+            </div>
+
+            {/* Subsidiary 10 - Alrawaq Alfareed */ }
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="https://images.pexels.com/photos/8850709/pexels-photo-8850709.jpeg"
+                  alt="Alrawaq Alfareed"
+                  className="max-h-48 w-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary10_name') }</h3>
+                <p className="text-gray-600 mb-4">
+                  { t('subsidiary10_desc') }
+                </p>
+                <Link href="/subsidiaries/alrawaq-alfareed" className="text-blue-600 hover:text-blue-800 font-medium">
+                  { t('learn_more') } →
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-10 fade-in-up">
@@ -473,9 +537,17 @@ export default function HomePage() {
       <style jsx>{ `
         /* Fix for horizontal scrolling */
         html, body {
-          overflow-x: hidden;
+          overflow-x: hidden !important;
           width: 100%;
           position: relative;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Ensure all sections don't overflow */
+        section {
+          overflow-x: hidden;
+          max-width: 100vw;
         }
 
         @keyframes zoomInOut {
@@ -590,12 +662,21 @@ export default function HomePage() {
         /* Fix for content overflowing container */
         .container {
           max-width: 100%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          box-sizing: border-box;
         }
 
         /* Ensure images don't cause overflow */
         img {
           max-width: 100%;
           height: auto;
+        }
+
+        /* Prevent grid layouts from causing overflow */
+        .grid {
+          width: 100%;
+          display: grid;
         }
       `}</style>
     </>
