@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import { motion } from "framer-motion";
 
 export default function CompletedTasks() {
     const t = useTranslations("subsidiaries");
@@ -32,9 +33,29 @@ export default function CompletedTasks() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Animation variants for staggered animations
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: { type: "spring", stiffness: 100 }
+        }
+    };
+
     return (
         <>
-            {/* Hero Banner - Modern full-screen with parallax */ }
+            {/* Hero Banner - Modern full-screen with video/parallax */ }
             <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-black">
                 {/* Parallax background layers */ }
                 <div className="absolute inset-0 h-full parallax" data-speed="0.1">
@@ -62,34 +83,43 @@ export default function CompletedTasks() {
 
                 {/* Content */ }
                 <div className="container mx-auto px-6 relative z-10 mt-[-5vh]">
-                    <div className="max-w-5xl mx-auto">
+                    <motion.div
+                        initial={ { opacity: 0, y: 50 } }
+                        animate={ { opacity: 1, y: 0 } }
+                        transition={ { duration: 0.8, ease: "easeOut" } }
+                        className="max-w-5xl mx-auto"
+                    >
                         <div className="text-center mb-8">
-                            <div
-                                data-aos="fade-up"
-                                data-aos-delay="200"
+                            <motion.div
+                                initial={ { scale: 0.8, opacity: 0 } }
+                                animate={ { scale: 1, opacity: 1 } }
+                                transition={ { duration: 0.5, delay: 0.2 } }
                                 className="inline-block mb-3 px-4 py-1 bg-white/10 backdrop-blur-md rounded-full text-blue-200 text-sm font-medium"
                             >
                                 المهام المنجزة التجارية
-                            </div>
-                            <h1
-                                data-aos="fade-up"
-                                data-aos-delay="300"
+                            </motion.div>
+                            <motion.h1
+                                initial={ { y: 20, opacity: 0 } }
+                                animate={ { y: 0, opacity: 1 } }
+                                transition={ { duration: 0.7, delay: 0.3 } }
                                 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
                             >
                                 Completed <span className="text-blue-300">Tasks</span>
-                            </h1>
-                            <p
-                                data-aos="fade-up"
-                                data-aos-delay="400"
+                            </motion.h1>
+                            <motion.p
+                                initial={ { y: 20, opacity: 0 } }
+                                animate={ { y: 0, opacity: 1 } }
+                                transition={ { duration: 0.7, delay: 0.5 } }
                                 className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed"
                             >
                                 Efficient business solutions and comprehensive commercial services tailored for your organization's success
-                            </p>
+                            </motion.p>
                         </div>
 
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="500"
+                        <motion.div
+                            initial={ { opacity: 0 } }
+                            animate={ { opacity: 1 } }
+                            transition={ { duration: 1, delay: 0.8 } }
                             className="flex flex-wrap justify-center gap-4 mt-10"
                         >
                             <Link
@@ -109,27 +139,36 @@ export default function CompletedTasks() {
                             >
                                 <span className="relative flex items-center">
                                     Learn More
-                                    <svg className="w-5 h-5 ml-2 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                     </svg>
                                 </span>
                             </a>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
 
                 {/* Scroll indicator */ }
-                <div
-                    data-aos="fade-up"
-                    data-aos-delay="700"
-                    className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-                >
-                    <div className="flex flex-col items-center">
+                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                    <motion.div
+                        initial={ { opacity: 0 } }
+                        animate={ { opacity: 1 } }
+                        transition={ { delay: 1.2, duration: 1 } }
+                        className="flex flex-col items-center"
+                    >
                         <span className="text-blue-200 text-sm mb-2">Scroll to discover</span>
-                        <div className="w-6 h-10 border-2 border-blue-200 rounded-full flex justify-center pt-1">
-                            <div className="w-1 h-2 bg-blue-200 rounded-full animate-pulse"></div>
-                        </div>
-                    </div>
+                        <motion.div
+                            animate={ { y: [0, 10, 0] } }
+                            transition={ { repeat: Infinity, duration: 1.5 } }
+                            className="w-6 h-10 border-2 border-blue-200 rounded-full flex justify-center pt-1"
+                        >
+                            <motion.div
+                                animate={ { height: ["0%", "30%", "0%"] } }
+                                transition={ { repeat: Infinity, duration: 1.5 } }
+                                className="w-1 bg-blue-200 rounded-full"
+                            />
+                        </motion.div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -137,9 +176,11 @@ export default function CompletedTasks() {
             <section id="about" className="py-24 bg-gradient-to-b from-white to-gray-50">
                 <div className="container mx-auto px-6">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <div
-                            data-aos="fade-up"
-                            data-aos-once="true"
+                        <motion.div
+                            initial={ { opacity: 0, y: 20 } }
+                            whileInView={ { opacity: 1, y: 0 } }
+                            viewport={ { once: true } }
+                            transition={ { duration: 0.6 } }
                         >
                             <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">About Us</span>
                             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">Excellence in <span className="text-blue-700">Business Solutions</span></h2>
@@ -147,15 +188,16 @@ export default function CompletedTasks() {
                             <p className="text-gray-600 text-lg leading-relaxed">
                                 Discover how Completed Tasks delivers exceptional business services designed to transform your organization's performance and potential.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
 
                     <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div
+                        <motion.div
                             className="lg:w-1/2"
-                            data-aos="fade-right"
-                            data-aos-once="true"
-                            data-aos-duration="1000"
+                            initial={ { opacity: 0, x: -50 } }
+                            whileInView={ { opacity: 1, x: 0 } }
+                            viewport={ { once: true } }
+                            transition={ { duration: 0.8 } }
                         >
                             <div className="relative">
                                 <img
@@ -166,14 +208,14 @@ export default function CompletedTasks() {
                                 <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-blue-100 rounded-xl -z-10"></div>
                                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-600 rounded-lg -z-10"></div>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div
+                        <motion.div
                             className="lg:w-1/2"
-                            data-aos="fade-left"
-                            data-aos-once="true"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
+                            initial={ { opacity: 0, x: 50 } }
+                            whileInView={ { opacity: 1, x: 0 } }
+                            viewport={ { once: true } }
+                            transition={ { duration: 0.8, delay: 0.2 } }
                         >
                             <h3 className="text-3xl font-bold text-gray-900 mb-6">About Completed Tasks</h3>
                             <p className="text-gray-700 text-lg mb-6 leading-relaxed">
@@ -187,11 +229,12 @@ export default function CompletedTasks() {
                                 optimize their performance and growth potential.
                             </p>
 
-                            <div
+                            <motion.div
                                 className="bg-white p-8 rounded-xl shadow-xl border border-gray-100"
-                                data-aos="fade-up"
-                                data-aos-once="true"
-                                data-aos-delay="400"
+                                initial={ { opacity: 0, y: 20 } }
+                                whileInView={ { opacity: 1, y: 0 } }
+                                viewport={ { once: true } }
+                                transition={ { duration: 0.6, delay: 0.4 } }
                             >
                                 <h4 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                                     <span className="inline-block p-2 bg-blue-600 text-white rounded-md mr-3">
@@ -202,7 +245,13 @@ export default function CompletedTasks() {
                                     Core Services
                                 </h4>
 
-                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <motion.ul
+                                    variants={ containerVariants }
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={ { once: true } }
+                                    className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                                >
                                     { [
                                         "Business Consultation",
                                         "Process Optimization",
@@ -211,18 +260,18 @@ export default function CompletedTasks() {
                                         "Business Development",
                                         "Digital Transformation"
                                     ].map((service, index) => (
-                                        <li key={ index } className="flex items-start" data-aos="fade-up" data-aos-delay={ 400 + (index * 50) }>
+                                        <motion.li key={ index } variants={ itemVariants } className="flex items-start">
                                             <div className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3 mt-0.5">
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                 </svg>
                                             </div>
                                             <span className="text-gray-700">{ service }</span>
-                                        </li>
+                                        </motion.li>
                                     )) }
-                                </ul>
-                            </div>
-                        </div>
+                                </motion.ul>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -237,10 +286,12 @@ export default function CompletedTasks() {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div
+                    <motion.div
                         className="text-center max-w-3xl mx-auto mb-20"
-                        data-aos="fade-up"
-                        data-aos-once="true"
+                        initial={ { opacity: 0, y: 20 } }
+                        whileInView={ { opacity: 1, y: 0 } }
+                        viewport={ { once: true } }
+                        transition={ { duration: 0.6 } }
                     >
                         <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">Our Services</span>
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">Premium Business Solutions</h2>
@@ -248,9 +299,15 @@ export default function CompletedTasks() {
                         <p className="text-gray-600 text-lg">
                             Comprehensive business services designed to optimize your operations and drive sustainable growth
                         </p>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <motion.div
+                        variants={ containerVariants }
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={ { once: true } }
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
                         { [
                             {
                                 icon: "chart-line",
@@ -283,17 +340,19 @@ export default function CompletedTasks() {
                                 description: "Targeted strategies to improve organizational structure, team performance, and workplace culture to drive business effectiveness."
                             }
                         ].map((service, index) => (
-                            <div
+                            <motion.div
                                 key={ index }
-                                data-aos="fade-up"
-                                data-aos-delay={ 100 * index }
-                                data-aos-once="true"
+                                variants={ itemVariants }
                                 className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                             >
                                 <div className="h-24 bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center group-hover:from-blue-700 group-hover:to-blue-900 transition-all duration-300">
-                                    <div className="text-white text-5xl transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
+                                    <motion.div
+                                        whileHover={ { rotateY: 180 } }
+                                        transition={ { duration: 0.5 } }
+                                        className="text-white text-5xl"
+                                    >
                                         <i className={ `fas fa-${service.icon}` }></i>
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div className="p-8">
                                     <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">{ service.title }</h3>
@@ -309,9 +368,9 @@ export default function CompletedTasks() {
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         )) }
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -325,10 +384,12 @@ export default function CompletedTasks() {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div
+                    <motion.div
                         className="text-center max-w-3xl mx-auto mb-20"
-                        data-aos="fade-up"
-                        data-aos-once="true"
+                        initial={ { opacity: 0, y: 20 } }
+                        whileInView={ { opacity: 1, y: 0 } }
+                        viewport={ { once: true } }
+                        transition={ { duration: 0.6 } }
                     >
                         <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm text-blue-100 rounded-full text-sm font-medium mb-4">Why Choose Us</span>
                         <h2 className="text-4xl font-bold text-white mb-6">The Completed Tasks Advantage</h2>
@@ -336,7 +397,7 @@ export default function CompletedTasks() {
                         <p className="text-blue-100 text-lg">
                             Our proven approach delivers exceptional results for businesses of all sizes across diverse industries
                         </p>
-                    </div>
+                    </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                         { [
@@ -362,11 +423,12 @@ export default function CompletedTasks() {
                                 statLabel: "projects completed"
                             }
                         ].map((feature, index) => (
-                            <div
+                            <motion.div
                                 key={ index }
-                                data-aos="fade-up"
-                                data-aos-delay={ index * 100 }
-                                data-aos-once="true"
+                                initial={ { opacity: 0, y: 30 } }
+                                whileInView={ { opacity: 1, y: 0 } }
+                                viewport={ { once: true } }
+                                transition={ { duration: 0.6, delay: index * 0.2 } }
                                 className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/5"
                             >
                                 <div className="mb-6">
@@ -385,7 +447,7 @@ export default function CompletedTasks() {
                                         <span className="text-blue-200">{ feature.statLabel }</span>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         )) }
                     </div>
                 </div>
@@ -396,33 +458,38 @@ export default function CompletedTasks() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-white"></div>
 
                 <div className="container mx-auto px-6 relative z-10">
-                    <div
+                    <motion.div
                         className="max-w-5xl mx-auto bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl overflow-hidden shadow-xl"
-                        data-aos="fade-up"
-                        data-aos-once="true"
+                        initial={ { opacity: 0, y: 50 } }
+                        whileInView={ { opacity: 1, y: 0 } }
+                        viewport={ { once: true } }
+                        transition={ { duration: 0.8 } }
                     >
                         <div className="flex flex-col md:flex-row">
                             <div className="md:w-3/5 p-12 text-white">
-                                <h2
+                                <motion.h2
                                     className="text-3xl md:text-4xl font-bold mb-6 leading-tight"
-                                    data-aos="fade-right"
-                                    data-aos-delay="200"
-                                    data-aos-once="true"
+                                    initial={ { opacity: 0, x: -20 } }
+                                    whileInView={ { opacity: 1, x: 0 } }
+                                    viewport={ { once: true } }
+                                    transition={ { duration: 0.5, delay: 0.2 } }
                                 >
                                     Ready to Transform Your Business Performance?
-                                </h2>
-                                <p
+                                </motion.h2>
+                                <motion.p
                                     className="text-blue-100 text-lg mb-8 leading-relaxed"
-                                    data-aos="fade-right"
-                                    data-aos-delay="300"
-                                    data-aos-once="true"
+                                    initial={ { opacity: 0, x: -20 } }
+                                    whileInView={ { opacity: 1, x: 0 } }
+                                    viewport={ { once: true } }
+                                    transition={ { duration: 0.5, delay: 0.3 } }
                                 >
                                     Contact Completed Tasks today to discover how our tailored business solutions can help your organization achieve its full potential.
-                                </p>
-                                <div
-                                    data-aos="fade-up"
-                                    data-aos-delay="400"
-                                    data-aos-once="true"
+                                </motion.p>
+                                <motion.div
+                                    initial={ { opacity: 0, y: 20 } }
+                                    whileInView={ { opacity: 1, y: 0 } }
+                                    viewport={ { once: true } }
+                                    transition={ { duration: 0.5, delay: 0.4 } }
                                 >
                                     <Link
                                         href="/contact"
@@ -433,7 +500,7 @@ export default function CompletedTasks() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                         </svg>
                                     </Link>
-                                </div>
+                                </motion.div>
                             </div>
 
                             <div className="md:w-2/5 relative">
@@ -449,7 +516,7 @@ export default function CompletedTasks() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </>
