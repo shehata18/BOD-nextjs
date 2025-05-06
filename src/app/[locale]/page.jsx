@@ -331,6 +331,46 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+
+            {/* Subsidiary 11 - HR Login */ }
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  alt="HR Login"
+                  className="max-h-48 w-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary11_name') }</h3>
+                <p className="text-gray-600 mb-4">
+                  { t('subsidiary11_desc') }
+                </p>
+                <Link href="/subsidiaries/hrlogin" className="text-blue-600 hover:text-blue-800 font-medium">
+                  { t('learn_more') } →
+                </Link>
+              </div>
+            </div>
+
+            {/* Subsidiary 12 - All Plans */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="All Plans"
+                  className="max-h-48 w-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary12_name') }</h3>
+                <p className="text-gray-600 mb-4">
+                  { t('subsidiary12_desc') }
+                </p>
+                <Link href="/subsidiaries/all-plans" className="text-blue-600 hover:text-blue-800 font-medium">
+                  { t('learn_more') } →
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-10 fade-in-up">

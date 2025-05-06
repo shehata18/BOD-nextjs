@@ -560,6 +560,82 @@ export default function Subsidiaries() {
                                 </Link>
                             </div>
                         </div>
+
+                        {/* HR Login */ }
+                        <div
+                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            style={{ display: activeFilter === "all" || activeFilter === "technology" ? "block" : "none" }}
+                        >
+                            <div className="h-48 bg-gray-200 flex items-center justify-center">
+                                <img
+                                    src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="HR Login"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800">{t("hrlogin_name")}</h3>
+                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                        {t("technology")}
+                                    </span>
+                                </div>
+                                <p className="text-gray-600 mb-6">{t("hrlogin_desc")}</p>
+                                <div className="mb-6">
+                                    <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
+                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <li>{t("hrlogin_service1")}</li>
+                                        <li>{t("hrlogin_service2")}</li>
+                                        <li>{t("hrlogin_service3")}</li>
+                                        <li>{t("hrlogin_service4")}</li>
+                                    </ul>
+                                </div>
+                                <Link
+                                    href="/subsidiaries/hrlogin"
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                >
+                                    {t("learn_more")}
+                                </Link>
+                            </div>
+                        </div>
+
+                        {/* All Plans */}
+                        <div
+                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            style={{ display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" }}
+                        >
+                            <div className="h-48 bg-gray-200 flex items-center justify-center">
+                                <img
+                                    src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    alt="All Plans"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800">{t("all_plans_name") || "All Plans"}</h3>
+                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                        {t("services")}
+                                    </span>
+                                </div>
+                                <p className="text-gray-600 mb-6">{t("all_plans_desc") || "Premier event management and exhibition organization company, specializing in creating memorable corporate events, conferences, and exhibitions with meticulous attention to detail."}</p>
+                                <div className="mb-6">
+                                    <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
+                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <li>{t("all_plans_service1") || "Exhibition Management"}</li>
+                                        <li>{t("all_plans_service2") || "Conference Organization"}</li>
+                                        <li>{t("all_plans_service3") || "Creative Design Services"}</li>
+                                        <li>{t("all_plans_service4") || "Audio-Visual Production"}</li>
+                                    </ul>
+                                </div>
+                                <Link
+                                    href="/subsidiaries/all-plans"
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                >
+                                    {t("learn_more")}
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
