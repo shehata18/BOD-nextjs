@@ -636,6 +636,50 @@ export default function Subsidiaries() {
                                 </Link>
                             </div>
                         </div>
+
+                        {/* REACH Agency */}
+                        <div
+                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            style={{ display: activeFilter === "all" || activeFilter === "technology" ? "block" : "none" }}
+                        >
+                            <div className="h-48 bg-gray-200 flex items-center justify-center">
+                                <img
+                                    src="/images/REACH_logo.png"
+                                    alt="REACH Agency"
+                                    className="max-h-48 w-full object-cover"
+                                    onError={(e) => {
+                                        e.target.onerror = null;
+                                        e.target.src = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80";
+                                    }}
+                                />
+                            </div>
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800">{t("reach_agency_name")}</h3>
+                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                        {t("technology")}
+                                    </span>
+                                </div>
+                                <p className="text-gray-600 mb-6">{t("reach_agency_desc")}</p>
+                                <div className="mb-6">
+                                    <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
+                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <li>{t("reach_agency_service1")}</li>
+                                        <li>{t("reach_agency_service2")}</li>
+                                        <li>{t("reach_agency_service3")}</li>
+                                        <li>{t("reach_agency_service4")}</li>
+                                    </ul>
+                                </div>
+                                <a
+                                    href="https://reachksa.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                >
+                                    {t("learn_more")}
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

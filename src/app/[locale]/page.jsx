@@ -371,6 +371,30 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
+
+            {/* Subsidiary 13 - REACH Agency */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+              <div className="h-48 bg-gray-200 flex items-center justify-center">
+                <img
+                  src="/images/REACH_logo.png"
+                  alt="REACH Agency"
+                  className="max-h-48 w-full object-cover"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80";
+                  }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{t('subsidiary13_name')}</h3>
+                <p className="text-gray-600 mb-4">
+                  {t('subsidiary13_desc')}
+                </p>
+                <a href="https://reachksa.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 font-medium">
+                  {t('learn_more')} →
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-10 fade-in-up">

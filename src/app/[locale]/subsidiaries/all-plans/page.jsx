@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import AOS from "aos";
@@ -8,6 +8,8 @@ import "aos/dist/aos.css";
 
 export default function AllPlansPage() {
     const t = useTranslations("subsidiaries");
+    const allPlans = useTranslations("all_plans");
+    const currentLocale = useLocale();
 
     useEffect(() => {
         AOS.init({
@@ -68,18 +70,17 @@ export default function AllPlansPage() {
                 <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center">
                     <div className="text-center max-w-5xl mx-auto" data-aos="fade-up">
                         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                            <span className="block">مؤسسه اول بلانز</span>
-                            <span className="block text-blue-400">All Plans</span>
+                            <span className="block text-blue-400">{t("all_plans_name")}</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
-                            لتنطيم المعارض والمؤتمرات
+                            {allPlans("hero_subtitle")}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="#services" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                                Explore Our Services
+                                {allPlans("explore_services")}
                             </Link>
-                            <Link href="#contact" className="bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-lg border-2 border-white transition duration-300 ease-in-out transform hover:scale-105 backdrop-blur-sm">
-                                {t("contact_us") || "Contact Us"}
+                            <Link href={`/${currentLocale}/contact`} className="bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-lg border-2 border-white transition duration-300 ease-in-out transform hover:scale-105 backdrop-blur-sm">
+                                {allPlans("contact_us")}
                             </Link>
                         </div>
                     </div>
@@ -122,8 +123,8 @@ export default function AllPlansPage() {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold text-gray-900 text-lg mb-2">Excellence in Execution</h4>
-                                        <p className="text-gray-600 text-sm">We transform concepts into unforgettable experiences with meticulous attention to detail.</p>
+                                        <h4 className="font-semibold text-gray-900 text-lg mb-2">{allPlans("execution_title")}</h4>
+                                        <p className="text-gray-600 text-sm">{allPlans("execution_desc")}</p>
                                     </div>
                                 </div>
                             </div>
@@ -132,14 +133,14 @@ export default function AllPlansPage() {
                         {/* Content Column */}
                         <div className="w-full lg:w-1/2" data-aos="fade-left">
                             <div className="mb-8">
-                                <span className="text-blue-600 font-semibold uppercase tracking-widest text-sm">About Us</span>
-                                <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">Creating Extraordinary Events & Exhibitions</h2>
+                                <span className="text-blue-600 font-semibold uppercase tracking-widest text-sm">{allPlans("about_title")}</span>
+                                <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">{allPlans("about_heading")}</h2>
                                 <div className="h-1 w-20 bg-blue-600 mb-6"></div>
                                 <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                                    All Plans is a premier event management and exhibition organization company, dedicated to creating memorable and impactful experiences. We specialize in designing and executing corporate events, conferences, and exhibitions that leave lasting impressions.
+                                    {allPlans("about_desc1")}
                                 </p>
                                 <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                                    With our creative team and meticulous planning process, we transform your vision into reality, ensuring every event achieves its objectives while exceeding expectations in presentation and execution.
+                                    {allPlans("about_desc2")}
                                 </p>
                             </div>
                             
@@ -154,8 +155,8 @@ export default function AllPlansPage() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Dynamic Planning</h3>
-                                        <p className="text-gray-600">Expert strategizing that adapts to your specific event needs and objectives.</p>
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{allPlans("feature1_title")}</h3>
+                                        <p className="text-gray-600">{allPlans("feature1_desc")}</p>
                                     </div>
                                 </div>
                                 
@@ -168,8 +169,8 @@ export default function AllPlansPage() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Team</h3>
-                                        <p className="text-gray-600">Experienced coordinators, designers, and technicians working seamlessly together.</p>
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{allPlans("feature2_title")}</h3>
+                                        <p className="text-gray-600">{allPlans("feature2_desc")}</p>
                                     </div>
                                 </div>
                                 
@@ -182,8 +183,8 @@ export default function AllPlansPage() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Creative Solutions</h3>
-                                        <p className="text-gray-600">Innovative designs and concepts that make your event stand out from the crowd.</p>
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{allPlans("feature3_title")}</h3>
+                                        <p className="text-gray-600">{allPlans("feature3_desc")}</p>
                                     </div>
                                 </div>
                                 
@@ -196,14 +197,14 @@ export default function AllPlansPage() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Meticulous Execution</h3>
-                                        <p className="text-gray-600">Flawless implementation with attention to every detail from start to finish.</p>
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{allPlans("feature4_title")}</h3>
+                                        <p className="text-gray-600">{allPlans("feature4_desc")}</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <Link href="#services" className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out">
-                                Discover Our Services
+                                {allPlans("discover_services")}
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
@@ -225,11 +226,11 @@ export default function AllPlansPage() {
                 <div className="container mx-auto px-4 relative z-10">
                     {/* Section Header */}
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                        <span className="text-blue-400 font-semibold uppercase tracking-widest text-sm">What We Offer</span>
-                        <h2 className="text-4xl font-bold text-white mt-2 mb-4">Comprehensive Event Solutions</h2>
+                        <span className="text-blue-400 font-semibold uppercase tracking-widest text-sm">{allPlans("services_subtitle")}</span>
+                        <h2 className="text-4xl font-bold text-white mt-2 mb-4">{allPlans("services_title")}</h2>
                         <div className="h-1 w-20 bg-blue-400 mx-auto mb-6"></div>
                         <p className="text-gray-300 text-lg">
-                            From concept to execution, we provide end-to-end services to make your events and exhibitions successful and memorable.
+                            {allPlans("services_desc")}
                         </p>
                     </div>
                     
@@ -242,26 +243,26 @@ export default function AllPlansPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">Exhibition Management</h3>
-                            <p className="text-gray-300 mb-6">Full-service exhibition planning including booth design, logistics, vendor coordination, and technical support.</p>
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">{allPlans("service1_title")}</h3>
+                            <p className="text-gray-300 mb-6">{allPlans("service1_desc")}</p>
                             <ul className="text-gray-400 space-y-2 mb-6">
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Booth Design & Construction
+                                    {allPlans("service1_feature1")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Exhibitor Management
+                                    {allPlans("service1_feature2")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Technical Production
+                                    {allPlans("service1_feature3")}
                                 </li>
                             </ul>
                         </div>
@@ -273,26 +274,26 @@ export default function AllPlansPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">Conference Organization</h3>
-                            <p className="text-gray-300 mb-6">Complete conference planning and management services that handle everything from venue selection to program development.</p>
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">{allPlans("service2_title")}</h3>
+                            <p className="text-gray-300 mb-6">{allPlans("service2_desc")}</p>
                             <ul className="text-gray-400 space-y-2 mb-6">
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Venue Selection & Setup
+                                    {allPlans("service2_feature1")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Speaker Management
+                                    {allPlans("service2_feature2")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Attendee Registration
+                                    {allPlans("service2_feature3")}
                                 </li>
                             </ul>
                         </div>
@@ -304,26 +305,26 @@ export default function AllPlansPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">Creative Design Services</h3>
-                            <p className="text-gray-300 mb-6">Innovative design solutions for branding, marketing materials, booth designs, and immersive event experiences.</p>
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">{allPlans("service3_title")}</h3>
+                            <p className="text-gray-300 mb-6">{allPlans("service3_desc")}</p>
                             <ul className="text-gray-400 space-y-2 mb-6">
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Brand Identity Development
+                                    {allPlans("service3_feature1")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Marketing Collateral
+                                    {allPlans("service3_feature2")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    3D Space Visualization
+                                    {allPlans("service3_feature3")}
                                 </li>
                             </ul>
                         </div>
@@ -335,26 +336,26 @@ export default function AllPlansPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">Audio-Visual Production</h3>
-                            <p className="text-gray-300 mb-6">Professional audio-visual services to create immersive and engaging presentations and experiences.</p>
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">{allPlans("service4_title")}</h3>
+                            <p className="text-gray-300 mb-6">{allPlans("service4_desc")}</p>
                             <ul className="text-gray-400 space-y-2 mb-6">
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Sound & Lighting Systems
+                                    {allPlans("service4_feature1")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Visual Presentations
+                                    {allPlans("service4_feature2")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Live Streaming Services
+                                    {allPlans("service4_feature3")}
                                 </li>
                             </ul>
                         </div>
@@ -366,26 +367,26 @@ export default function AllPlansPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">Sponsorship Management</h3>
-                            <p className="text-gray-300 mb-6">Strategic sponsorship acquisition, activation, and relationship management for maximum value and exposure.</p>
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">{allPlans("service5_title")}</h3>
+                            <p className="text-gray-300 mb-6">{allPlans("service5_desc")}</p>
                             <ul className="text-gray-400 space-y-2 mb-6">
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Sponsor Acquisition
+                                    {allPlans("service5_feature1")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Benefit Fulfillment
+                                    {allPlans("service5_feature2")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    ROI Reporting
+                                    {allPlans("service5_feature3")}
                                 </li>
                             </ul>
                         </div>
@@ -397,26 +398,26 @@ export default function AllPlansPage() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">Registration & Ticketing</h3>
-                            <p className="text-gray-300 mb-6">End-to-end registration and ticketing solutions with customized platforms and on-site support.</p>
+                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-all duration-300">{allPlans("service6_title")}</h3>
+                            <p className="text-gray-300 mb-6">{allPlans("service6_desc")}</p>
                             <ul className="text-gray-400 space-y-2 mb-6">
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Online Registration Systems
+                                    {allPlans("service6_feature1")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    Badge Production
+                                    {allPlans("service6_feature2")}
                                 </li>
                                 <li className="flex items-center">
                                     <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    On-site Check-in Process
+                                    {allPlans("service6_feature3")}
                                 </li>
                             </ul>
                         </div>
@@ -424,8 +425,8 @@ export default function AllPlansPage() {
                     
                     {/* Call to Action */}
                     <div className="text-center mt-16" data-aos="fade-up">
-                        <Link href="#contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-10 rounded-lg transition duration-300 transform hover:scale-105 hover:shadow-lg">
-                            Request a Custom Quote
+                        <Link href={`/${currentLocale}/contact`} className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-10 rounded-lg transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                            {allPlans("request_quote")}
                         </Link>
                     </div>
                 </div>
@@ -442,11 +443,11 @@ export default function AllPlansPage() {
                 <div className="container mx-auto px-4 relative z-10">
                     {/* Section Header */}
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                        <span className="text-blue-600 font-semibold uppercase tracking-widest text-sm">Our Projects</span>
-                        <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">Featured Portfolio</h2>
+                        <span className="text-blue-600 font-semibold uppercase tracking-widest text-sm">{allPlans("portfolio_subtitle")}</span>
+                        <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">{allPlans("portfolio_title")}</h2>
                         <div className="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
                         <p className="text-gray-600 text-lg">
-                            Explore our showcase of successful events and exhibitions we've organized for clients across various industries.
+                            {allPlans("portfolio_desc")}
                         </p>
                     </div>
                     
@@ -457,20 +458,20 @@ export default function AllPlansPage() {
                             <div className="relative overflow-hidden rounded-xl aspect-[4/3] shadow-lg mb-5">
                                 <img 
                                     src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                                    alt="Tech Innovation Summit" 
+                                    alt={allPlans("project1_title")} 
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                                     <div className="transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                                        <h3 className="text-xl font-bold text-white mb-2">Tech Innovation Summit</h3>
-                                        <p className="text-gray-300">A premier technology conference showcasing the latest AI advancements.</p>
+                                        <h3 className="text-xl font-bold text-white mb-2">{allPlans("project1_title")}</h3>
+                                        <p className="text-gray-300">{allPlans("project1_desc")}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">Tech Innovation Summit</h3>
-                                    <p className="text-gray-600">Conference Planning</p>
+                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">{allPlans("project1_title")}</h3>
+                                    <p className="text-gray-600">{allPlans("project1_category")}</p>
                                 </div>
                                 <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -490,15 +491,15 @@ export default function AllPlansPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                                     <div className="transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                                        <h3 className="text-xl font-bold text-white mb-2">Global Healthcare Expo</h3>
-                                        <p className="text-gray-300">Medical innovations showcase with international presence.</p>
+                                        <h3 className="text-xl font-bold text-white mb-2">{allPlans("project2_title")}</h3>
+                                        <p className="text-gray-300">{allPlans("project2_desc")}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">Global Healthcare Expo</h3>
-                                    <p className="text-gray-600">Exhibition Management</p>
+                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">{allPlans("project2_title")}</h3>
+                                    <p className="text-gray-600">{allPlans("project2_category")}</p>
                                 </div>
                                 <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -518,15 +519,15 @@ export default function AllPlansPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                                     <div className="transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                                        <h3 className="text-xl font-bold text-white mb-2">Business Leadership Forum</h3>
-                                        <p className="text-gray-300">Executive conference for industry leaders and innovators.</p>
+                                        <h3 className="text-xl font-bold text-white mb-2">{allPlans("project3_title")}</h3>
+                                        <p className="text-gray-300">{allPlans("project3_desc")}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">Business Leadership Forum</h3>
-                                    <p className="text-gray-600">Conference & Networking</p>
+                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">{allPlans("project3_title")}</h3>
+                                    <p className="text-gray-600">{allPlans("project3_category")}</p>
                                 </div>
                                 <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -546,15 +547,15 @@ export default function AllPlansPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                                     <div className="transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                                        <h3 className="text-xl font-bold text-white mb-2">Harmony Music Festival</h3>
-                                        <p className="text-gray-300">Full-scale music festival with multiple stages and experiences.</p>
+                                        <h3 className="text-xl font-bold text-white mb-2">{allPlans("project4_title")}</h3>
+                                        <p className="text-gray-300">{allPlans("project4_desc")}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">Harmony Music Festival</h3>
-                                    <p className="text-gray-600">Event Production</p>
+                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">{allPlans("project4_title")}</h3>
+                                    <p className="text-gray-600">{allPlans("project4_category")}</p>
                                 </div>
                                 <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -574,15 +575,15 @@ export default function AllPlansPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                                     <div className="transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                                        <h3 className="text-xl font-bold text-white mb-2">Culinary Masters Expo</h3>
-                                        <p className="text-gray-300">Premier food and hospitality industry showcase and competition.</p>
+                                        <h3 className="text-xl font-bold text-white mb-2">{allPlans("project5_title")}</h3>
+                                        <p className="text-gray-300">{allPlans("project5_desc")}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">Culinary Masters Expo</h3>
-                                    <p className="text-gray-600">Trade Show & Competition</p>
+                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">{allPlans("project5_title")}</h3>
+                                    <p className="text-gray-600">{allPlans("project5_category")}</p>
                                 </div>
                                 <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -602,15 +603,15 @@ export default function AllPlansPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                                     <div className="transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                                        <h3 className="text-xl font-bold text-white mb-2">Green Future Summit</h3>
-                                        <p className="text-gray-300">Sustainable energy and environmental innovation conference.</p>
+                                        <h3 className="text-xl font-bold text-white mb-2">{allPlans("project6_title")}</h3>
+                                        <p className="text-gray-300">{allPlans("project6_desc")}</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">Green Future Summit</h3>
-                                    <p className="text-gray-600">Sustainability Conference</p>
+                                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition duration-300">{allPlans("project6_title")}</h3>
+                                    <p className="text-gray-600">{allPlans("project6_category")}</p>
                                 </div>
                                 <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-blue-600 transition duration-300">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600 group-hover:text-white transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -624,9 +625,9 @@ export default function AllPlansPage() {
                     {/* CTA Button */}
                     <div className="mt-16 text-center" data-aos="fade-up">
                         <Link href="/portfolio" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-lg group">
-                            <span>View All Projects</span>
-                            <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <span className="relative z-10">{allPlans("view_all_projects")}</span>
+                            <span className="relative z-10 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-800 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                             </span>
@@ -646,11 +647,11 @@ export default function AllPlansPage() {
                 <div className="container mx-auto px-4 relative z-10">
                     {/* Section Header */}
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                        <span className="text-blue-600 font-semibold uppercase tracking-widest text-sm">Testimonials</span>
-                        <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">What Our Clients Say</h2>
+                        <span className="text-blue-600 font-semibold uppercase tracking-widest text-sm">{allPlans("testimonials_title")}</span>
+                        <h2 className="text-4xl font-bold text-gray-900 mt-2 mb-4">{allPlans("testimonials_heading")}</h2>
                         <div className="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
                         <p className="text-gray-600 text-lg">
-                            Don't just take our word for it. Here's what our clients have to say about their experience working with All Plans.
+                            {allPlans("testimonials_desc")}
                         </p>
                     </div>
                     
@@ -676,19 +677,19 @@ export default function AllPlansPage() {
                             
                             {/* Content */}
                             <p className="text-gray-700 mb-6 italic">
-                                "All Plans transformed our corporate conference into an unforgettable experience. Their attention to detail, creative solutions, and flawless execution exceeded our expectations. We've received countless compliments from attendees."
+                                {allPlans("testimonial1_text")}
                             </p>
                             
                             {/* Author */}
                             <div className="flex items-center">
                                 <img 
                                     src="https://randomuser.me/api/portraits/women/46.jpg" 
-                                    alt="Sarah Johnson" 
+                                    alt={allPlans("testimonial1_name")} 
                                     className="w-12 h-12 rounded-full object-cover mr-4"
                                 />
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">Sarah Johnson</h4>
-                                    <p className="text-gray-600 text-sm">Marketing Director, TechCorp</p>
+                                    <h4 className="font-semibold text-gray-900">{allPlans("testimonial1_name")}</h4>
+                                    <p className="text-gray-600 text-sm">{allPlans("testimonial1_position")}</p>
                                 </div>
                             </div>
                         </div>
@@ -713,19 +714,19 @@ export default function AllPlansPage() {
                             
                             {/* Content */}
                             <p className="text-gray-700 mb-6 italic">
-                                "The exhibition All Plans designed for us attracted twice the expected foot traffic and resulted in a 40% increase in leads compared to previous years. Their strategic approach and innovative design made all the difference."
+                                {allPlans("testimonial2_text")}
                             </p>
                             
                             {/* Author */}
                             <div className="flex items-center">
                                 <img 
                                     src="https://randomuser.me/api/portraits/men/33.jpg" 
-                                    alt="Ahmad Al-Faisal" 
+                                    alt={allPlans("testimonial2_name")} 
                                     className="w-12 h-12 rounded-full object-cover mr-4"
                                 />
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">Ahmad Al-Faisal</h4>
-                                    <p className="text-gray-600 text-sm">CEO, Innovate Medical</p>
+                                    <h4 className="font-semibold text-gray-900">{allPlans("testimonial2_name")}</h4>
+                                    <p className="text-gray-600 text-sm">{allPlans("testimonial2_position")}</p>
                                 </div>
                             </div>
                         </div>
@@ -750,19 +751,19 @@ export default function AllPlansPage() {
                             
                             {/* Content */}
                             <p className="text-gray-700 mb-6 italic">
-                                "Working with All Plans has been a game-changer for our annual industry summit. Their team handled everything professionally from concept to execution, allowing us to focus on content and networking with our attendees."
+                                {allPlans("testimonial3_text")}
                             </p>
                             
                             {/* Author */}
                             <div className="flex items-center">
                                 <img 
                                     src="https://randomuser.me/api/portraits/women/63.jpg" 
-                                    alt="Maha Al-Mutairi" 
+                                    alt={allPlans("testimonial3_name")} 
                                     className="w-12 h-12 rounded-full object-cover mr-4"
                                 />
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">Maha Al-Mutairi</h4>
-                                    <p className="text-gray-600 text-sm">Events Director, Global Finance</p>
+                                    <h4 className="font-semibold text-gray-900">{allPlans("testimonial3_name")}</h4>
+                                    <p className="text-gray-600 text-sm">{allPlans("testimonial3_position")}</p>
                                 </div>
                             </div>
                         </div>
@@ -782,11 +783,11 @@ export default function AllPlansPage() {
                 
                 <div className="container mx-auto px-4 relative z-10">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                        <span className="text-blue-200 font-semibold uppercase tracking-widest text-sm">Our Impact</span>
-                        <h2 className="text-5xl font-bold text-white mt-2 mb-6">Numbers That Speak</h2>
+                        <span className="text-blue-200 font-semibold uppercase tracking-widest text-sm">{allPlans("stats_subtitle")}</span>
+                        <h2 className="text-5xl font-bold text-white mt-2 mb-6">{allPlans("stats_title")}</h2>
                         <div className="h-1 w-24 bg-blue-400 mx-auto mb-8"></div>
                         <p className="text-blue-100 text-xl leading-relaxed">
-                            Our exceptional track record reflects our unwavering commitment to excellence and consistent delivery of impactful events and exhibitions.
+                            {allPlans("stats_desc")}
                         </p>
                     </div>
                     
@@ -811,8 +812,8 @@ export default function AllPlansPage() {
                                             <span className="text-blue-300 ml-1">+</span>
                                         </h3>
                                     </div>
-                                    <p className="text-blue-100 text-xl font-medium">Happy Clients</p>
-                                    <p className="text-blue-200/70 text-center mt-3">Satisfied partners who trust us with their events year after year</p>
+                                    <p className="text-blue-100 text-xl font-medium">{allPlans("stat1_title")}</p>
+                                    <p className="text-blue-200/70 text-center mt-3">{allPlans("stat1_desc")}</p>
                                 </div>
                             </div>
                         </div>
@@ -836,8 +837,8 @@ export default function AllPlansPage() {
                                             <span className="text-blue-300 ml-1">+</span>
                                         </h3>
                                     </div>
-                                    <p className="text-blue-100 text-xl font-medium">Projects Completed</p>
-                                    <p className="text-blue-200/70 text-center mt-3">Successful events and exhibitions delivered with excellence</p>
+                                    <p className="text-blue-100 text-xl font-medium">{allPlans("stat2_title")}</p>
+                                    <p className="text-blue-200/70 text-center mt-3">{allPlans("stat2_desc")}</p>
                                 </div>
                             </div>
                         </div>
@@ -860,8 +861,8 @@ export default function AllPlansPage() {
                                             <span className="counter relative" data-count="12">12</span>
                                         </h3>
                                     </div>
-                                    <p className="text-blue-100 text-xl font-medium">Countries Served</p>
-                                    <p className="text-blue-200/70 text-center mt-3">International reach across the MENA region and beyond</p>
+                                    <p className="text-blue-100 text-xl font-medium">{allPlans("stat3_title")}</p>
+                                    <p className="text-blue-200/70 text-center mt-3">{allPlans("stat3_desc")}</p>
                                 </div>
                             </div>
                         </div>
@@ -885,8 +886,8 @@ export default function AllPlansPage() {
                                             <span className="text-blue-300 ml-1">%</span>
                                         </h3>
                                     </div>
-                                    <p className="text-blue-100 text-xl font-medium">Client Satisfaction</p>
-                                    <p className="text-blue-200/70 text-center mt-3">Exceptional results that exceed client expectations</p>
+                                    <p className="text-blue-100 text-xl font-medium">{allPlans("stat4_title")}</p>
+                                    <p className="text-blue-200/70 text-center mt-3">{allPlans("stat4_desc")}</p>
                                 </div>
                             </div>
                         </div>
@@ -894,14 +895,13 @@ export default function AllPlansPage() {
                     
                     {/* Action Button */}
                     <div className="text-center mt-16" data-aos="fade-up">
-                        <Link href="/contact" className="group relative inline-flex items-center gap-2 bg-white text-blue-800 font-semibold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden">
-                            <span className="relative z-10">Get Started With Us</span>
+                        <Link href={`/${currentLocale}/contact`} className="group relative inline-flex items-center gap-2 bg-white text-blue-800 font-semibold py-4 px-10 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-2xl overflow-hidden">
+                            <span className="relative z-10">{allPlans("cta_button")}</span>
                             <span className="relative z-10 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-800 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                             </span>
-                            <span className="absolute top-0 left-0 w-0 h-full bg-gradient-to-r from-blue-100 to-white/80 transition-all duration-500 group-hover:w-full"></span>
                         </Link>
                     </div>
                 </div>
