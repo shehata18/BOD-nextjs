@@ -1,3 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Global overflow control */
 html, body {
   overflow-x: hidden !important;
@@ -10,6 +15,10 @@ html, body {
 
 * {
   box-sizing: border-box;
+}
+
+html[dir="rtl"] .arowIcon {
+  transform: scaleX(-1);
 }
 
 /* Container control */
@@ -179,10 +188,6 @@ html, body {
 .stagger-animation > div:nth-child(8) { transition-delay: 0.8s; }
 .stagger-animation > div:nth-child(9) { transition-delay: 0.9s; }
 .stagger-animation > div:nth-child(10) { transition-delay: 1s; }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Custom Animations */
 .news-card {

@@ -28,7 +28,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <html lang={locale} style={{ overflowX: 'hidden' }}>
+      <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} style={{ overflowX: 'hidden' }}>
         <body style={{ overflowX: 'hidden', maxWidth: '100vw' }} className={`${inter.className} ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
           <Script 
             src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"

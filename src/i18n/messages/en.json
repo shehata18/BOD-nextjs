@@ -132,7 +132,7 @@
     "lo_uniforms_industrial_industry_desc": "Workwear, safety gear, and factory uniforms",
     "lo_uniforms_security_industry": "Security",
     "lo_uniforms_security_industry_desc": "Security personnel uniforms, guard outfits, and safety wear",
-    "lo_uniforms_retail_industry": "Retail", 
+    "lo_uniforms_retail_industry": "Retail",
     "lo_uniforms_retail_industry_desc": "Store staff uniforms, promotional wear, and brand apparel",
     "lo_uniforms_transportation_industry": "Transportation",
     "lo_uniforms_transportation_industry_desc": "Airlines, railways, and other transport staff uniforms",
@@ -355,104 +355,104 @@
       "title": "Graston Medical Clinics",
       "subtitle": "Specialized Physical Therapy & Rehabilitation Centers",
       "explore_services": "Explore Our Services",
-      
+
       "about_title": "About Graston Medical Clinics",
       "about_p1": "Graston Medical Clinics is REACH Holding's premium healthcare subsidiary, providing specialized physical therapy and rehabilitation services with the latest medical technologies and evidence-based treatment approaches.",
       "about_p2": "With multiple state-of-the-art facilities across the Middle East, our clinics offer patients access to board-certified therapists and medical specialists who work together to deliver personalized care plans for optimal recovery and health outcomes.",
-      
+
       "core_services_title": "Our Core Services",
       "service1": "Physical Therapy & Rehabilitation",
       "service2": "Sports Medicine & Recovery",
       "service3": "Orthopedic Therapy",
       "service4": "Neurological Rehabilitation",
       "service5": "Pain Management Solutions",
-      
+
       "specialized_services_title": "Our Specialized Services",
-      
+
       "service_graston_title": "Graston Technique®",
       "service_graston_desc": "A specialized approach to soft tissue mobilization that helps break down scar tissue and fascial restrictions using stainless steel instruments.",
-      
+
       "service_sports_title": "Sports Rehabilitation",
       "service_sports_desc": "Customized recovery programs for athletes of all levels, focusing on quick, safe return to sports activities with improved performance.",
-      
+
       "service_orthopedic_title": "Orthopedic Therapy",
       "service_orthopedic_desc": "Specialized treatment for conditions affecting bones, joints, ligaments, tendons, and muscles using evidence-based protocols.",
-      
+
       "service_neurological_title": "Neurological Rehabilitation",
       "service_neurological_desc": "Comprehensive therapy for patients recovering from stroke, brain injury, and other neurological conditions to regain function and independence.",
-      
+
       "service_functional_title": "Functional Movement",
       "service_functional_desc": "Assessment and treatment focusing on restoring natural movement patterns to prevent injury and improve overall physical performance.",
-      
+
       "service_pain_title": "Pain Management",
       "service_pain_desc": "Multidisciplinary approach to chronic pain management using physical modalities, manual therapy and exercise to reduce reliance on medication.",
-      
+
       "approach_title": "Our Therapeutic Approach",
       "patient_centered_title": "Patient-Centered Care",
       "patient_centered_desc": "Our approach places each patient at the center of their treatment journey. We recognize that every individual has unique needs and goals, and we tailor our therapy plans accordingly.",
-      
+
       "approach_assessment_title": "Comprehensive Assessment",
       "approach_assessment_desc": "Our treatment begins with a thorough evaluation to identify the root causes of your condition, not just the symptoms.",
-      
+
       "approach_treatment_title": "Personalized Treatment Plans",
       "approach_treatment_desc": "We create customized therapy programs that address your specific needs, lifestyle factors, and recovery goals.",
-      
+
       "approach_monitoring_title": "Continuous Progress Monitoring",
       "approach_monitoring_desc": "We regularly assess your improvement and adjust treatment approaches to optimize your recovery timeline.",
-      
+
       "approach_education_title": "Patient Education",
       "approach_education_desc": "We empower you with knowledge and self-management techniques to maintain progress between sessions and after discharge.",
-      
+
       "team_title": "Our Expert Team",
       "team_desc": "Our clinics are staffed with highly qualified healthcare professionals dedicated to providing exceptional care.",
-      
+
       "team_therapists_title": "Licensed Physical Therapists",
       "team_therapists_desc": "Board-certified therapists with advanced training in various specialties and therapeutic techniques.",
-      
+
       "team_specialists_title": "Medical Specialists",
       "team_specialists_desc": "Orthopedic and neurological specialists who collaborate with our therapists to ensure comprehensive care.",
-      
+
       "team_support_title": "Support Staff",
       "team_support_desc": "Dedicated administrators and assistants who ensure a smooth, comfortable experience throughout your treatment.",
-      
+
       "join_team_btn": "Join Our Team",
-      
+
       "tech_title": "Our Advanced Technologies",
       "tech_desc": "We utilize the latest therapeutic technologies to enhance treatment effectiveness and accelerate recovery.",
-      
+
       "tech_graston_title": "Graston Instrument-Assisted Therapy",
       "tech_graston_desc": "Specialized stainless steel instruments to effectively treat soft tissue restrictions and improve recovery outcomes.",
       "tech_graston_feature1": "Reduces treatment time and improves outcomes",
       "tech_graston_feature2": "Increases range of motion and function",
       "tech_graston_feature3": "Targets deep tissue restrictions effectively",
-      
+
       "tech_electro_title": "Electrotherapy Systems",
       "tech_electro_desc": "Advanced electrical stimulation technologies for pain management and muscle rehabilitation.",
       "tech_electro_feature1": "Non-invasive pain relief solutions",
       "tech_electro_feature2": "Promotes tissue healing and regeneration",
       "tech_electro_feature3": "Targets specific muscle groups effectively",
-      
+
       "tech_ultrasound_title": "Therapeutic Ultrasound",
       "tech_ultrasound_desc": "High-frequency sound waves that promote healing by increasing blood flow and reducing inflammation.",
       "tech_ultrasound_feature1": "Deep tissue heating and increased circulation",
       "tech_ultrasound_feature2": "Reduces inflammation and swelling",
       "tech_ultrasound_feature3": "Accelerates the healing process",
-      
+
       "testimonials_title": "Patient Success Stories",
       "testimonials_desc": "Hear from patients who have experienced significant improvements through our therapy programs.",
-      
+
       "testimonial1": "After my sports injury, I thought my running days were over. The team at Graston not only got me back on my feet but helped me achieve better performance than before my injury.",
       "testimonial1_name": "Sara Martinez",
       "testimonial1_title": "Marathon Runner",
-      
+
       "testimonial2": "The chronic back pain I suffered for years was resolved in just two months of specialized treatment. The Graston Technique made all the difference when nothing else worked.",
       "testimonial2_name": "Ahmed Al-Farsi",
       "testimonial2_title": "Business Executive",
-      
+
       "testimonial3": "Following my stroke, I was unable to perform basic daily activities. The neurological rehabilitation program at Graston helped me regain my independence and confidence.",
       "testimonial3_name": "Elizabeth Chen",
       "testimonial3_title": "Stroke Recovery Patient",
-      
+
       "cta_title": "Start Your Healing Journey Today",
       "cta_desc": "Our expert team is ready to help you overcome pain, recover from injury, and achieve optimal physical function.",
       "cta_appointment_btn": "Schedule an Appointment",
@@ -463,7 +463,7 @@
       "subtitle": "Your Trusted Partner in Vehicle Care and Excellence",
       "explore_services": "Explore Our Services",
       "contact_us": "Contact Us",
-      
+
       "excellence_title": "Excellence in Automotive Care",
       "excellence_desc": "At PowerMark Auto, we combine cutting-edge technology with expert craftsmanship to deliver unparalleled automotive care. Our state-of-the-art facility and certified technicians ensure your vehicle receives the highest standard of service.",
       "years_experience": "15+ Years",
@@ -472,67 +472,67 @@
       "expert_technicians_desc": "Factory-trained professionals with years of experience",
       "quality_guaranteed_title": "Quality Guaranteed",
       "quality_guaranteed_desc": "Industry-leading warranty on all our services",
-      
+
       "services_title": "Our Premium Services",
       "services_subtitle": "Comprehensive automotive solutions tailored to your vehicle's needs",
-      
+
       "service1_title": "Routine Maintenance",
       "service1_desc": "Keep your vehicle running smoothly with our comprehensive maintenance services.",
       "service1_feature1": "Oil & Filter Changes",
       "service1_feature2": "Fluid Services",
       "service1_feature3": "Multi-Point Inspection",
-      
+
       "service2_title": "Express Service",
       "service2_desc": "Quick and efficient service when you're short on time.",
       "service2_feature1": "30-Minute Oil Change",
       "service2_feature2": "Quick Tire Service",
       "service2_feature3": "Battery Check & Replace",
-      
+
       "service3_title": "Mechanical Repairs",
       "service3_desc": "Expert diagnosis and repair for all mechanical components.",
       "service3_feature1": "Engine Diagnostics",
       "service3_feature2": "Transmission Service",
       "service3_feature3": "Brake System Repairs",
-      
+
       "service4_title": "Performance Upgrades",
       "service4_desc": "Enhance your vehicle's performance with our expert tuning services.",
       "service4_feature1": "Engine Tuning",
       "service4_feature2": "Suspension Upgrades",
       "service4_feature3": "Performance Testing",
-      
+
       "service5_title": "Diagnostic Services",
       "service5_desc": "Advanced computer diagnostics for precise problem identification.",
       "service5_feature1": "Computer Diagnostics",
       "service5_feature2": "Error Code Analysis",
       "service5_feature3": "Sensor Testing",
-      
+
       "service6_title": "Preventive Maintenance",
       "service6_desc": "Regular maintenance to prevent future problems and extend vehicle life.",
       "service6_feature1": "Scheduled Maintenance",
       "service6_feature2": "Safety Inspections",
       "service6_feature3": "Component Testing",
-      
+
       "why_choose_title": "Why Choose PowerMark",
       "why_choose_subtitle": "Experience the difference of premium automotive care backed by expertise, technology, and dedication.",
-      
+
       "feature1_title": "Expert Team",
       "feature1_desc": "Our certified technicians bring decades of combined experience and continuous training to every service.",
       "feature1_point1": "Factory-Trained Technicians",
       "feature1_point2": "Continuous Professional Development",
       "feature1_point3": "Specialized Expertise",
-      
+
       "feature2_title": "Advanced Technology",
       "feature2_desc": "State-of-the-art diagnostic equipment and tools for precise service and repairs.",
       "feature2_point1": "Modern Diagnostic Equipment",
       "feature2_point2": "Digital Service Records",
       "feature2_point3": "Real-time Updates",
-      
+
       "feature3_title": "Quality Guarantee",
       "feature3_desc": "We stand behind our work with comprehensive service warranties and satisfaction guarantee.",
       "feature3_point1": "Service Warranty",
       "feature3_point2": "Genuine Parts",
       "feature3_point3": "Satisfaction Guaranteed",
-      
+
       "stat1_value": "15+",
       "stat1_title": "Years Experience",
       "stat2_value": "10K+",
@@ -541,55 +541,55 @@
       "stat3_title": "Expert Technicians",
       "stat4_value": "24/7",
       "stat4_title": "Support Available",
-      
+
       "trust_badge1": "Certified Service Center",
       "trust_badge2": "Professional Equipment",
       "trust_badge3": "Guaranteed Work",
-      
+
       "customization_title": "Customization Studio",
       "customization_subtitle": "Transform your vehicle into a personalized masterpiece with our expert customization services",
-      
+
       "customization_showcase_title": "Featured Custom Builds",
       "customization_showcase_desc": "Discover our most impressive vehicle transformations and imagine the possibilities for your own ride",
       "view_gallery": "View Gallery",
-      
+
       "customization_option1_title": "Exterior Styling",
       "customization_option1_desc": "Custom paint finishes, body kits, wraps, and graphics that transform your vehicle's appearance",
       "customization_option1_feature1": "Premium Paint & Wraps",
       "customization_option1_feature2": "Custom Body Modifications",
-      
+
       "customization_option2_title": "Interior Design",
       "customization_option2_desc": "Luxury upholstery, custom dashboards, and personalized cabin features for ultimate comfort",
       "customization_option2_feature1": "Premium Materials",
       "customization_option2_feature2": "Bespoke Interior Elements",
-      
+
       "customization_option3_title": "Audio & Electronics",
       "customization_option3_desc": "State-of-the-art sound systems, lighting, and entertainment technology for a superior experience",
       "customization_option3_feature1": "Premium Sound Systems",
       "customization_option3_feature2": "Custom Lighting Solutions",
-      
+
       "customization_option4_title": "Performance Enhancements",
       "customization_option4_desc": "Upgrades that boost power, handling, and overall performance while maintaining reliability",
       "customization_option4_feature1": "Engine Modifications",
       "customization_option4_feature2": "Suspension & Brake Upgrades",
-      
+
       "customization_process_title": "Our Customization Process",
-      
+
       "customization_step1_title": "Consultation & Design",
       "customization_step1_desc": "Meet with our design specialists to discuss your vision and explore possibilities for your vehicle",
-      
+
       "customization_step2_title": "Detailed Proposal",
       "customization_step2_desc": "Receive a comprehensive plan including designs, materials, timeline, and investment details",
-      
+
       "customization_step3_title": "Expert Craftsmanship",
       "customization_step3_desc": "Our skilled technicians execute your customization with precision and attention to detail",
-      
+
       "customization_step4_title": "Final Reveal",
       "customization_step4_desc": "Experience the unveiling of your transformed vehicle and enjoy your personalized masterpiece",
-      
+
       "customization_cta_button": "Start Your Custom Project",
       "customization_cta_desc": "Book a consultation with our design team to begin bringing your vision to life",
-      
+
       "cta_title": "Ready for Premium Auto Service?",
       "cta_desc": "Experience the difference at PowerMark Auto. Schedule your appointment today.",
       "cta_button1": "Book an Appointment",
@@ -1116,5 +1116,104 @@
     "cta_title": "Enhance Your Delivery Experience",
     "cta_desc": "Partner with Peak Time Logistics to provide exceptional delivery and customer service experiences for your business and customers.",
     "cta_button": "Partner With Us"
+  },
+  "all_plans": {
+    "hero_subtitle": "Comprehensive event planning and management services for corporate and private events of all sizes.",
+    "explore_services": "Explore Our Services",
+    "contact_us": "Contact Us",
+    "about_title": "ABOUT US",
+    "about_heading": "Transforming Your Event Vision Into Reality",
+    "about_desc1": "All Plans is a premier event planning and management company specializing in creating memorable experiences for corporate events, conferences, exhibitions, and private celebrations.",
+    "about_desc2": "With our team of experienced professionals and attention to detail, we handle every aspect of your event from concept development to flawless execution, ensuring your vision comes to life exactly as you imagined.",
+    "execution_title": "Flawless Execution",
+    "execution_desc": "We pride ourselves on meticulous planning and seamless execution of every event, no matter the size or complexity.",
+    "feature1_title": "Strategic Planning",
+    "feature1_desc": "Comprehensive event strategy and planning tailored to your specific goals and objectives.",
+    "feature2_title": "Expert Team",
+    "feature2_desc": "Dedicated professionals with extensive experience in event management and coordination.",
+    "feature3_title": "Data-Driven Insights",
+    "feature3_desc": "Detailed analytics and reporting to measure event success and ROI.",
+    "feature4_title": "Comprehensive Documentation",
+    "feature4_desc": "Detailed event documentation and reporting to capture insights and improve future events.",
+    "testimonials_heading": "What Our Clients Say",
+    "testimonials_desc": "Hear from organizations that have trusted us with their most important events.",
+    "testimonial1_text": "All Plans transformed our annual corporate conference into an unforgettable experience. Their attention to detail and creative solutions exceeded our expectations at every turn.",
+    "testimonial1_name": "Sarah Johnson",
+    "testimonial1_position": "Marketing Director, Tech Innovations Inc.",
+    "testimonial2_text": "Working with All Plans was a game-changer for our product launch event. Their team handled everything professionally, allowing us to focus on our business objectives.",
+    "testimonial2_name": "Michael Chen",
+    "testimonial2_position": "CEO, Future Solutions",
+    "testimonial3_text": "The level of service and creativity that All Plans brings to event planning is unmatched. They've become our go-to partner for all our corporate events.",
+    "testimonial3_name": "Emily Rodriguez",
+    "testimonial3_position": "Events Manager, Global Enterprises",
+    "stats_subtitle": "OUR IMPACT",
+    "stats_title": "The Numbers Speak For Themselves",
+    "stats_desc": "Our track record of successful events and satisfied clients demonstrates our commitment to excellence in event planning and management.",
+    "stat1_title": "Happy Clients",
+    "stat1_desc": "Organizations that have trusted us with their events and continue to partner with us.",
+    "stat2_title": "Events Managed",
+    "stat2_desc": "Successful events planned and executed across various industries and scales.",
+    "stat3_title": "Countries",
+    "stat3_desc": "Global reach with events managed across multiple countries and cultures.",
+    "stat4_title": "Client Satisfaction",
+    "stat4_desc": "Our clients rate their experience with us as excellent or outstanding.",
+    "cta_button": "Start Planning Your Event",
+    "discover_services": "Discover Our Services",
+    "services_subtitle": "OUR SERVICES",
+    "services_title": "Comprehensive Event Planning Solutions",
+    "services_desc": "We offer a full range of event planning and management services to meet your specific needs and objectives.",
+    "service1_title": "Corporate Events",
+    "service1_desc": "Professional planning and execution of corporate meetings, conferences, and team-building events.",
+    "service1_feature1": "Strategic venue selection",
+    "service1_feature2": "Comprehensive agenda planning",
+    "service1_feature3": "Professional event staffing",
+    "service2_title": "Conference Management",
+    "service2_desc": "End-to-end management of conferences from planning to execution and post-event analysis.",
+    "service2_feature1": "Speaker coordination",
+    "service2_feature2": "Registration management",
+    "service2_feature3": "Technical production",
+    "service3_title": "Custom Event Solutions",
+    "service3_desc": "Tailored event planning services designed to meet your unique requirements and objectives.",
+    "service3_feature1": "Personalized event strategy",
+    "service3_feature2": "Custom branding integration",
+    "service3_feature3": "Specialized vendor coordination",
+    "service4_title": "Virtual Events",
+    "service4_desc": "Professional planning and production of engaging virtual and hybrid events.",
+    "service4_feature1": "Platform selection and setup",
+    "service4_feature2": "Interactive content creation",
+    "service4_feature3": "Technical support and troubleshooting",
+    "service5_title": "Budget Management",
+    "service5_desc": "Strategic financial planning and cost control for events of all sizes.",
+    "service5_feature1": "Detailed budget development",
+    "service5_feature2": "Vendor negotiation",
+    "service5_feature3": "Cost tracking and reporting",
+    "service6_title": "Payment Processing",
+    "service6_desc": "Secure and efficient payment solutions for event registrations and transactions.",
+    "service6_feature1": "Multiple payment options",
+    "service6_feature2": "Secure transaction processing",
+    "service6_feature3": "Automated invoicing",
+    "request_quote": "Request a Quote",
+    "portfolio_subtitle": "OUR PORTFOLIO",
+    "portfolio_title": "Showcasing Our Successful Events",
+    "portfolio_desc": "Explore our diverse portfolio of successful events across various industries and scales, demonstrating our expertise and creativity in event planning and management.",
+    "project1_title": "Global Tech Summit",
+    "project1_desc": "A premier technology conference bringing together industry leaders and innovators from around the world.",
+    "project1_category": "Conference",
+    "project2_title": "Healthcare Innovation Expo",
+    "project2_desc": "An exhibition showcasing the latest advancements in healthcare technology and services.",
+    "project2_category": "Exhibition",
+    "project3_title": "Corporate Leadership Retreat",
+    "project3_desc": "A strategic planning and team-building event for executive leadership teams.",
+    "project3_category": "Corporate Event",
+    "project4_title": "International Finance Forum",
+    "project4_desc": "A high-profile gathering of financial experts discussing global economic trends and opportunities.",
+    "project4_category": "Conference",
+    "project5_title": "Product Launch Gala",
+    "project5_desc": "An elegant evening event celebrating the launch of a revolutionary new product.",
+    "project5_category": "Launch Event",
+    "project6_title": "Sustainable Energy Symposium",
+    "project6_desc": "A collaborative event focused on innovations and policies in renewable energy.",
+    "project6_category": "Symposium",
+    "view_all_projects": "View All Projects"
   }
 }
