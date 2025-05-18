@@ -40,7 +40,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
           />
           <AosInit />
           <Header />
-          <div className="overflow-x-hidden w-full">
+          <div className=" w-full">
             {children}
           </div>
           <Footer />
