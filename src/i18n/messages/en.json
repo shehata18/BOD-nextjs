@@ -1215,5 +1215,189 @@
     "project6_desc": "A collaborative event focused on innovations and policies in renewable energy.",
     "project6_category": "Symposium",
     "view_all_projects": "View All Projects"
+  },
+  "alrawaq-alfareed": {
+    "hero_title": "Al Rawaq Al Fareed",
+    "hero_subtitle": "Hotel Operations & Maintenance",
+    "hero_description": "Premium hotel management, operations, and maintenance services that elevate the hospitality experience.",
+    "hero_cta_services": "Our Services",
+    "hero_cta_contact": "Contact Us",
+
+    "about_subtitle": "About Us",
+    "about_title": "Excellence in Hotel Management",
+    "about_established": "Est. 2010",
+    "about_subheading": "Transforming Hotel Operations",
+    "about_paragraph1": "Al Rawaq Al Fareed is a leading hotel operations and maintenance company specializing in comprehensive hospitality management services. We pride ourselves on elevating the guest experience through our meticulous attention to detail and commitment to operational excellence.",
+    "about_paragraph2": "With our extensive experience in the hospitality industry, we provide end-to-end solutions for hotels of all sizes, from boutique establishments to luxury chains. Our team of seasoned professionals is dedicated to optimizing every aspect of hotel operations, ensuring maximum efficiency, guest satisfaction, and profitability.",
+
+    "feature1_title": "Operational Excellence",
+    "feature1_desc": "Streamlined processes that maximize efficiency",
+    "feature2_title": "Skilled Workforce",
+    "feature2_desc": "Professionally trained staff at every level",
+    "feature3_title": "Customized Solutions",
+    "feature3_desc": "Tailored approaches for each property's unique needs",
+    "feature4_title": "Preventive Maintenance",
+    "feature4_desc": "Proactive approach to facility upkeep",
+
+    "trusted_excellence_title": "Trusted Excellence",
+    "trusted_excellence_subtitle": "Over 200 hotels managed",
+    "services_subtitle": "What We Offer",
+    "services_title": "Our Comprehensive Services",
+    "services_description": "We provide a full spectrum of hotel management and maintenance services designed to optimize operations and enhance guest experiences.",
+
+    "service1_title": "Hotel Operations Management",
+    "service1_desc": "Comprehensive management of day-to-day hotel operations, including front desk, housekeeping, food & beverage, and overall guest services to ensure smooth functionality and exceptional guest experiences.",
+    "service1_feature1": "Staff management & training",
+    "service1_feature2": "Operational procedures development",
+    "service1_feature3": "Quality control systems",
+
+    "service2_title": "Facility Maintenance",
+    "service2_desc": "Complete maintenance solutions that keep hotel facilities in pristine condition, from preventive maintenance programs to emergency repairs, ensuring all systems operate at peak efficiency.",
+    "service2_feature1": "Preventive maintenance scheduling",
+    "service2_feature2": "HVAC and electrical systems",
+    "service2_feature3": "Plumbing and infrastructure upkeep",
+
+    "service3_title": "Contract Management",
+    "service3_desc": "Expert negotiation and management of hotel contracts, from vendor agreements to management contracts, ensuring favorable terms and seamless execution of all contractual obligations.",
+    "service3_feature1": "Vendor relationship management",
+    "service3_feature2": "Contract negotiation & optimization",
+    "service3_feature3": "Compliance monitoring",
+
+    "service4_title": "Renovation & Remodeling",
+    "service4_desc": "Full-scale renovation and remodeling services that refresh and modernize hotel properties, from guest rooms to public spaces, enhancing appeal and functionality while minimizing operational disruptions.",
+    "service4_feature1": "Design consultation",
+    "service4_feature2": "Project management",
+    "service4_feature3": "Phased implementation plans",
+
+    "service5_title": "Staff Training & Development",
+    "service5_desc": "Comprehensive training programs that elevate service standards, enhance staff skills, and ensure consistent delivery of exceptional guest experiences across all hotel departments.",
+    "service5_feature1": "Customized training programs",
+    "service5_feature2": "Leadership development",
+    "service5_feature3": "Service excellence workshops",
+
+    "service6_title": "Quality Assurance",
+    "service6_desc": "Rigorous quality control systems that maintain and elevate service standards, identify areas for improvement, and ensure consistent delivery of exceptional guest experiences.",
+    "service6_feature1": "Regular audits & inspections",
+    "service6_feature2": "Performance metrics tracking",
+    "service6_feature3": "Continuous improvement programs",
+
+    "portfolio_subtitle": "Our Work",
+    "portfolio_title": "Featured Projects",
+    "portfolio_description": "Discover some of our most successful hotel management projects across the region.",
+
+    "project1_title": "The Royal Palm Resort",
+    "project1_desc": "Complete operations management and maintenance for this 5-star luxury resort with 300 rooms.",
+    "project1_tags": {
+      "Operations": "Operations",
+      "Maintenance": "Maintenance",
+      "Staff Training": "Staff Training"
+    },
+
+    "project2_title": "Azure Boutique Hotel",
+    "project2_desc": "Renovation and operational overhaul for this exclusive 50-room boutique hotel in the city center.",
+    "project2_tags": {
+      "Renovation": "Renovation",
+      "Operations": "Operations",
+      "Quality Assurance": "Quality Assurance"
+    },
+
+    "project3_title": "Grand Business Tower Hotel",
+    "project3_desc": "Comprehensive management contract for this 400-room business hotel including conference facilities.",
+    "project3_tags": {
+      "Contract Management": "Contract Management",
+      "Operations": "Operations",
+      "Staff Development": "Staff Development"
+    },
+
+    "project4_title": "Sapphire Beach Resort",
+    "project4_desc": "Full-scale renovation and ongoing maintenance for this 250-room beachfront resort property.",
+    "project4_tags": {
+      "Renovation": "Renovation",
+      "Maintenance": "Maintenance",
+      "Operations": "Operations"
+    },
+
+    "project5_title": "Metropolitan Luxury Hotel",
+    "project5_desc": "Staff training and operational excellence program for this prestigious urban hotel with 150 rooms.",
+    "project5_tags": {
+      "Staff Training": "Staff Training",
+      "Operations": "Operations",
+      "Quality Assurance": "Quality Assurance"
+    },
+
+    "project6_title": "Heritage Palace Hotel",
+    "project6_desc": "Specialized maintenance and operations for this historic 100-room heritage hotel property.",
+    "project6_tags": {
+      "Heritage Preservation": "Heritage Preservation",
+      "Maintenance": "Maintenance",
+      "Operations": "Operations"
+    },
+
+    "testimonials_subtitle": "What Our Clients Say",
+    "testimonials_title": "Client Testimonials",
+    "testimonial1_name": "Mohamed Al-Farsi",
+    "testimonial1_role": "CEO, Royal Palm Hotels",
+    "testimonial1_text": "Al Rawaq Al Fareed transformed our hotel operations. Their attention to detail and dedication to excellence has significantly improved our guest satisfaction ratings and operational efficiency.",
+
+    "testimonial2_name": "Sarah Al-Qahtani",
+    "testimonial2_role": "Operations Director, Azure Hotels",
+    "testimonial2_text": "Their maintenance program has been a game-changer for our property. We've seen a 40% reduction in emergency repairs and our facilities have never looked better. Highly recommended!",
+
+    "testimonial3_name": "Ahmad Ibrahim",
+    "testimonial3_role": "General Manager, Heritage Palace",
+    "testimonial3_text": "The contract management services provided by Al Rawaq Al Fareed have been exceptional. Their team's expertise has helped us navigate complex vendor relationships and optimize our operational contracts.",
+
+    "why_choose_us_subtitle": "Our Advantages",
+    "why_choose_us_title": "Why Choose Al Rawaq Al Fareed",
+    "why_choose_us_desc": "We combine expertise, innovation, and dedication to deliver exceptional hotel management services that transform hospitality experiences.",
+
+    "stat1_value": "200+",
+    "stat1_label": "Hotels Managed",
+
+    "stat2_value": "500+",
+    "stat2_label": "Skilled Professionals",
+
+    "stat3_value": "15+",
+    "stat3_label": "Years of Excellence",
+
+    "stat4_value": "12+",
+    "stat4_label": "Countries Served",
+
+    "approach_title": "Our Approach to Excellence",
+
+    "step1_title": "Analyze",
+    "step1_desc": "Comprehensive assessment of hotel operations and needs",
+
+    "step2_title": "Strategize",
+    "step2_desc": "Develop customized solutions and implementation plans",
+
+    "step3_title": "Implement",
+    "step3_desc": "Execute strategies with skilled teams and meticulous oversight",
+
+    "step4_title": "Optimize",
+    "step4_desc": "Continuous improvement through data-driven refinements",
+
+    "values_title": "Our Core Values",
+    "value1_title": "Excellence",
+    "value1_desc": "We strive for perfection in every aspect of our operations",
+    "value2_title": "Innovation",
+    "value2_desc": "We continuously adopt new approaches and technologies",
+    "value3_title": "Integrity",
+    "value3_desc": "We operate with transparency and ethical standards",
+    "value4_title": "Customer Focus",
+    "value4_desc": "We prioritize client satisfaction and guest experience",
+
+    "benefits_title": "Benefits of Partnership",
+    "benefit1_title": "Increased Profitability",
+    "benefit1_desc": "Optimize operations to maximize revenue and reduce costs",
+    "benefit2_title": "Enhanced Guest Satisfaction",
+    "benefit2_desc": "Improved service quality leading to better reviews and loyalty",
+    "benefit3_title": "Operational Excellence",
+    "benefit3_desc": "Streamlined processes and efficient management systems",
+    "benefit4_title": "Property Value Preservation",
+    "benefit4_desc": "Proactive maintenance to protect and enhance your investment",
+
+    "cta_title": "Connect With Our Team",
+    "cta_email": "or email us at info@alrawaqalfareed.com"
   }
 }
