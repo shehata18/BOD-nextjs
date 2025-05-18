@@ -1399,5 +1399,131 @@
 
     "cta_title": "Connect With Our Team",
     "cta_email": "or email us at info@alrawaqalfareed.com"
+  },
+  "bod-united": {
+    "hero_title": "BOD United",
+    "hero_subtitle": "for Communications & Information Technology",
+    "hero_description": "Pioneering digital transformation with cutting-edge technology solutions in AI, mobile applications, and immersive experiences.",
+    "hero_cta_services": "Explore Solutions",
+    "hero_cta_contact": "Get in Touch",
+    "hero_scroll_to_explore": "Scroll to explore",
+
+    "about_title": "About Us",
+    "about_subtitle": "Innovating the Future of Technology",
+    "about_paragraph1": "BOD United for Communications & Information Technology is the flagship company of BOD Holdings, specializing in cutting-edge technology solutions and digital services. As the parent company, we drive innovation across all our subsidiaries while maintaining our core focus on technological excellence.",
+    "about_paragraph2": "With expertise spanning application development, digital marketing, artificial intelligence, augmented reality, and virtual reality, BOD United is positioned at the forefront of digital transformation in the region.",
+
+    "vision_title": "Our Vision",
+    "vision_desc": "To be the leading technological innovator driving digital transformation globally.",
+    "mission_title": "Our Mission",
+    "mission_desc": "Delivering innovative solutions that empower businesses to thrive in the digital era.",
+
+    "services_title": "Our Services",
+    "services_subtitle": "Comprehensive Technology Solutions",
+    "services_description": "We offer end-to-end technology solutions designed to drive digital transformation and business growth.",
+
+    "service1_title": "Application Development",
+    "service1_desc": "Custom software solutions tailored to your business needs",
+    "service1_feature1": "Mobile app development",
+    "service1_feature2": "Web applications",
+    "service1_feature3": "Enterprise software",
+
+    "service2_title": "Digital Marketing",
+    "service2_desc": "Strategic digital marketing services to enhance your online presence",
+    "service2_feature1": "SEO optimization",
+    "service2_feature2": "Social media management",
+    "service2_feature3": "Content marketing",
+
+    "service3_title": "Artificial Intelligence",
+    "service3_desc": "AI-powered solutions to automate and optimize business processes",
+    "service3_feature1": "Machine learning",
+    "service3_feature2": "Natural language processing",
+    "service3_feature3": "Predictive analytics",
+
+    "service4_title": "Augmented Reality",
+    "service4_desc": "Immersive AR experiences for enhanced user engagement",
+    "service4_feature1": "AR applications",
+    "service4_feature2": "Interactive experiences",
+    "service4_feature3": "Training simulations",
+
+    "service5_title": "Virtual Reality",
+    "service5_desc": "VR solutions for immersive training and visualization",
+    "service5_feature1": "VR environments",
+    "service5_feature2": "Virtual tours",
+    "service5_feature3": "Training modules",
+
+    "service6_title": "IT Consulting",
+    "service6_desc": "Expert guidance on technology implementation and digital transformation",
+    "service6_feature1": "Technology assessment",
+    "service6_feature2": "Digital strategy",
+    "service6_feature3": "Implementation planning",
+
+    "portfolio_title": "Our Work",
+    "portfolio_subtitle": "Featured Projects",
+    "portfolio_description": "Explore our portfolio of successful technology implementations and digital transformations.",
+
+    "project1_title": "Smart City Platform",
+    "project1_desc": "Integrated IoT platform for urban management and citizen services",
+    "project1_category": "IoT Solution",
+
+    "project2_title": "E-Learning Platform",
+    "project2_desc": "Comprehensive online learning management system with AI-powered features",
+    "project2_category": "Education Technology",
+
+    "project3_title": "Healthcare Management System",
+    "project3_desc": "End-to-end hospital management solution with patient care optimization",
+    "project3_category": "Healthcare IT",
+
+    "project4_title": "Retail Analytics Platform",
+    "project4_desc": "AI-powered analytics solution for retail operations optimization",
+    "project4_category": "Business Intelligence",
+
+    "project5_title": "Virtual Reality Training",
+    "project5_desc": "Immersive VR training platform for industrial safety",
+    "project5_category": "VR Solution",
+
+    "project6_title": "Mobile Banking App",
+    "project6_desc": "Secure and feature-rich mobile banking application",
+    "project6_category": "FinTech",
+
+    "contact_title": "Get in Touch",
+    "contact_subtitle": "Let's Discuss Your Project",
+    "contact_description": "Ready to transform your business with cutting-edge technology? Contact us today.",
+    "contact_email": "info@bodunited.com",
+    "contact_phone": "+971 4 123 4567",
+    "contact_address": "Dubai, United Arab Emirates",
+    "case_studies_title": "Success Stories",
+    "case_studies_subtitle": "Our Impact Through Technology",
+    "case_studies_description": "Explore how our solutions have transformed businesses and created exceptional digital experiences.",
+
+    "case_study1_category": "E-Commerce",
+    "case_study1_title": "E-commerce Platform Transformation",
+    "case_study1_description": "Redesigned and rebuilt a leading retailer's e-commerce platform, resulting in a 45% increase in conversion rates and 60% improvement in page load time.",
+    "case_study1_industry": "Retail Industry",
+    "case_study1_cta": "View Case Study",
+
+    "case_study2_category": "Augmented Reality",
+    "case_study2_title": "AR Marketing Campaign",
+    "case_study2_description": "Developed an augmented reality campaign for a consumer goods brand that achieved 2.5 million interactions and increased brand engagement by 78%.",
+    "case_study2_industry": "Consumer Goods",
+    "case_study2_cta": "View Case Study",
+
+    "case_studies_view_all": "View All Case Studies",
+    "impact_title": "Our Impact in Numbers",
+    "impact_years": "Years Experience",
+    "impact_projects": "Completed Projects",
+    "impact_team": "Team Members",
+    "impact_satisfaction": "Client Satisfaction",
+
+    "cta_title": "Ready to Transform Your Business?",
+    "cta_description": "Contact BOD United to discuss how our cutting-edge technology solutions can help your organization innovate, grow, and thrive in the digital age.",
+    "cta_primary": "Start A Conversation",
+    "cta_secondary": "Explore Solutions",
+    "featured_company_title": "Featured Company",
+    "featured_company_description": "BOD United is proudly featured as a key subsidiary of BOD Holdings, showcased on our home page and subsidiaries section.",
+    "home_page_link": "Home Page",
+    "subsidiaries_page_link": "Subsidiaries Page",
+    "service_key_features": "Key Features"
+    
   }
 }
