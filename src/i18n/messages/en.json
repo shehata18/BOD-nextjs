@@ -210,6 +210,12 @@
     "lo_uniforms_quality_badge": "Premium Quality",
     "lo_uniforms_quality_badge_desc": "Crafted with excellence",
     "lo_uniforms_learn_more_process": "Learn More About Our Process",
+    "reach_agency_name": "REACH Digital Agency",
+    "reach_agency_desc": "A leading digital agency specializing in web development, digital marketing, and innovative technology solutions. We help businesses establish and enhance their digital presence through cutting-edge solutions and strategic digital transformation.",
+    "reach_agency_service1": "Web & Mobile Development",
+    "reach_agency_service2": "Digital Marketing & SEO",
+    "reach_agency_service3": "UI/UX Design & Branding",
+    "reach_agency_service4": "Digital Transformation Solutions",
     "asap": {
       "title": "ASAP Maintenance & Operations",
       "subtitle": "Swift and reliable maintenance and operation solutions for all your facility needs.",
