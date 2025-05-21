@@ -24,7 +24,7 @@ export default function Subsidiaries() {
                         <img
                             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                             alt="Corporate Buildings"
-                            className="absolute inset-0 w-full h-full object-cover object-center opacity-50"
+                            className="absolute inset-0 w-full h-full object-center opacity-50"
                         />
                     </div>
                     {/* Overlay Image */ }
@@ -32,7 +32,7 @@ export default function Subsidiaries() {
                         <img
                             src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                             alt="Business Grid"
-                            className="absolute inset-0 w-full h-full object-cover object-center"
+                            className="absolute inset-0 w-full h-full object-center"
                         />
                     </div>
                     {/* Gradient Overlays */ }
@@ -194,492 +194,233 @@ export default function Subsidiaries() {
 
                     {/* Subsidiaries Grid */ }
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* LO Uniforms */ }
-                        <div
-                            id="manufacturing"
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "manufacturing" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="/images/LO%20Company.jpg"
-                                    alt="LO Uniforms"
-                                    className="w-full h-full object-cover"
-                                    onError={ (e) => {
-                                        e.target.onerror = null;
-                                        e.target.src = "https://images.unsplash.com/photo-1514866747592-c2d279258a78?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80";
-                                    } }
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("lo_uniforms_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("manufacturing") }
-                                    </span>
+                        {[
+                            {
+                                id: "manufacturing",
+                                name: "lo_uniforms_name",
+                                category: "manufacturing",
+                                image: "/images/LO%20Company.jpg",
+                                fallbackImage: "https://images.unsplash.com/photo-1514866747592-c2d279258a78?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+                                description: "lo_uniforms_desc",
+                                services: [
+                                    "lo_uniforms_service1",
+                                    "lo_uniforms_service2", 
+                                    "lo_uniforms_service3",
+                                    "lo_uniforms_service4"
+                                ],
+                                link: "/subsidiaries/louniform"
+                            },
+                            {
+                                id: "services",
+                                name: "asap_name",
+                                category: "services", 
+                                image: "/images/ASAP-Comapny.jpg",
+                                fallbackImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+                                description: "asap_desc",
+                                services: [
+                                    "asap_service1",
+                                    "asap_service2",
+                                    "asap_service3", 
+                                    "asap_service4",
+                                    "asap_service5"
+                                ],
+                                link: "/subsidiaries/asap"
+                            },
+                            {
+                                id: "healthcare",
+                                name: "graston_name",
+                                category: "healthcare",
+                                image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+                                description: "graston_desc",
+                                services: [
+                                    "graston_service1",
+                                    "graston_service2",
+                                    "graston_service3",
+                                    "graston_service4",
+                                    "graston_service5"
+                                ],
+                                link: "/subsidiaries/graston"
+                            },
+                            {
+                                id: "automotive",
+                                name: "powermark_name",
+                                category: "automotive",
+                                image: "/images/Power%20Mark%20company%20for%20cars.jpg",
+                                fallbackImage: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+                                description: "powermark_desc",
+                                services: [
+                                    "powermark_service1",
+                                    "powermark_service2",
+                                    "powermark_service3",
+                                    "powermark_service4",
+                                    "powermark_service5"
+                                ],
+                                link: "/subsidiaries/powermark"
+                            },
+                            {
+                                id: "hospitality",
+                                name: "ramadan_name",
+                                category: "hospitality",
+                                image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
+                                description: "ramadan_desc",
+                                services: [
+                                    "ramadan_offering1",
+                                    "ramadan_offering2",
+                                    "ramadan_offering3",
+                                    "ramadan_offering4",
+                                    "ramadan_offering5"
+                                ],
+                                link: "/subsidiaries/ramadan"
+                            },
+                            {
+                                name: "peak_time_logistics_name",
+                                category: "services",
+                                image: "https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2070&auto=format&fit=crop",
+                                description: "peak_time_logistics_desc",
+                                services: [
+                                    "peak_time_logistics_service1",
+                                    "peak_time_logistics_service2",
+                                    "peak_time_logistics_service3",
+                                    "peak_time_logistics_service4",
+                                    "peak_time_logistics_service5"
+                                ],
+                                link: "/subsidiaries/peak-time-logistics"
+                            },
+                            {
+                                id: "technology",
+                                name: "bod_united_name",
+                                category: "technology",
+                                image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+                                description: "bod_united_desc",
+                                services: [
+                                    "bod_united_service1",
+                                    "bod_united_service2",
+                                    "bod_united_service3",
+                                    "bod_united_service4"
+                                ],
+                                link: "/subsidiaries/bod-united"
+                            },
+                            {
+                                name: "seven_eleven_name",
+                                category: "retail",
+                                image: "https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg",
+                                description: "seven_eleven_desc",
+                                services: [
+                                    "seven_eleven_offering1",
+                                    "seven_eleven_offering2",
+                                    "seven_eleven_offering3",
+                                    "seven_eleven_offering4"
+                                ],
+                                link: "/subsidiaries/seven-eleven"
+                            },
+                            {
+                                name: "alrawaq_alfareed_name",
+                                category: "services",
+                                image: "https://images.pexels.com/photos/8850709/pexels-photo-8850709.jpeg",
+                                description: "alrawaq_alfareed_desc",
+                                services: [
+                                    "alrawaq_alfareed_service1",
+                                    "alrawaq_alfareed_service2",
+                                    "alrawaq_alfareed_service3",
+                                    "alrawaq_alfareed_service4"
+                                ],
+                                link: "/subsidiaries/alrawaq-alfareed"
+                            },
+                            {
+                                name: "hrlogin_name",
+                                category: "technology",
+                                image: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                                description: "hrlogin_desc",
+                                services: [
+                                    "hrlogin_service1",
+                                    "hrlogin_service2",
+                                    "hrlogin_service3",
+                                    "hrlogin_service4"
+                                ],
+                                link: "/subsidiaries/hrlogin"
+                            },
+                            {
+                                name: "all_plans_name",
+                                category: "services",
+                                image: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                                description: "all_plans_desc",
+                                services: [
+                                    "all_plans_service1",
+                                    "all_plans_service2",
+                                    "all_plans_service3",
+                                    "all_plans_service4"
+                                ],
+                                link: "/subsidiaries/all-plans"
+                            },
+                            {
+                                name: "reach_agency_name",
+                                category: "technology",
+                                image: "/images/REACH_logo.png",
+                                fallbackImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+                                description: "reach_agency_desc",
+                                services: [
+                                    "reach_agency_service1",
+                                    "reach_agency_service2",
+                                    "reach_agency_service3",
+                                    "reach_agency_service4"
+                                ],
+                                link: "https://reachksa.com",
+                                external: true
+                            }
+                        ].map((subsidiary) => (
+                            <div
+                                key={subsidiary.name}
+                                id={subsidiary.id}
+                                className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                                style={{ display: activeFilter === "all" || activeFilter === subsidiary.category ? "block" : "none" }}
+                            >
+                                <div className="h-[250px] bg-gray-200 flex items-center justify-center">
+                                    <img
+                                        src={subsidiary.image}
+                                        alt={t(subsidiary.name)}
+                                        className="w-full h-full"
+                                        onError={subsidiary.fallbackImage ? (e) => {
+                                            e.target.onerror = null;
+                                            e.target.src = subsidiary.fallbackImage;
+                                        } : undefined}
+                                    />
                                 </div>
-                                <p className="text-gray-600 mb-6">{ t("lo_uniforms_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("lo_uniforms_service1") }</li>
-                                        <li>{ t("lo_uniforms_service2") }</li>
-                                        <li>{ t("lo_uniforms_service3") }</li>
-                                        <li>{ t("lo_uniforms_service4") }</li>
-                                    </ul>
+                                <div className="p-6">
+                                    <div className="flex justify-between items-center mb-4">
+                                        <h3 className="text-xl font-bold text-gray-800">{t(subsidiary.name)}</h3>
+                                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                            {t(subsidiary.category)}
+                                        </span>
+                                    </div>
+                                    <p className="text-gray-600 mb-6">{t(subsidiary.description)}</p>
+                                    <div className="mb-6">
+                                        <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
+                                        <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                            {subsidiary.services.map((service) => (
+                                                <li key={service}>{t(service)}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    {subsidiary.external ? (
+                                        <a
+                                            href={subsidiary.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                        >
+                                            {t("learn_more")}
+                                        </a>
+                                    ) : (
+                                        <Link
+                                            href={subsidiary.link}
+                                            className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                        >
+                                            {t("learn_more")}
+                                        </Link>
+                                    )}
                                 </div>
-                                <Link
-                                    href="/subsidiaries/louniform"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
                             </div>
-                        </div>
-
-                        {/* ASAP Maintenance */ }
-                        <div
-                            id="services"
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="/images/ASAP%20Comapny.jpg"
-                                    alt="ASAP Maintenance & Operations"
-                                    className="w-full h-full object-cover"
-                                    onError={ (e) => {
-                                        e.target.onerror = null;
-                                        e.target.src = "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80";
-                                    } }
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("asap_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("services") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{ t("asap_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("asap_service1") }</li>
-                                        <li>{ t("asap_service2") }</li>
-                                        <li>{ t("asap_service3") }</li>
-                                        <li>{ t("asap_service4") }</li>
-                                        <li>{ t("asap_service5") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/asap"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Graston Medical Clinics */ }
-                        <div
-                            id="healthcare"
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "healthcare" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                                    alt="Graston Medical Clinics"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("graston_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("healthcare") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{ t("graston_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("graston_service1") }</li>
-                                        <li>{ t("graston_service2") }</li>
-                                        <li>{ t("graston_service3") }</li>
-                                        <li>{ t("graston_service4") }</li>
-                                        <li>{ t("graston_service5") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/graston"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* PowerMark Auto */ }
-                        <div
-                            id="automotive"
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "automotive" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="/images/Power%20Mark%20company%20for%20cars.jpg"
-                                    alt="PowerMark Auto"
-                                    className="w-full h-full object-cover"
-                                    onError={ (e) => {
-                                        e.target.onerror = null;
-                                        e.target.src = "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80";
-                                    } }
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("powermark_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("automotive") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{ t("powermark_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("powermark_service1") }</li>
-                                        <li>{ t("powermark_service2") }</li>
-                                        <li>{ t("powermark_service3") }</li>
-                                        <li>{ t("powermark_service4") }</li>
-                                        <li>{ t("powermark_service5") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/powermark"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Ramadan Restaurants */ }
-                        <div
-                            id="hospitality"
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "hospitality" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                                    alt="Ramadan Restaurants"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("ramadan_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("hospitality") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{ t("ramadan_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_offerings") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("ramadan_offering1") }</li>
-                                        <li>{ t("ramadan_offering2") }</li>
-                                        <li>{ t("ramadan_offering3") }</li>
-                                        <li>{ t("ramadan_offering4") }</li>
-                                        <li>{ t("ramadan_offering5") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/ramadan"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Peak Time Logistics */ }
-                        <div
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2070&auto=format&fit=crop"
-                                    alt="Peak Time Logistics"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("peak_time_logistics_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("services") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{ t("peak_time_logistics_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("peak_time_logistics_service1") }</li>
-                                        <li>{ t("peak_time_logistics_service2") }</li>
-                                        <li>{ t("peak_time_logistics_service3") }</li>
-                                        <li>{ t("peak_time_logistics_service4") }</li>
-                                        <li>{ t("peak_time_logistics_service5") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/peak-time-logistics"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* BOD United */ }
-                        <div
-                            id="technology"
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "technology" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                                    alt="BOD United"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("bod_united_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("technology") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">
-                                    { t("bod_united_desc") }
-                                </p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("bod_united_service1") }</li>
-                                        <li>{ t("bod_united_service2") }</li>
-                                        <li>{ t("bod_united_service3") }</li>
-                                        <li>{ t("bod_united_service4") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/bod-united"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Seven-Eleven Grocery Supplies */ }
-                        <div
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "retail" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.pexels.com/photos/3962294/pexels-photo-3962294.jpeg"
-                                    alt="Seven-Eleven Grocery Supplies"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("seven_eleven_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("retail") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{ t("seven_eleven_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_offerings") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("seven_eleven_offering1") }</li>
-                                        <li>{ t("seven_eleven_offering2") }</li>
-                                        <li>{ t("seven_eleven_offering3") }</li>
-                                        <li>{ t("seven_eleven_offering4") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/seven-eleven"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* Alrawaq Alfareed */ }
-                        <div
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={ { display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" } }
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.pexels.com/photos/8850709/pexels-photo-8850709.jpeg"
-                                    alt="Alrawaq Alfareed"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{ t("alrawaq_alfareed_name") }</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        { t("services") }
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{ t("alrawaq_alfareed_desc") }</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{ t("key_services") }:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{ t("alrawaq_alfareed_service1") }</li>
-                                        <li>{ t("alrawaq_alfareed_service2") }</li>
-                                        <li>{ t("alrawaq_alfareed_service3") }</li>
-                                        <li>{ t("alrawaq_alfareed_service4") }</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/alrawaq-alfareed"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    { t("learn_more") }
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* HR Login */ }
-                        <div
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={{ display: activeFilter === "all" || activeFilter === "technology" ? "block" : "none" }}
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="HR Login"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{t("hrlogin_name")}</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        {t("technology")}
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{t("hrlogin_desc")}</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{t("hrlogin_service1")}</li>
-                                        <li>{t("hrlogin_service2")}</li>
-                                        <li>{t("hrlogin_service3")}</li>
-                                        <li>{t("hrlogin_service4")}</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/hrlogin"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    {t("learn_more")}
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* All Plans */}
-                        <div
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={{ display: activeFilter === "all" || activeFilter === "services" ? "block" : "none" }}
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                    alt="All Plans"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{t("all_plans_name") || "All Plans"}</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        {t("services")}
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{t("all_plans_desc") || "Premier event management and exhibition organization company, specializing in creating memorable corporate events, conferences, and exhibitions with meticulous attention to detail."}</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{t("all_plans_service1") || "Exhibition Management"}</li>
-                                        <li>{t("all_plans_service2") || "Conference Organization"}</li>
-                                        <li>{t("all_plans_service3") || "Creative Design Services"}</li>
-                                        <li>{t("all_plans_service4") || "Audio-Visual Production"}</li>
-                                    </ul>
-                                </div>
-                                <Link
-                                    href="/subsidiaries/all-plans"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    {t("learn_more")}
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* REACH Agency */}
-                        <div
-                            className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                            style={{ display: activeFilter === "all" || activeFilter === "technology" ? "block" : "none" }}
-                        >
-                            <div className="h-48 bg-gray-200 flex items-center justify-center">
-                                <img
-                                    src="/images/REACH_logo.png"
-                                    alt="REACH Agency"
-                                    className="max-h-48 w-full object-cover"
-                                    onError={(e) => {
-                                        e.target.onerror = null;
-                                        e.target.src = "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80";
-                                    }}
-                                />
-                            </div>
-                            <div className="p-6">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800">{t("reach_agency_name")}</h3>
-                                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                                        {t("technology")}
-                                    </span>
-                                </div>
-                                <p className="text-gray-600 mb-6">{t("reach_agency_desc")}</p>
-                                <div className="mb-6">
-                                    <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
-                                    <ul className="text-gray-600 list-disc list-inside space-y-1">
-                                        <li>{t("reach_agency_service1")}</li>
-                                        <li>{t("reach_agency_service2")}</li>
-                                        <li>{t("reach_agency_service3")}</li>
-                                        <li>{t("reach_agency_service4")}</li>
-                                    </ul>
-                                </div>
-                                <a
-                                    href="https://reachksa.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
-                                >
-                                    {t("learn_more")}
-                                </a>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -693,7 +434,7 @@ export default function Subsidiaries() {
                                 <img
                                     src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                                     alt="Business Acquisition"
-                                    className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
+                                    className="rounded-lg shadow-2xl w-full h-[400px]"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent rounded-lg"></div>
                                 {/* Decorative Elements */ }
