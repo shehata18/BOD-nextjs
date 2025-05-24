@@ -9,50 +9,89 @@ export default function SectorsPage() {
 
     return (
         <>
-            {/* Enhanced Banner with Curved Design and Animations */ }
-            <section className="relative min-h-[80vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
-                {/* Animated Background Elements */ }
+            {/* Enhanced Modern Banner with Dynamic Design */ }
+            <section className="relative min-h-[90vh] bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900 text-white overflow-hidden">
+                {/* Dynamic Background Elements */ }
                 <div className="absolute inset-0">
-                    <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-                    <div className="absolute top-20 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-                    <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+                    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+                    <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+                    <div className="absolute bottom-0 left-1/2 w-[500px] h-[500px] bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
                 </div>
 
-                {/* Curved Overlay */ }
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3')] bg-cover bg-center opacity-10"></div>
-
-                {/* Floating Elements */ }
+                {/* Animated Background Objects */ }
                 <div className="absolute inset-0 overflow-hidden">
-                    <div className="floating-icon absolute left-[10%] top-[20%]">
-                        <i className="fas fa-microchip text-4xl text-blue-200 opacity-20"></i>
+                    {/* Floating Circles */ }
+                    <div className="absolute w-4 h-4 bg-blue-400 rounded-full top-[15%] left-[15%] animate-float opacity-30"></div>
+                    <div className="absolute w-6 h-6 bg-indigo-400 rounded-full top-[45%] left-[80%] animate-float animation-delay-1000 opacity-30"></div>
+                    <div className="absolute w-8 h-8 bg-purple-400 rounded-full top-[75%] left-[25%] animate-float animation-delay-2000 opacity-30"></div>
+                    
+                    {/* Floating Squares */ }
+                    <div className="absolute w-8 h-8 border-2 border-blue-400 top-[25%] right-[20%] animate-float-rotate opacity-30"></div>
+                    <div className="absolute w-12 h-12 border-2 border-indigo-400 top-[60%] right-[30%] animate-float-rotate animation-delay-1500 opacity-30"></div>
+                    
+                    {/* Animated Lines */ }
+                    <div className="absolute h-32 w-[1px] bg-gradient-to-b from-transparent via-blue-400 to-transparent top-[20%] left-[30%] animate-glow"></div>
+                    <div className="absolute h-48 w-[1px] bg-gradient-to-b from-transparent via-indigo-400 to-transparent top-[40%] right-[20%] animate-glow animation-delay-1000"></div>
+                    
+                    {/* Enhanced Dots Grid */ }
+                    <div className="absolute grid grid-cols-8 gap-12 top-[5%] left-[20%] opacity-20 transform -rotate-6">
+                        {[...Array(48)].map((_, i) => (
+                            <div key={i} 
+                                 className="w-2 h-2 bg-white rounded-full animate-pulse-bright" 
+                                 style={{
+                                     animationDelay: `${i * 100}ms`,
+                                     opacity: Math.random() * 0.5 + 0.3
+                                 }}
+                            ></div>
+                        ))}
                     </div>
-                    <div className="floating-icon absolute left-[85%] top-[40%]">
-                        <i className="fas fa-chart-line text-4xl text-blue-200 opacity-20"></i>
-                    </div>
-                    <div className="floating-icon absolute left-[20%] top-[70%]">
-                        <i className="fas fa-industry text-4xl text-blue-200 opacity-20"></i>
-                    </div>
-                    <div className="floating-icon absolute left-[75%] top-[15%]">
-                        <i className="fas fa-heartbeat text-4xl text-blue-200 opacity-20"></i>
+                    <div className="absolute grid grid-cols-8 gap-12 bottom-[15%] right-[10%] opacity-20 transform rotate-6">
+                        {[...Array(32)].map((_, i) => (
+                            <div key={i} 
+                                 className="w-2 h-2 bg-white rounded-full animate-pulse-bright" 
+                                 style={{
+                                     animationDelay: `${i * 100}ms`,
+                                     opacity: Math.random() * 0.5 + 0.3
+                                 }}
+                            ></div>
+                        ))}
                     </div>
                 </div>
+
+                {/* Modern Grid Overlay */ }
+                <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]"></div>
+
+                {/* Gradient Overlay */ }
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/50 to-transparent"></div>
 
                 {/* Content */ }
                 <div className="container mx-auto px-4 h-full relative z-10">
-                    <div className="flex flex-col justify-center items-center h-full py-20">
-                        {/* Animated Title */ }
-                        <div className="text-center animate-fade-in-up">
-                            <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
+                    <div className="flex flex-col justify-center items-center h-full py-20 text-center">
+                        {/* Enhanced Title with Modern Typography */ }
+                        <div className="animate-fade-in-up max-w-5xl mb-12">
+                            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-200 leading-tight tracking-tight">
                                 { t("page_title") }
                             </h1>
-                            <div className="w-24 h-2 bg-blue-400 mx-auto rounded-full mb-8"></div>
+                            <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full mb-8 transform hover:scale-110 transition-transform duration-300"></div>
                         </div>
 
-                        {/* Animated Description */ }
-                        <div className="max-w-4xl text-center animate-fade-in-up animation-delay-300">
-                            <p className="text-xl md:text-2xl leading-relaxed text-blue-100">
+                        {/* Enhanced Description */ }
+                        <div className="max-w-4xl text-center animate-fade-in-up animation-delay-300 space-y-12">
+                            <p className="text-xl md:text-2xl leading-relaxed text-blue-100/90">
                                 { t("page_subtitle") }
                             </p>
+                            
+                            {/* Modern Call-to-Action Button Container */ }
+                            <div className="flex justify-center items-center space-x-6">
+                                <a href="#technology" 
+                                   className="group relative inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full hover:from-blue-500 hover:to-indigo-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
+                                    <span className="relative z-10">Explore Sectors</span>
+                                    <svg className="w-5 h-5 ml-2 animate-bounce relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                    </svg>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +155,10 @@ export default function SectorsPage() {
                                     { t("tech_summary") }
                                 </p>
 
-                                <Link href="/subsidiaries#technology" className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10">
+                                <Link 
+                                    href="/subsidiaries?sector=technology" 
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
+                                >
                                     { t("view_tech_companies") }
                                 </Link>
                             </div>
@@ -132,64 +174,6 @@ export default function SectorsPage() {
                 </div>
             </section>
 
-            {/* Finance Sector */ }
-            <section id="finance" className="py-20 bg-white">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="lg:w-1/2 animate-slide-in-right">
-                            <div className="bg-gray-50 p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-32 h-32 bg-blue-50 rounded-br-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
-                                    <i className="fas fa-chart-line"></i>
-                                </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{ t("finance_sector") }</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">{ t("finance_desc") }</p>
-
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{ t("key_focus_areas") }</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("finance_focus1") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("finance_focus2") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("finance_focus3") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("finance_focus4") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("finance_focus5") }</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <p className="text-gray-600 mb-6 relative z-10">
-                                    { t("finance_summary") }
-                                </p>
-
-                                <Link href="/subsidiaries#finance" className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10">
-                                    { t("view_finance_companies") }
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="lg:w-1/2 animate-slide-in-left">
-                            <img
-                                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3"
-                                alt="Financial Services"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* Manufacturing Sector */ }
             <section id="manufacturing" className="py-20 bg-gray-50">
@@ -234,7 +218,10 @@ export default function SectorsPage() {
                                     { t("manufacturing_summary") }
                                 </p>
 
-                                <Link href="/subsidiaries#manufacturing" className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10">
+                                <Link 
+                                    href="/subsidiaries?sector=manufacturing" 
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
+                                >
                                     { t("view_manufacturing_companies") }
                                 </Link>
                             </div>
@@ -295,7 +282,10 @@ export default function SectorsPage() {
                                     { t("healthcare_summary") }
                                 </p>
 
-                                <Link href="/subsidiaries#healthcare" className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10">
+                                <Link 
+                                    href="/subsidiaries?sector=healthcare" 
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
+                                >
                                     { t("view_healthcare_companies") }
                                 </Link>
                             </div>
@@ -354,7 +344,10 @@ export default function SectorsPage() {
                                     { t("automotive_summary") }
                                 </p>
 
-                                <Link href="/subsidiaries#automotive" className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10">
+                                <Link 
+                                    href="/subsidiaries?sector=automotive" 
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
+                                >
                                     { t("view_automotive_companies") }
                                 </Link>
                             </div>
@@ -413,7 +406,10 @@ export default function SectorsPage() {
                                     { t("hospitality_summary") }
                                 </p>
 
-                                <Link href="/subsidiaries#hospitality" className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10">
+                                <Link 
+                                    href="/subsidiaries?sector=hospitality" 
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
+                                >
                                     { t("view_hospitality_companies") }
                                 </Link>
                             </div>
@@ -422,6 +418,134 @@ export default function SectorsPage() {
                             <img
                                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3"
                                 alt="Hospitality Services"
+                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Services Sector */}
+            <section id="services" className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="lg:w-1/2 animate-slide-in-right">
+                            <div className="bg-gray-50 p-10 rounded-2xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-32 h-32 bg-blue-50 rounded-br-full z-0"></div>
+                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                                    <i className="fas fa-cogs"></i>
+                                </div>
+                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{t("services_sector")}</h2>
+                                <p className="text-gray-600 mb-4 relative z-10">
+                                    {t("services_desc")}
+                                </p>
+
+                                <div className="mb-6 relative z-10">
+                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{t("key_focus_areas")}</h3>
+                                    <ul className="text-gray-600 space-y-2">
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("services_focus1")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("services_focus2")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("services_focus3")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("services_focus4")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("services_focus5")}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <p className="text-gray-600 mb-6 relative z-10">
+                                    {t("services_summary")}
+                                </p>
+
+                                <Link 
+                                    href="/subsidiaries?sector=services" 
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
+                                >
+                                    {t("view_services_companies")}
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="lg:w-1/2 animate-slide-in-left">
+                            <img
+                                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3"
+                                alt="Business Services"
+                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Retail Sector */}
+            <section id="retail" className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+                        <div className="lg:w-1/2 animate-slide-in-left">
+                            <div className="bg-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full z-0"></div>
+                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                                    <i className="fas fa-shopping-bag"></i>
+                                </div>
+                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{t("retail_sector")}</h2>
+                                <p className="text-gray-600 mb-4 relative z-10">
+                                    {t("retail_desc")}
+                                </p>
+
+                                <div className="mb-6 relative z-10">
+                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{t("key_focus_areas")}</h3>
+                                    <ul className="text-gray-600 space-y-2">
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("retail_focus1")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("retail_focus2")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("retail_focus3")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("retail_focus4")}</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
+                                            <span>{t("retail_focus5")}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <p className="text-gray-600 mb-6 relative z-10">
+                                    {t("retail_summary")}
+                                </p>
+
+                                <Link 
+                                    href="/subsidiaries?sector=retail" 
+                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
+                                >
+                                    {t("view_retail_companies")}
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="lg:w-1/2 animate-slide-in-right">
+                            <img
+                                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3"
+                                alt="Retail Solutions"
                                 className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
                             />
                         </div>
@@ -549,24 +673,54 @@ export default function SectorsPage() {
             </section>
 
             {/* Animation Styles */ }
-            <style jsx>{ `
-                @keyframes blob {
-                    0% {
-                        transform: translate(0px, 0px) scale(1);
+            <style jsx>{`
+                @keyframes float {
+                    0%, 100% {
+                        transform: translateY(0);
                     }
-                    33% {
-                        transform: translate(30px, -50px) scale(1.1);
-                    }
-                    66% {
-                        transform: translate(-20px, 20px) scale(0.9);
-                    }
-                    100% {
-                        transform: translate(0px, 0px) scale(1);
+                    50% {
+                        transform: translateY(-20px);
                     }
                 }
 
-                .animate-blob {
-                    animation: blob 7s infinite;
+                @keyframes float-rotate {
+                    0%, 100% {
+                        transform: translateY(0) rotate(0deg);
+                    }
+                    50% {
+                        transform: translateY(-20px) rotate(180deg);
+                    }
+                }
+
+                @keyframes glow {
+                    0%, 100% {
+                        opacity: 0.3;
+                        height: 32px;
+                    }
+                    50% {
+                        opacity: 0.6;
+                        height: 48px;
+                    }
+                }
+
+                .animate-float {
+                    animation: float 6s ease-in-out infinite;
+                }
+
+                .animate-float-rotate {
+                    animation: float-rotate 8s ease-in-out infinite;
+                }
+
+                .animate-glow {
+                    animation: glow 4s ease-in-out infinite;
+                }
+
+                .animation-delay-1000 {
+                    animation-delay: 1s;
+                }
+
+                .animation-delay-1500 {
+                    animation-delay: 1.5s;
                 }
 
                 .animation-delay-2000 {
@@ -577,24 +731,9 @@ export default function SectorsPage() {
                     animation-delay: 4s;
                 }
 
-                .animation-delay-300 {
-                    animation-delay: 300ms;
-                }
-
-                .floating-icon {
-                    animation: float 6s ease-in-out infinite;
-                }
-
-                @keyframes float {
-                    0% {
-                        transform: translateY(0px);
-                    }
-                    50% {
-                        transform: translateY(-20px);
-                    }
-                    100% {
-                        transform: translateY(0px);
-                    }
+                .bg-grid-white {
+                    background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                                      linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
                 }
 
                 @keyframes fadeInUp {
@@ -612,34 +751,19 @@ export default function SectorsPage() {
                     animation: fadeInUp 0.8s ease-out forwards;
                 }
 
-                @keyframes slideInRight {
-                    from {
-                        opacity: 0;
-                        transform: translateX(30px);
+                @keyframes pulse-bright {
+                    0%, 100% {
+                        transform: scale(1);
+                        opacity: 0.3;
                     }
-                    to {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                }
-
-                .animate-slide-in-right {
-                    animation: slideInRight 0.8s ease-out forwards;
-                }
-
-                @keyframes slideInLeft {
-                    from {
-                        opacity: 0;
-                        transform: translateX(-30px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateX(0);
+                    50% {
+                        transform: scale(1.5);
+                        opacity: 0.8;
                     }
                 }
 
-                .animate-slide-in-left {
-                    animation: slideInLeft 0.8s ease-out forwards;
+                .animate-pulse-bright {
+                    animation: pulse-bright 3s ease-in-out infinite;
                 }
             `}</style>
         </>

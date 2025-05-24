@@ -1,67 +1,97 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 import "@/app/styles/subsidiaries.css";
 
 export default function Subsidiaries() {
     const t = useTranslations("subsidiaries");
     const [activeFilter, setActiveFilter] = useState("all");
+    const searchParams = useSearchParams();
+
+    useEffect(() => {
+        // Get filter from URL parameter
+        const sectorFilter = searchParams.get('sector');
+        if (sectorFilter) {
+            setActiveFilter(sectorFilter);
+            // Smooth scroll to the section after a small delay to ensure rendering
+            setTimeout(() => {
+                document.getElementById(sectorFilter)?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        }
+    }, [searchParams]);
 
     const filterSubsidiaries = (filter) => {
         setActiveFilter(filter);
+        document.getElementById(filter)?.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
         <>
-            {/* Page Banner */ }
+            {/* Page Banner */}
             <section className="relative h-[100vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
-                {/* Background Images with Parallax */ }
+                {/* Background Images with Parallax */}
                 <div className="absolute inset-0 h-full">
-                    {/* Main Background Image */ }
+                    {/* Main Background Image */}
                     <div className="absolute inset-0 h-full transform scale-105 animate-slow-zoom">
                         <img
                             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                             alt="Corporate Buildings"
-                            className="absolute inset-0 w-full h-full object-center opacity-50"
+                            className="absolute inset-0 w-full h-full object-cover object-center opacity-50 transform hover:scale-105 transition-transform duration-3000"
                         />
                     </div>
-                    {/* Overlay Image */ }
-                    <div className="absolute inset-0 h-full mix-blend-overlay opacity-40">
+                    {/* Overlay Image with Parallax Effect */}
+                    <div className="absolute inset-0 h-full mix-blend-overlay opacity-40 transform hover:scale-105 transition-transform duration-3000">
                         <img
                             src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                             alt="Business Grid"
-                            className="absolute inset-0 w-full h-full object-center"
+                            className="absolute inset-0 w-full h-full object-cover object-center"
                         />
                     </div>
-                    {/* Gradient Overlays */ }
+                    {/* Enhanced Gradient Overlays */}
                     <div className="absolute inset-0 h-full bg-gradient-to-r from-black/95 via-blue-900/85 to-black/95"></div>
                     <div className="absolute inset-0 h-full bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.9)_100%)]"></div>
                 </div>
 
-                {/* Content */ }
+                {/* Content with Enhanced Animations */}
                 <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="overflow-hidden mb-6">
-                            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 animate-fade-in-up">
-                                { t("page_title") } <span className="text-blue-400">{ t("page_title_accent") }</span>
+                            <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 animate-fade-in-up tracking-tight">
+                                {t("page_title")} <span className="text-blue-400 relative inline-block group">
+                                    {t("page_title_accent")}
+                                    <span className="absolute bottom-0 left-0 w-full h-1 bg-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+                                </span>
                             </h1>
                         </div>
                         <div className="overflow-hidden mb-16">
                             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed animate-fade-in-up animation-delay-300">
-                                { t("page_subtitle") }
+                                {t("page_subtitle")}
                             </p>
                         </div>
-                        <div className="animate-fade-in-up animation-delay-600">
+                        <div className="animate-fade-in-up animation-delay-600 space-x-4">
                             <Link
                                 href="/sectors"
-                                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-blue-600 to-blue-800 overflow-hidden rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-blue-600 to-blue-800 overflow-hidden rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:from-blue-500 hover:to-blue-700"
                             >
                                 <span className="relative flex items-center">
-                                    { t("explore_sectors_btn") }
+                                    {t("explore_sectors_btn")}
                                     <svg className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-transparent transform -skew-x-45 translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                            </Link>
+                            <Link
+                                href="/contact"
+                                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-blue-500 bg-white/10 backdrop-blur-sm border border-white/20 overflow-hidden rounded-full transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:text-blue-400"
+                            >
+                                <span className="relative flex items-center">
+                                    Contact Us
+                                    <svg className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                                     </svg>
                                 </span>
                             </Link>
@@ -69,20 +99,37 @@ export default function Subsidiaries() {
                     </div>
                 </div>
 
-                {/* Decorative Elements */ }
+                {/* Enhanced Decorative Elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    {/* Animated Circles */ }
-                    <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob"></div>
-                    <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-                    {/* Grid Pattern */ }
-                    <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"></div>
+                    {/* Animated Circles with Glow Effects */}
+                    <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-blob mix-blend-overlay"></div>
+                    <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-blob animation-delay-2000 mix-blend-overlay"></div>
+                    <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-blob animation-delay-4000 mix-blend-overlay"></div>
+                    
+                    {/* Enhanced Grid Pattern */}
+                    <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px] opacity-50"></div>
+                    
+                    {/* Floating Particles */}
+                    <div className="absolute inset-0">
+                        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-float"></div>
+                        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-purple-400 rounded-full animate-float animation-delay-2000"></div>
+                        <div className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-blue-300 rounded-full animate-float animation-delay-4000"></div>
+                    </div>
                 </div>
 
-                {/* Bottom Fade */ }
-                <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white to-transparent"></div>
+                {/* Enhanced Bottom Fade */}
+                <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
+
+                {/* Scroll Indicator */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+                    <span className="text-white/50 text-sm mb-2">Scroll to explore</span>
+                    <svg className="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
             </section>
 
-            {/* Filters Section */ }
+            {/* Filters Section */}
             <section className="py-8 border-b border-gray-200 sticky top-0 bg-white z-20 shadow-md">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap justify-center gap-3">
@@ -101,16 +148,6 @@ export default function Subsidiaries() {
                             } }
                         >
                             { t("filter_technology") }
-                        </button>
-
-                        <button
-                            className={ `px-6 py-2 rounded-full transition-all duration-300 ${activeFilter === "finance" ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}` }
-                            onClick={ () => {
-                                filterSubsidiaries("finance");
-                                document.getElementById("finance")?.scrollIntoView({ behavior: "smooth" });
-                            } }
-                        >
-                            { t("filter_finance") }
                         </button>
 
                         <button
@@ -176,23 +213,20 @@ export default function Subsidiaries() {
                 </div>
             </section>
 
-            {/* Introduction */ }
+            {/* Introduction */}
             <section className="py-16 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center mb-16">
                         <div className="relative inline-block group mb-8">
-                            <h2 className="text-4xl font-bold text-gray-800 mb-6">{ t("portfolio_title") }</h2>
-                            <div className="absolute left-0 bottom-0 w-full">
-                                <div className="h-1 bg-blue-600 transform origin-left transition-all duration-300 ease-out 
-                              group-hover:scale-x-110 group-hover:bg-blue-500"></div>
-                                <div className="h-px bg-blue-400/50 mt-0.5 transform origin-left transition-all duration-300 ease-out 
-                              group-hover:scale-x-150 group-hover:bg-blue-400/30"></div>
-                            </div>
+                            <h2 className="text-4xl font-bold text-gray-800 mb-6 relative">
+                                {t("portfolio_title")}
+                                <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                            </h2>
                         </div>
-                        <p className="text-gray-600 text-lg">{ t("portfolio_desc") }</p>
+                        <p className="text-gray-600 text-lg">{t("portfolio_desc")}</p>
                     </div>
 
-                    {/* Subsidiaries Grid */ }
+                    {/* Enhanced Subsidiaries Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             {
@@ -290,7 +324,8 @@ export default function Subsidiaries() {
                                 id: "technology",
                                 name: "bod_united_name",
                                 category: "technology",
-                                image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+                                image: "/images/BOD Logo.jpg",
+                                fallbackImage: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
                                 description: "bod_united_desc",
                                 services: [
                                     "bod_united_service1",
@@ -371,131 +406,89 @@ export default function Subsidiaries() {
                             <div
                                 key={subsidiary.name}
                                 id={subsidiary.id}
-                                className="subsidiary-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
-                                style={{ display: activeFilter === "all" || activeFilter === subsidiary.category ? "block" : "none" }}
+                                className={`subsidiary-card group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 ${
+                                    activeFilter === "all" || activeFilter === subsidiary.category ? "opacity-100 scale-100" : "opacity-0 scale-95 hidden"
+                                }`}
                             >
-                                <div className="h-[250px] bg-gray-200 flex items-center justify-center">
+                                {/* Image Container with Overlay */}
+                                <div className="relative h-[250px] overflow-hidden group">
                                     <img
                                         src={subsidiary.image}
                                         alt={t(subsidiary.name)}
-                                        className="w-full h-full"
+                                        className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                                         onError={subsidiary.fallbackImage ? (e) => {
                                             e.target.onerror = null;
                                             e.target.src = subsidiary.fallbackImage;
                                         } : undefined}
                                     />
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex justify-between items-center mb-4">
-                                        <h3 className="text-xl font-bold text-gray-800">{t(subsidiary.name)}</h3>
-                                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    
+                                    {/* Category Badge */}
+                                    <div className="absolute top-4 right-4">
+                                        <span className="px-4 py-2 bg-white/90 backdrop-blur-sm text-blue-800 rounded-full text-sm font-medium shadow-lg">
                                             {t(subsidiary.category)}
                                         </span>
                                     </div>
-                                    <p className="text-gray-600 mb-6">{t(subsidiary.description)}</p>
+                                </div>
+
+                                <div className="p-8">
+                                    {/* Title and Description */}
                                     <div className="mb-6">
-                                        <h4 className="font-medium text-gray-800 mb-2">{t("key_services")}:</h4>
-                                        <ul className="text-gray-600 list-disc list-inside space-y-1">
+                                        <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                            {t(subsidiary.name)}
+                                        </h3>
+                                        <p className="text-gray-600 leading-relaxed">
+                                            {t(subsidiary.description)}
+                                        </p>
+                                    </div>
+
+                                    {/* Services List */}
+                                    <div className="mb-8">
+                                        <h4 className="font-medium text-gray-800 mb-4 flex items-center">
+                                            <svg className="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                            </svg>
+                                            {t("key_services")}
+                                        </h4>
+                                        <ul className="space-y-3">
                                             {subsidiary.services.map((service) => (
-                                                <li key={service}>{t(service)}</li>
+                                                <li key={service} className="flex items-center text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                                                    <svg className="w-4 h-4 mr-2 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                    <span>{t(service)}</span>
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
+
+                                    {/* Action Button */}
                                     {subsidiary.external ? (
                                         <a
                                             href={subsidiary.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                            className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg hover:from-blue-700 hover:to-blue-900 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
                                         >
-                                            {t("learn_more")}
+                                            <span>{t("learn_more")}</span>
+                                            <svg className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                            </svg>
                                         </a>
                                     ) : (
                                         <Link
                                             href={subsidiary.link}
-                                            className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-2 rounded-md font-medium transition duration-300"
+                                            className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg hover:from-blue-700 hover:to-blue-900 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
                                         >
-                                            {t("learn_more")}
+                                            <span>{t("learn_more")}</span>
+                                            <svg className="w-5 h-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                            </svg>
                                         </Link>
                                     )}
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Acquisition Strategy */ }
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                            <div className="relative">
-                                <img
-                                    src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Business Acquisition"
-                                    className="rounded-lg shadow-2xl w-full h-[400px]"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent rounded-lg"></div>
-                                {/* Decorative Elements */ }
-                                <div className="absolute -top-6 -left-6 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                                <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-                            </div>
-                            <div className="lg:pl-8">
-                                <div className="relative inline-block group mb-8">
-                                    <h2 className="text-4xl font-bold text-gray-800 mb-6">{ t("acquisition_title") }</h2>
-                                    <div className="absolute left-0 bottom-0 w-full">
-                                        <div className="h-1 bg-blue-600 transform origin-left transition-all duration-300 ease-out 
-                                  group-hover:scale-x-110 group-hover:bg-blue-500"></div>
-                                        <div className="h-px bg-blue-400/50 mt-0.5 transform origin-left transition-all duration-300 ease-out 
-                                  group-hover:scale-x-150 group-hover:bg-blue-400/30"></div>
-                                    </div>
-                                </div>
-                                <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                    { t("acquisition_desc1") }
-                                </p>
-                                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                                    { t("acquisition_desc2") }
-                                </p>
-                                <div className="space-y-4">
-                                    <div className="flex items-center space-x-3">
-                                        <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                            </svg>
-                                        </div>
-                                        <span className="text-gray-700">{ t("acquisition_point1") }</span>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                            </svg>
-                                        </div>
-                                        <span className="text-gray-700">{ t("acquisition_point2") }</span>
-                                    </div>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                                            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                                            </svg>
-                                        </div>
-                                        <span className="text-gray-700">{ t("acquisition_point3") }</span>
-                                    </div>
-                                </div>
-                                <div className="mt-8">
-                                    <Link
-                                        href="/contact"
-                                        className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-lg"
-                                    >
-                                        { t("partnership_cta") }
-                                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                        </svg>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

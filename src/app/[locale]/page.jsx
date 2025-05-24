@@ -232,18 +232,22 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
               <div className="h-48 bg-gray-200 flex items-center justify-center">
                 <img
-                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                  src="/images/BOD Logo.jpg"
                   alt="BOD United"
                   className="max-h-48 w-full object-cover"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80";
+                  }}
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('subsidiary6_name') }</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{t('subsidiary6_name')}</h3>
                 <p className="text-gray-600 mb-4">
-                  { t('subsidiary6_desc') }
+                  {t('subsidiary6_desc')}
                 </p>
                 <Link href="/subsidiaries/bod-united" className="text-blue-600 hover:text-blue-800 font-medium">
-                  { t('learn_more') } →
+                  {t('learn_more')} →
                 </Link>
               </div>
             </div>
@@ -436,23 +440,6 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Finance Sector */ }
-            <div className="bg-white p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-              <div className="flex justify-center items-center text-blue-800 text-4xl mb-6">
-                <img src="https://cdn-icons-png.flaticon.com/512/2382/2382533.png" alt="Finance Icon" className="w-16 h-16 mb-4" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">{ t('finance_sector') }</h3>
-              <p className="text-gray-600 mb-4">
-                { t('finance_desc') }
-              </p>
-              <Link href="/sectors#finance" className="text-blue-800 hover:text-blue-700 font-medium inline-flex items-center">
-                { t('learn_more') }
-                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </Link>
-            </div>
-
             {/* Manufacturing Sector */ }
             <div className="bg-white p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
               <div className="flex justify-center items-center text-blue-800 text-4xl mb-6">
@@ -463,6 +450,23 @@ export default function HomePage() {
                 { t('manufacturing_desc') }
               </p>
               <Link href="/sectors#manufacturing" className="text-blue-800 hover:text-blue-700 font-medium inline-flex items-center">
+                { t('learn_more') }
+                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </Link>
+            </div>
+
+            {/* Healthcare Sector */ }
+            <div className="bg-white p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <div className="flex justify-center items-center text-blue-800 text-4xl mb-6">
+                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" alt="Healthcare Icon" className="w-16 h-16 mb-4" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">{ t('healthcare_sector') }</h3>
+              <p className="text-gray-600 mb-4">
+                { t('healthcare_desc') }
+              </p>
+              <Link href="/sectors#healthcare" className="text-blue-800 hover:text-blue-700 font-medium inline-flex items-center">
                 { t('learn_more') }
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -503,6 +507,40 @@ export default function HomePage() {
                 </svg>
               </Link>
             </div>
+
+            {/* Services Sector */ }
+            <div className="bg-white p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <div className="flex justify-center items-center text-blue-800 text-4xl mb-6">
+                <img src="https://cdn-icons-png.flaticon.com/512/3233/3233479.png" alt="Services Icon" className="w-16 h-16 mb-4" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">{ t('services_sector') }</h3>
+              <p className="text-gray-600 mb-4">
+                { t('services_desc') }
+              </p>
+              <Link href="/sectors#services" className="text-blue-800 hover:text-blue-700 font-medium inline-flex items-center">
+                { t('learn_more') }
+                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </Link>
+            </div>
+
+            {/* Retail Sector */ }
+            <div className="bg-white p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+              <div className="flex justify-center items-center text-blue-800 text-4xl mb-6">
+                <img src="https://cdn-icons-png.flaticon.com/512/3225/3225194.png" alt="Retail Icon" className="w-16 h-16 mb-4" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-2">{ t('retail_sector') }</h3>
+              <p className="text-gray-600 mb-4">
+                { t('retail_desc') }
+              </p>
+              <Link href="/sectors#retail" className="text-blue-800 hover:text-blue-700 font-medium inline-flex items-center">
+                { t('learn_more') }
+                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </Link>
+            </div>
           </div>
 
           <div className="text-center mt-10 fade-in-up">
@@ -512,63 +550,6 @@ export default function HomePage() {
             >
               { t('explore_all_sectors') }
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest News Section */ }
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-10 fade-in-up">
-            <h2 className="text-3xl font-bold text-gray-800">{ t('news_title') }</h2>
-            <Link href="/news" className="text-blue-600 hover:text-blue-800 font-medium">{ t('view_all_news') } →</Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-animation">
-            {/* News Item 1 */ }
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="BOD Holdings Acquisition News"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <span className="text-sm text-gray-500 block mb-2">{ t('news1_date') }</span>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('news1_title') }</h3>
-                <p className="text-gray-600 mb-4">{ t('news1_excerpt') }</p>
-                <Link href="/news#news1" className="text-blue-600 hover:text-blue-800 font-medium">{ t('read_more') } →</Link>
-              </div>
-            </div>
-
-            {/* News Item 2 */ }
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="Financial Results News"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <span className="text-sm text-gray-500 block mb-2">{ t('news2_date') }</span>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('news2_title') }</h3>
-                <p className="text-gray-600 mb-4">{ t('news2_excerpt') }</p>
-                <Link href="/news#news2" className="text-blue-600 hover:text-blue-800 font-medium">{ t('read_more') } →</Link>
-              </div>
-            </div>
-
-            {/* News Item 3 */ }
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-              <img
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt="Sustainability Initiative News"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <span className="text-sm text-gray-500 block mb-2">{ t('news3_date') }</span>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{ t('news3_title') }</h3>
-                <p className="text-gray-600 mb-4">{ t('news3_excerpt') }</p>
-                <Link href="/news#news3" className="text-blue-600 hover:text-blue-800 font-medium">{ t('read_more') } →</Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -587,12 +568,7 @@ export default function HomePage() {
             >
               { t('contact_us') }
             </Link>
-            <Link
-              href="/careers"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-800 px-8 py-3 rounded-md font-medium transition duration-300"
-            >
-              { t('join_team') }
-            </Link>
+
           </div>
         </div>
       </section>

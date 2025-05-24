@@ -123,9 +123,9 @@ export default function Contact() {
                             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                                 <div className="flex items-center justify-center space-x-4 text-white/80 hover:text-white transition-colors duration-300">
                                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 float-animation">
-                                        <i className="fas fa-phone-alt text-xl"></i>
+                                        <i className="fas fa-shield-alt text-xl"></i>
                                     </div>
-                                    <span className="text-lg">{ t("support_247") }</span>
+                                    <span className="text-lg">{ t("secure_communication") }</span>
                                 </div>
                                 <div className="flex items-center justify-center space-x-4 text-white/80 hover:text-white transition-colors duration-300">
                                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 float-animation">
@@ -135,9 +135,8 @@ export default function Contact() {
                                 </div>
                                 <div className="flex items-center justify-center space-x-4 text-white/80 hover:text-white transition-colors duration-300">
                                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 float-animation">
-                                        <i className="fas fa-map-marked-alt text-xl"></i>
-                                    </div>
-                                    <span className="text-lg">{ t("global_presence") }</span>
+                                        <i className="fas fa-handshake text-xl"></i>                                    </div>
+                                    <span className="text-lg">{ t("personalized_service") }</span>
                                 </div>
                             </div>
                         </div>
@@ -187,6 +186,10 @@ export default function Contact() {
                                 <p className="flex items-center justify-center">
                                     <i className="fas fa-globe-americas mr-2"></i>
                                     { t("headquarters_address3") }
+                                </p>
+                                <p className="flex items-center justify-center">
+                                    <i className="fas fa-mail-bulk mr-2"></i>
+                                    { t("headquarters_postal") }
                                 </p>
                             </div>
                         </div>

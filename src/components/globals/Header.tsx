@@ -53,14 +53,7 @@ export default function Header() {
             {t("sectors")}
             <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/sectors' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/news" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/news' ? 'text-blue-800' : ''}`}>
-            {t("news")}
-            <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/news' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-          </Link>
-          <Link href="/careers" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/careers' ? 'text-blue-800' : ''}`}>
-            {t("careers")}
-            <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/careers' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-          </Link>
+
           <Link href="/contact" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/contact' ? 'text-blue-800' : ''}`}>
             {t("contact")}
             <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>

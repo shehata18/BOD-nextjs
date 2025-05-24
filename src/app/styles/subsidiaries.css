@@ -43,10 +43,10 @@
     transform: translate(0px, 0px) scale(1);
   }
   33% {
-    transform: translate(30px, -50px) scale(1.2);
+    transform: translate(30px, -50px) scale(1.1);
   }
   66% {
-    transform: translate(-20px, 20px) scale(0.8);
+    transform: translate(-20px, 20px) scale(0.9);
   }
   100% {
     transform: translate(0px, 0px) scale(1);
@@ -116,11 +116,13 @@
 
 /* Card hover effects */
 .subsidiary-card {
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
 }
 
 .subsidiary-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 /* RTL support for animations and effects */
@@ -140,5 +142,202 @@ html[dir="rtl"] .filter-btn:hover::after {
   
   .animate-blob {
     animation-duration: 20s;
+  }
+}
+
+/* New animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.6;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Transition durations */
+.duration-3000 {
+  transition-duration: 3000ms;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.hover\:glow:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+}
+
+/* Gradient text */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #3b82f6, #93c5fd);
+}
+
+/* Image hover effect */
+.subsidiary-card .group:hover img {
+  transform: scale(1.1);
+}
+
+/* Smooth transitions */
+.subsidiary-card img,
+.subsidiary-card .overlay,
+.subsidiary-card h3,
+.subsidiary-card p,
+.subsidiary-card li {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Category badge glow effect */
+.subsidiary-card .category-badge {
+  transition: all 0.3s ease;
+}
+
+.subsidiary-card:hover .category-badge {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* List item hover effect */
+.subsidiary-card li {
+  transition: transform 0.2s ease;
+}
+
+.subsidiary-card li:hover {
+  transform: translateX(5px);
+}
+
+/* Button gradient animation */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.subsidiary-card .gradient-btn {
+  background-size: 200% auto;
+  animation: gradientFlow 5s ease infinite;
+}
+
+/* Card appear animation */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.subsidiary-card {
+  animation: cardAppear 0.5s ease-out forwards;
+}
+
+/* Stagger children animations */
+.subsidiary-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.subsidiary-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.subsidiary-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Service icon pulse effect */
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.subsidiary-card li:hover svg {
+  animation: iconPulse 0.5s ease-in-out;
+}
+
+/* Enhanced hover states */
+.subsidiary-card:hover .service-icon {
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.subsidiary-card:hover .card-title {
+  color: #3b82f6;
+}
+
+/* Smooth scaling for images */
+.subsidiary-card img {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card content fade in */
+.subsidiary-card .card-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subsidiary-card:hover .card-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .subsidiary-card {
+    margin-bottom: 2rem;
+  }
+  
+  .subsidiary-card:hover {
+    transform: translateY(-4px);
   }
 } 
