@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <div className="mb-6">
               <Image 
-                src="/images/BOD Logo.jpg" 
+                src="/images/small-bod.png" 
                 alt="BOD Logo" 
                 width={150} 
                 height={70} 
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6 relative pl-3 border-l-4 border-red-500">{t("quick_links")}</h3>
+            <h3 className="text-xl font-bold mb-6 relative pl-3 border-l-4 border-blue-600">{t("quick_links")}</h3>
             <ul className="space-y-3">
               <li><Link href="/" locale={currentLocale} className="text-gray-300 hover:text-white hover:translate-x-1 transition-transform flex items-center">
                 <span className="mr-2">→</span> {t("home")}
@@ -62,10 +62,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6 relative pl-3 border-l-4 border-red-500">{t("contact_info")}</h3>
+            <h3 className="text-xl font-bold mb-6 relative pl-3 border-l-4 border-blue-600">{t("contact_info")}</h3>
             <ul className="space-y-4">
               <li className="flex items-start group">
-                <div className="bg-gray-800 p-2 rounded-full mr-3 group-hover:bg-red-500 transition-colors">
+                <div className="bg-gray-800 p-2 rounded-full mr-3 group-hover:bg-blue-600 transition-colors">
                   <i className="fas fa-map-marker-alt text-gray-300 group-hover:text-white"></i>
                 </div>
                 <span className="text-gray-300 group-hover:text-white transition-colors whitespace-pre-line">
@@ -73,13 +73,13 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-start group">
-                <div className="bg-gray-800 p-2 rounded-full mr-3 group-hover:bg-red-500 transition-colors">
+                <div className="bg-gray-800 p-2 rounded-full mr-3 group-hover:bg-blue-600 transition-colors">
                   <i className="fas fa-phone text-gray-300 group-hover:text-white"></i>
                 </div>
                 <span className="text-gray-300 group-hover:text-white transition-colors">{t("phone")}</span>
               </li>
               <li className="flex items-start group">
-                <div className="bg-gray-800 p-2 rounded-full mr-3 group-hover:bg-red-500 transition-colors">
+                <div className="bg-gray-800 p-2 rounded-full mr-3 group-hover:bg-blue-600 transition-colors">
                   <i className="fas fa-envelope text-gray-300 group-hover:text-white"></i>
                 </div>
                 <span className="text-gray-300 group-hover:text-white transition-colors">{t("email")}</span>
@@ -88,7 +88,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-6 relative pl-3 border-l-4 border-red-500">{t("business_hours")}</h3>
+            <h3 className="text-xl font-bold mb-6 relative pl-3 border-l-4 border-blue-600">{t("business_hours")}</h3>
             <ul className="space-y-3">
               <li className="flex justify-between">
                 <span className="text-gray-300">Monday - Friday:</span>

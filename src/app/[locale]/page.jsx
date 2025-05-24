@@ -144,7 +144,7 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
               <div className="h-48 bg-gray-200 flex items-center justify-center">
                 <img
-                  src="/images/ASAP%20Comapny.jpg"
+                  src="/images/ASAP-Comapny.jpg"
                   alt="ASAP Maintenance"
                   className="max-h-48 w-full object-cover"
                   onError={ (e) => {
