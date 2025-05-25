@@ -309,7 +309,7 @@ export default function Subsidiaries() {
                             {
                                 name: "peak_time_logistics_name",
                                 category: "services",
-                                image: "https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2070&auto=format&fit=crop",
+                                image: "/images/Pt company.jpg",
                                 description: "peak_time_logistics_desc",
                                 services: [
                                     "peak_time_logistics_service1",

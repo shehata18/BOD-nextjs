@@ -256,7 +256,7 @@ export default function HomePage() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
               <div className="h-48 bg-gray-200 flex items-center justify-center">
                 <img
-                  src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/Pt company.jpg"
                   alt="Peak Time Logistics"
                   className="max-h-48 w-full object-cover"
                 />

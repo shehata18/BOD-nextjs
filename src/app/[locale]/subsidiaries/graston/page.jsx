@@ -337,9 +337,13 @@ export default function GrastonMedicalClinics() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div data-aos="fade-right" data-aos-duration="1000">
                 <img
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                  src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg"
                   alt="Physical Therapy Session"
-                  className="rounded-xl shadow-xl w-full h-full object-cover"
+                  className="rounded-xl shadow-xl w-full h-[600px] object-cover"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YwZjRmOCI+PC9yZWN0Pjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiM5OWI0ZDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJjZW50cmFsIj5UaGVyYXBldXRpYyBBcHByb2FjaDwvdGV4dD48L3N2Zz4=';
+                  }}
                 />
               </div>
               <div
@@ -448,7 +452,7 @@ export default function GrastonMedicalClinics() {
               >
                 <div className="h-72 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+                    src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg"
                     alt={t("team_therapists_title")}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
@@ -491,7 +495,7 @@ export default function GrastonMedicalClinics() {
               >
                 <div className="h-72 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                    src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg"
                     alt={t("team_specialists_title")}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
@@ -534,7 +538,7 @@ export default function GrastonMedicalClinics() {
               >
                 <div className="h-72 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1582056615449-5dcb2332b3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80"
+                    src="https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg"
                     alt={t("team_support_title")}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
@@ -570,7 +574,7 @@ export default function GrastonMedicalClinics() {
             </div>
 
             {/* Team Section Call to Action */}
-            <div
+            {/* <div
               className="mt-16 text-center"
               data-aos="fade-up"
               data-aos-duration="800"
@@ -584,7 +588,7 @@ export default function GrastonMedicalClinics() {
                 <span>{t("join_team_btn")}</span>
                 <i className="fas arowIcon px-2 fa-arrow-right ml-2"></i>
               </NavigationLink>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -877,14 +881,6 @@ export default function GrastonMedicalClinics() {
                   href="/contact"
                   locale={currentLocale}
                   className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center"
-                >
-                  <i className="fas fa-calendar-alt mr-2"></i>
-                  <span>{t("cta_appointment_btn")}</span>
-                </NavigationLink>
-                <NavigationLink
-                  href="/contact"
-                  locale={currentLocale}
-                  className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center"
                 >
                   <i className="fas fa-phone-alt mr-2"></i>
                   <span>{t("cta_contact_btn")}</span>

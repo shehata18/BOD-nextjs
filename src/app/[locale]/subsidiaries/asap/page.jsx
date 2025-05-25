@@ -257,8 +257,34 @@ export default function ASAPPage() {
                                 data-aos="fade-up"
                                 data-aos-delay={ 100 * (index + 1) }
                             >
-                                <div className="h-48 bg-gradient-to-r from-blue-800 to-blue-600 text-white flex items-center justify-center overflow-hidden">
-                                    <FontAwesomeIcon icon={ service.icon } className={ `text-6xl ${styles.cardIcon}` } />
+                                <div className="h-48 relative overflow-hidden">
+                                    <img
+                                        src={
+                                            index === 0 ? "https://images.pexels.com/photos/8005397/pexels-photo-8005397.jpeg" : // Mechanical
+                                            index === 1 ? "https://images.pexels.com/photos/257886/pexels-photo-257886.jpeg" : // Electrical - New image showing electrical panel/work
+                                            index === 2 ? "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" : // Plumbing
+                                            index === 3 ? "https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg" : // Facility
+                                            index === 4 ? "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg" : // Contracts
+                                            "https://images.pexels.com/photos/8005398/pexels-photo-8005398.jpeg" // Emergency
+                                        }
+                                        alt={service.title}
+                                        className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                                        onError={(e) => {
+                                            e.target.onerror = null;
+                                            e.target.parentElement.className = 'h-48 bg-gradient-to-r from-blue-800 to-blue-600 text-white flex items-center justify-center';
+                                            e.target.replaceWith((() => {
+                                                const icon = document.createElement('div');
+                                                icon.className = 'text-6xl';
+                                                icon.innerHTML = `<i class="fas ${service.icon.iconName}"></i>`;
+                                                return icon;
+                                            })());
+                                        }}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                                        <div className="p-4">
+                                            <FontAwesomeIcon icon={service.icon} className="text-white text-3xl mb-2" />
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="p-8">
                                     <h3 className="text-xl font-bold text-gray-800 mb-3">{ service.title }</h3>
@@ -287,15 +313,41 @@ export default function ASAPPage() {
                         { industries.map((industry, index) => (
                             <div
                                 key={ index }
-                                className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center transition-all hover:shadow-md hover:-translate-y-1"
+                                className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden transition-all hover:shadow-md hover:-translate-y-1"
                                 data-aos="zoom-in"
                                 data-aos-delay={ 100 * (index + 1) }
                             >
-                                <div className="inline-flex items-center justify-center w-16 h-16 mb-6 bg-blue-100 text-blue-800 rounded-full">
-                                    <FontAwesomeIcon icon={ industry.icon } className="text-2xl" />
+                                <div className="h-48 relative overflow-hidden">
+                                    <img
+                                        src={
+                                            index === 0 ? "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg" : // Hospitality
+                                            index === 1 ? "https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg" : // Healthcare
+                                            index === 2 ? "https://images.pexels.com/photos/1838640/pexels-photo-1838640.jpeg" : // Commercial
+                                            index === 3 ? "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" : // Industrial
+                                            index === 4 ? "https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg" : // Education
+                                            index === 5 ? "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" : // Residential
+                                            index === 6 ? "https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg" : // Retail
+                                            "https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg" // Logistics
+                                        }
+                                        alt={industry.title}
+                                        className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                                        onError={(e) => {
+                                            e.target.onerror = null;
+                                            e.target.parentElement.className = 'p-8 text-center';
+                                            e.target.replaceWith((() => {
+                                                const iconContainer = document.createElement('div');
+                                                iconContainer.className = 'inline-flex items-center justify-center w-16 h-16 mb-6 bg-blue-100 text-blue-800 rounded-full';
+                                                iconContainer.innerHTML = `<i class="fas ${industry.icon.iconName} text-2xl"></i>`;
+                                                return iconContainer;
+                                            })());
+                                        }}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-800 mb-2">{ industry.title }</h3>
-                                <p className="text-gray-600">{ industry.description }</p>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold text-gray-800 mb-2">{ industry.title }</h3>
+                                    <p className="text-gray-600">{ industry.description }</p>
+                                </div>
                             </div>
                         )) }
                     </div>
@@ -376,7 +428,7 @@ export default function ASAPPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/contact"
+                                href="/en/contact"
                                 className={ `${styles.ctaButton} inline-block bg-white text-blue-800 hover:bg-blue-50 px-8 py-4 rounded-md font-medium transition-all duration-300 transform hover:scale-105` }
                             >
                                 <FontAwesomeIcon icon={ faFileAlt } className="mr-2" /> { t('request_quote') }

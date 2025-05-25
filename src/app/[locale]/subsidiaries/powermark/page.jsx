@@ -332,7 +332,7 @@ export default function PowerMarkAuto() {
                             <div
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
                                 <div className="relative">
-                                    <img src="https://images.pexels.com/photos/3807455/pexels-photo-3807455.jpeg"
+                                    <img src="https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg"
                                         alt={ t("service1_title") }
                                         className="w-full h-48 object-cover transform transition duration-500 group-hover:scale-110" />
                                     <div
@@ -371,7 +371,7 @@ export default function PowerMarkAuto() {
                             <div
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
                                 <div className="relative">
-                                    <img src="https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg"
+                                    <img src="https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg"
                                         alt={ t("service2_title") }
                                         className="w-full h-48 object-cover transform transition duration-500 group-hover:scale-110" />
                                     <div
@@ -410,7 +410,7 @@ export default function PowerMarkAuto() {
                             <div
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
                                 <div className="relative">
-                                    <img src="https://images.pexels.com/photos/3807386/pexels-photo-3807386.jpeg"
+                                    <img src="https://images.pexels.com/photos/8985517/pexels-photo-8985517.jpeg"
                                         alt={ t("service3_title") }
                                         className="w-full h-48 object-cover transform transition duration-500 group-hover:scale-110" />
                                     <div
@@ -449,7 +449,7 @@ export default function PowerMarkAuto() {
                             <div
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
                                 <div className="relative">
-                                    <img src="https://images.pexels.com/photos/3807811/pexels-photo-3807811.jpeg"
+                                    <img src="https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg"
                                         alt={ t("service4_title") }
                                         className="w-full h-48 object-cover transform transition duration-500 group-hover:scale-110" />
                                     <div
@@ -488,7 +488,7 @@ export default function PowerMarkAuto() {
                             <div
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
                                 <div className="relative">
-                                    <img src="https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg"
+                                    <img src="https://images.pexels.com/photos/3846205/pexels-photo-3846205.jpeg"
                                         alt={ t("service5_title") }
                                         className="w-full h-48 object-cover transform transition duration-500 group-hover:scale-110" />
                                     <div
@@ -527,7 +527,7 @@ export default function PowerMarkAuto() {
                             <div
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
                                 <div className="relative">
-                                    <img src="https://images.pexels.com/photos/3807433/pexels-photo-3807433.jpeg"
+                                    <img src="https://images.pexels.com/photos/4489794/pexels-photo-4489794.jpeg"
                                         alt={ t("service6_title") }
                                         className="w-full h-48 object-cover transform transition duration-500 group-hover:scale-110" />
                                     <div

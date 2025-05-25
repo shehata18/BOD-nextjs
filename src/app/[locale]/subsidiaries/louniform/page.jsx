@@ -42,8 +42,21 @@ export default function LOUniformsPage() {
         <main className="bg-white min-h-screen">
             {/* Hero Section with Animation Elements */ }
             <section className="relative h-[80vh] bg-black">
-                {/* Fixed background approach */ }
-                <div className="absolute inset-0 z-0 bg-gradient-to-r from-blue-900/40 to-black/30" />
+                {/* Background Image */ }
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg"
+                        alt="Professional uniforms background"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFhMjA0NCI+PC9yZWN0Pjwvc3ZnPg==';
+                        }}
+                    />
+                </div>
+
+                {/* Gradient Overlay */ }
+                <div className="absolute inset-0 z-0 bg-gradient-to-r from-blue-900/80 to-black/70" />
 
                 {/* Floating Fashion Animation Elements */ }
                 <div className="absolute inset-0 overflow-hidden">
@@ -267,60 +280,88 @@ export default function LOUniformsPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
-                            <div className="h-48 bg-blue-100">
-                                <div className="w-full h-full flex items-center justify-center bg-blue-50">
-                                    <i className="fas fa-tshirt text-blue-600 text-5xl"></i>
-                                </div>
+                            <div className="h-48">
+                                <img 
+                                    src="https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg" 
+                                    alt="Professional tailoring"
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        e.target.onerror = null;
+                                        e.target.parentElement.className = 'h-48 bg-blue-100 flex items-center justify-center';
+                                        e.target.replaceWith(document.createElement('i')).className = 'fas fa-tshirt text-blue-600 text-5xl';
+                                    }}
+                                />
                             </div>
                             <div className="p-6">
                                 <h4 className="font-semibold text-xl mb-3">{ t("lo_uniforms_service1") }</h4>
                                 <p className="text-gray-600 mb-4">{ t("lo_uniforms_tailoring_desc") }</p>
-                                <Link href="#contact" className="text-blue-600 hover:text-blue-800 font-medium">
+                                <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
                                     { t("contact_us") } →
                                 </Link>
                             </div>
                         </div>
 
                         <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1" data-aos="fade-up" data-aos-delay="250">
-                            <div className="h-48 bg-blue-100">
-                                <div className="w-full h-full flex items-center justify-center bg-blue-50">
-                                    <i className="fas fa-industry text-blue-600 text-5xl"></i>
-                                </div>
+                            <div className="h-48">
+                                <img 
+                                    src="https://images.pexels.com/photos/1620788/pexels-photo-1620788.jpeg" 
+                                    alt="Bulk Manufacturing and Safety Equipment"
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        e.target.onerror = null;
+                                        e.target.parentElement.className = 'h-48 bg-blue-100 flex items-center justify-center';
+                                        e.target.replaceWith(document.createElement('i')).className = 'fas fa-industry text-blue-600 text-5xl';
+                                    }}
+                                />
                             </div>
                             <div className="p-6">
                                 <h4 className="font-semibold text-xl mb-3">{ t("lo_uniforms_service2") }</h4>
                                 <p className="text-gray-600 mb-4">{ t("lo_uniforms_safety_desc") }</p>
-                                <Link href="#contact" className="text-blue-600 hover:text-blue-800 font-medium">
+                                <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
                                     { t("contact_us") } →
                                 </Link>
                             </div>
                         </div>
 
                         <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
-                            <div className="h-48 bg-blue-100">
-                                <div className="w-full h-full flex items-center justify-center bg-blue-50">
-                                    <i className="fas fa-building text-blue-600 text-5xl"></i>
-                                </div>
+                            <div className="h-48">
+                                <img 
+                                    src="https://images.pexels.com/photos/5698851/pexels-photo-5698851.jpeg" 
+                                    alt="Corporate uniforms"
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        e.target.onerror = null;
+                                        e.target.parentElement.className = 'h-48 bg-blue-100 flex items-center justify-center';
+                                        e.target.replaceWith(document.createElement('i')).className = 'fas fa-building text-blue-600 text-5xl';
+                                    }}
+                                />
                             </div>
                             <div className="p-6">
                                 <h4 className="font-semibold text-xl mb-3">{ t("lo_uniforms_service3") }</h4>
                                 <p className="text-gray-600 mb-4">{ t("lo_uniforms_distribution_desc") }</p>
-                                <Link href="#contact" className="text-blue-600 hover:text-blue-800 font-medium">
+                                <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
                                     { t("contact_us") } →
                                 </Link>
                             </div>
                         </div>
 
                         <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1" data-aos="fade-up" data-aos-delay="350">
-                            <div className="h-48 bg-blue-100">
-                                <div className="w-full h-full flex items-center justify-center bg-blue-50">
-                                    <i className="fas fa-hard-hat text-blue-600 text-5xl"></i>
-                                </div>
+                            <div className="h-48">
+                                <img 
+                                    src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg" 
+                                    alt="Safety wear"
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                        e.target.onerror = null;
+                                        e.target.parentElement.className = 'h-48 bg-blue-100 flex items-center justify-center';
+                                        e.target.replaceWith(document.createElement('i')).className = 'fas fa-hard-hat text-blue-600 text-5xl';
+                                    }}
+                                />
                             </div>
                             <div className="p-6">
                                 <h4 className="font-semibold text-xl mb-3">{ t("lo_uniforms_service4") }</h4>
                                 <p className="text-gray-600 mb-4">{ t("lo_uniforms_safety_desc") }</p>
-                                <Link href="#contact" className="text-blue-600 hover:text-blue-800 font-medium">
+                                <Link href="/contact" className="text-blue-600 hover:text-blue-800 font-medium">
                                     { t("contact_us") } →
                                 </Link>
                             </div>
@@ -499,7 +540,7 @@ export default function LOUniformsPage() {
                 {/* Background Image */ }
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.pexels.com/photos/6068960/pexels-photo-6068960.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        src="https://images.pexels.com/photos/3768911/pexels-photo-3768911.jpeg"
                         alt="Fashion workshop background"
                         className="w-full h-full object-cover"
                         onError={ (e) => {
@@ -521,7 +562,7 @@ export default function LOUniformsPage() {
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white" data-aos="fade-up">{ t("lo_uniforms_cta_heading") }</h2>
                         <p className="text-xl mb-10 text-white/90" data-aos="fade-up" data-aos-delay="100">{ t("lo_uniforms_cta_desc") }</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
-                            <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                            <Link href="/en/contact" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                                 { t("lo_uniforms_quote_btn") }
                             </Link>
                             <Link href="tel:+123456789" className="bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border-2 border-white transition duration-300 ease-in-out transform hover:scale-105">
