@@ -561,7 +561,88 @@
     "subsidiary11_desc": "Revolutionizing human resources management with innovative digital solutions that streamline HR operations and enhance workforce productivity across various industries.",
     "subsidiary12_name": "All Plans",
     "subsidiary12_desc": "Premier event management and exhibition organization company, specializing in creating memorable corporate events, conferences, and exhibitions with meticulous attention to detail.",
-    "view_all_subsidiaries": "View All Subsidiaries"
+    "view_all_subsidiaries": "View All Subsidiaries",
+    "seven-eleven": {
+      "title": "Seven-Eleven Grocery Supplies",
+      "learn_more":"Learn More",
+      "subtitle": "Your Trusted Partner for Quality Food Products and Grocery Supplies",
+      "explore_products": "Explore Our Products",
+      "contact_us": "Contact Us",
+      "about_title": "About Seven-Eleven",
+      "about_desc": "Seven-Eleven is a premier provider of high-quality food products and grocery supplies, serving both retail and wholesale customers. With a commitment to quality, freshness, and exceptional service, we have established ourselves as a trusted name in the grocery supply industry.",
+      "our_mission_title": "Our Mission",
+      "our_mission_desc": "To provide consistently high-quality food products and grocery supplies while ensuring excellent customer service and competitive pricing.",
+      "our_vision_title": "Our Vision",
+      "our_vision_desc": "To be the leading grocery supplier in the region, known for quality, reliability, and innovation.",
+      "products_title": "Our Products",
+      "products_subtitle": "Discover our wide range of high-quality grocery products",
+      "why_choose_title": "Why Choose Seven-Eleven?",
+      "why_choose_subtitle": "We're dedicated to quality, freshness, and excellent service",
+      "product_fresh_produce": {
+        "title": "Fresh Produce",
+        "description": "A wide selection of fresh fruits and vegetables sourced from trusted local and international farms."
+      },
+      "product_dairy": {
+        "title": "Dairy Products",
+        "description": "High-quality dairy products including milk, cheese, yogurt, and more from premium suppliers."
+      },
+      "product_bakery": {
+        "title": "Bakery Items",
+        "description": "Freshly baked bread, pastries, and confectioneries made with premium ingredients."
+      },
+      "product_beverages": {
+        "title": "Beverages",
+        "description": "A comprehensive range of beverages including soft drinks, juices, water, coffee, and tea."
+      },
+      "product_pantry": {
+        "title": "Pantry Essentials",
+        "description": "Essential pantry items including rice, pasta, oils, spices, sauces, and condiments."
+      },
+      "product_snacks": {
+        "title": "Snacks & Confectionery",
+        "description": "A delightful selection of snacks, chocolates, candies, and other confectionery items."
+      },
+      "feature_quality": {
+        "title": "Premium Quality",
+        "description": "We offer only the highest quality products that meet our strict standards."
+      },
+      "feature_delivery": {
+        "title": "Fast Delivery",
+        "description": "Efficient delivery service to ensure your products arrive on time."
+      },
+      "feature_restock": {
+        "title": "Regular Restocking",
+        "description": "Frequent restocking to ensure fresh products are always available."
+      },
+      "feature_pricing": {
+        "title": "Competitive Pricing",
+        "description": "Fair and competitive prices without compromising on quality."
+      },
+      "stats_products": "Products",
+      "stats_suppliers": "Suppliers",
+      "stats_customers": "Regular Customers",
+      "stats_experience": "Years Experience",
+      "testimonials_title": "What Our Customers Say",
+      "testimonials_subtitle": "Read testimonials from our satisfied customers",
+      "testimonial1": {
+        "quote": "Seven-Eleven has been our trusted supplier for over 5 years. Their products are consistently high-quality and their service is exceptional.",
+        "name": "Ahmed Al-Khatib",
+        "position": "Restaurant Owner"
+      },
+      "testimonial2": {
+        "quote": "What sets Seven-Eleven apart is their attention to detail and commitment to customer satisfaction. They go above and beyond to ensure we get the best products.",
+        "name": "Fatima Al-Saud",
+        "position": "Hotel Purchasing Manager"
+      },
+      "testimonial3": {
+        "quote": "I've been shopping at Seven-Eleven for years and have always been impressed by their product quality and friendly service. Highly recommended!",
+        "name": "Mohammad Al-Jasim",
+        "position": "Regular Customer"
+      },
+      "cta_title": "Ready to Partner with Seven-Eleven?",
+      "cta_desc": "Contact us today to learn more about our products and services.",
+      "cta_button": "Contact Us Now"
+    }
   },
   "about": {
     "page_title": "About BOD Holdings",
@@ -681,7 +762,6 @@
     "cta_desc": "Join us in building a successful future. Whether you're looking to invest, partner, or explore career opportunities, we'd love to hear from you.",
     "join_team": "Join Our Team",
     "bod": "BOD Holdings"
-    
   },
   "auth": {
     "Email": "Email",
@@ -779,7 +859,7 @@
     "intro_title": "Diverse Portfolio, Focused Expertise",
     "intro_description": "BOD Holdings has strategically expanded its operations into various industries, allowing us to diversify our investment portfolio while maintaining specialized expertise in each sector.",
     "key_focus_areas": "Key Focus Areas:",
-    
+
     "tech_sector": "Technology",
     "tech_desc": "Digital innovation and IT services including software development, cybersecurity, and cloud solutions.",
     "tech_focus1": "Software Development",
@@ -1654,5 +1734,62 @@
     "integration_feature2_desc": "Drag-and-drop interface for creating custom workflows between different business systems.",
     "integration_feature3_title": "Single Sign-On (SSO)",
     "integration_feature3_desc": "Seamless authentication across all connected applications for enhanced security and user experience."
+  },
+  "ramadan": {
+    "title": "Ramadan Restaurants",
+    "subtitle": "Experience the Art of Authentic Cuisine",
+    "find_location": "Find Location",
+    "about_title": "Experience the Art of Authentic Cuisine",
+    "about_desc": "Ramadan Restaurants is more than just a dining establishment – it's a culinary journey that brings together the finest flavors of Pakistani, Turkish, and traditional cuisine. Our commitment to authenticity and excellence has made us a premier destination for food enthusiasts.",
+    "culinary_excellence": "Our Culinary Excellence",
+    "authentic_recipes": "Authentic Recipes",
+    "authentic_recipes_desc": "Traditional cooking methods and premium ingredients",
+    "master_chefs": "Master Chefs",
+    "master_chefs_desc": "Expertly trained culinary professionals",
+    "fresh_ingredients": "Fresh Ingredients",
+    "fresh_ingredients_desc": "Locally sourced, premium quality produce",
+    "premium_service": "Premium Service",
+    "premium_service_desc": "Exceptional dining experience guaranteed",
+    "view_menu": "View Our Menu",
+    "cuisines_title": "Our Signature Cuisines",
+    "cuisines_subtitle": "Discover our carefully curated selection of authentic dishes, each prepared with passion and tradition.",
+    "pakistani_cuisine": "Pakistani Cuisine",
+    "pakistani_cuisine_desc": "Experience the rich and aromatic flavors of authentic Pakistani cuisine, featuring a diverse array of spices, tender meats, and fragrant rice dishes.",
+    "turkish_cuisine": "Turkish Cuisine",
+    "turkish_cuisine_desc": "Enjoy the finest traditional Turkish dishes, from savory kebabs to delightful Turkish desserts, all prepared with fresh ingredients and authentic cooking techniques.",
+    "traditional_specialties": "Traditional Specialties",
+    "traditional_specialties_desc": "Discover our signature traditional dishes, from aromatic Mandi to flavorful Bukhari rice, all prepared with authentic cooking methods.",
+    "features_title": "Restaurant Features",
+    "features_subtitle": "What makes our dining experience special",
+    "private_dining": "Private Dining",
+    "private_dining_desc": "Exclusive private rooms for special occasions",
+    "outdoor_seating": "Outdoor Seating",
+    "outdoor_seating_desc": "Comfortable outdoor dining areas",
+    "live_cooking": "Live Cooking",
+    "live_cooking_desc": "Interactive cooking stations and demonstrations",
+    "prayer_room": "Prayer Room",
+    "prayer_room_desc": "Dedicated prayer facilities for our guests",
+    "family_section": "Family Section",
+    "family_section_desc": "Spacious family-friendly dining areas",
+    "valet_parking": "Valet Parking",
+    "valet_parking_desc": "Complimentary valet parking service",
+    "locations_title": "Our Locations",
+    "locations_subtitle": "Find a Ramadan Restaurant near you",
+    "main_branch": "Main Branch",
+    "main_branch_desc": "Our flagship restaurant offering the complete dining experience with all our specialties.",
+    "eastern_district": "Eastern District",
+    "eastern_district_desc": "Conveniently located in the eastern part of the city, featuring our complete menu.",
+    "northern_heights": "Northern Heights",
+    "northern_heights_desc": "Our newest location in the northern district, with expanded family dining areas.",
+    "address": "Address",
+    "contact": "Contact",
+    "hours": "Hours",
+    "get_directions": "Get Directions",
+    "testimonials_title": "What Our Customers Say",
+    "testimonials_subtitle": "Hear from our satisfied guests about their dining experiences",
+    "cta_title": "Experience Authentic Cuisine Today",
+    "cta_subtitle": "Visit any of our Ramadan Restaurant locations to enjoy a memorable dining experience or place an order for delivery to your doorstep.",
+    "make_reservation": "Make a Reservation",
+    "order_online": "Order Online"
   }
 }
