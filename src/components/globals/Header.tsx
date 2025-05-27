@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 
 export default function Header() {
@@ -9,16 +9,29 @@ export default function Header() {
   const pathname = usePathname();
   const currentLocale = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
   const t = useTranslations("header");
 
   const changeLanguage = (locale: string) => {
     router.replace(pathname, { locale });
   };
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (mobileMenuOpen && !(e.target as Element).closest('.mobile-menu-container')) {
+      if (
+        mobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(e.target as Node)
+      ) {
         setMobileMenuOpen(false);
       }
     };
@@ -70,6 +83,7 @@ export default function Header() {
             <span>{t("language_ar")}</span>
           </button>
           <button 
+            ref={menuButtonRef}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
             className={`md:hidden ${pathname === '/' || pathname === '/about' ? 'text-white' : 'text-gray-800'} focus:outline-none mobile-menu-button`}
             aria-label="Toggle mobile menu"
@@ -84,7 +98,10 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu-container absolute left-0 right-0 ${mobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white px-4 py-4 shadow-md transition-all duration-300 z-50`}>
+      <div 
+        ref={mobileMenuRef}
+        className={`mobile-menu-container absolute left-0 right-0 ${mobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white px-4 py-4 shadow-md transition-all duration-300 z-50`}
+      >
         <Link 
           href="/" 
           locale={currentLocale} 
