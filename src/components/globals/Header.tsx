@@ -118,22 +118,6 @@ export default function Header() {
           {t("sectors")}
         </Link>
         <Link 
-          href="/news" 
-          locale={currentLocale} 
-          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 ${pathname === '/news' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t("news")}
-        </Link>
-        <Link 
-          href="/careers" 
-          locale={currentLocale} 
-          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 ${pathname === '/careers' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
-          onClick={() => setMobileMenuOpen(false)}
-        >
-          {t("careers")}
-        </Link>
-        <Link 
           href="/contact" 
           locale={currentLocale} 
           className={`block py-3 px-2 hover:bg-gray-50 ${pathname === '/contact' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
