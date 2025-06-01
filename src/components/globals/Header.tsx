@@ -50,24 +50,24 @@ export default function Header() {
         </div>
 
         <nav className="hidden md:flex space-x-8">
-          <Link href="/" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/' ? 'text-white' : ''}`}>
+          <Link href="/" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium text-lg relative group ${pathname === '/' ? 'text-white' : ''}`}>
             {t("home")}
             <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/about" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/about' ? 'text-white' : ''}`}>
+          <Link href="/about" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium text-lg relative group ${pathname === '/about' ? 'text-white' : ''}`}>
             {t("about")}
             <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/subsidiaries" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/subsidiaries' ? 'text-blue-800' : ''}`}>
+          {/* <Link href="/subsidiaries" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/subsidiaries' ? 'text-blue-800' : ''}`}>
             {t("subsidiaries")}
             <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/subsidiaries' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-          </Link>
-          <Link href="/sectors" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/sectors' ? 'text-blue-800' : ''}`}>
+          </Link> */}
+          <Link href="/sectors" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium text-lg relative group ${pathname === '/sectors' ? 'text-blue-800' : ''}`}>
             {t("sectors")}
             <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/sectors' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
 
-          <Link href="/contact" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium relative group ${pathname === '/contact' ? 'text-blue-800' : ''}`}>
+          <Link href="/contact" locale={currentLocale} className={`${pathname === '/' || pathname === '/about' ? 'text-white hover:text-gray-200' : 'text-gray-800 hover:text-blue-600'} font-medium text-lg relative group ${pathname === '/contact' ? 'text-blue-800' : ''}`}>
             {t("contact")}
             <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
@@ -105,7 +105,7 @@ export default function Header() {
         <Link 
           href="/" 
           locale={currentLocale} 
-          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 ${pathname === '/' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
+          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 text-lg ${pathname === '/' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
           onClick={() => setMobileMenuOpen(false)}
         >
           {t("home")}
@@ -113,7 +113,7 @@ export default function Header() {
         <Link 
           href="/about" 
           locale={currentLocale} 
-          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 ${pathname === '/about' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
+          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 text-lg ${pathname === '/about' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
           onClick={() => setMobileMenuOpen(false)}
         >
           {t("about")}
@@ -121,7 +121,7 @@ export default function Header() {
         <Link 
           href="/subsidiaries" 
           locale={currentLocale} 
-          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 ${pathname === '/subsidiaries' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
+          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 text-lg ${pathname === '/subsidiaries' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
           onClick={() => setMobileMenuOpen(false)}
         >
           {t("subsidiaries")}
@@ -129,7 +129,7 @@ export default function Header() {
         <Link 
           href="/sectors" 
           locale={currentLocale} 
-          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 ${pathname === '/sectors' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
+          className={`block py-3 px-2 border-b border-gray-100 hover:bg-gray-50 text-lg ${pathname === '/sectors' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
           onClick={() => setMobileMenuOpen(false)}
         >
           {t("sectors")}
@@ -137,7 +137,7 @@ export default function Header() {
         <Link 
           href="/contact" 
           locale={currentLocale} 
-          className={`block py-3 px-2 hover:bg-gray-50 ${pathname === '/contact' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
+          className={`block py-3 px-2 hover:bg-gray-50 text-lg ${pathname === '/contact' ? 'text-blue-800 font-medium' : 'text-gray-800'}`}
           onClick={() => setMobileMenuOpen(false)}
         >
           {t("contact")}

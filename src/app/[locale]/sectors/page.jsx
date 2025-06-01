@@ -85,7 +85,7 @@ export default function SectorsPage() {
                             <div className="flex justify-center items-center space-x-6">
                                 <a href="#technology" 
                                    className="group relative inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full hover:from-blue-500 hover:to-indigo-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
-                                    <span className="relative z-10">Explore Sectors</span>
+                                    <span className="relative z-10">{t("explore_all_sectors_btn")}</span>
                                     <svg className="w-5 h-5 ml-2 animate-bounce relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                                     </svg>
@@ -113,312 +113,202 @@ export default function SectorsPage() {
             </section>
 
             {/* Technology Sector */ }
-            <section id="technology" className="py-20 bg-gray-50">
+            <section id="technology" className="py-24 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
                         <div className="lg:w-1/2 animate-slide-in-right">
-                            <div className="bg-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                            <div className="bg-white p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-bl-full z-0"></div>
+                                <div className="text-blue-800 text-7xl mb-10 relative z-10">
                                     <i className="fas fa-microchip"></i>
                                 </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{ t("tech_sector") }</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">{ t("tech_desc") }</p>
+                                <h2 className="text-5xl font-bold text-gray-800 mb-8 relative z-10">{t("tech_sector")}</h2>
+                                <p className="text-xl text-gray-600 mb-8 relative z-10 leading-relaxed">{t("tech_desc")}</p>
 
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{ t("key_focus_areas") }</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("tech_focus1") }</span>
+                                <div className="mb-8 relative z-10">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-6">{t("our_companies_title")}</h3>
+                                    <ul className="text-lg text-gray-600 space-y-4">
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("tech_companies.bod_united")}</span>
                                         </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("tech_focus2") }</span>
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("tech_companies.hr_login")}</span>
                                         </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("tech_focus3") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("tech_focus4") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("tech_focus5") }</span>
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("tech_companies.reach")}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p className="text-gray-600 mb-6 relative z-10">
-                                    { t("tech_summary") }
+                                <p className="text-xl text-gray-600 mb-6 relative z-10 leading-relaxed">
+                                    {t("tech_summary")}
                                 </p>
-
-                                <Link 
-                                    href="/subsidiaries?sector=technology" 
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
-                                >
-                                    { t("view_tech_companies") }
-                                </Link>
                             </div>
                         </div>
                         <div className="lg:w-1/2 animate-slide-in-left">
                             <img
                                 src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3"
                                 alt="Technology Solutions"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500 object-cover h-[600px]"
                             />
                         </div>
                     </div>
                 </div>
             </section>
 
-
             {/* Manufacturing Sector */ }
-            <section id="manufacturing" className="py-20 bg-gray-50">
+            <section id="manufacturing" className="py-24 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
-                        <div className="lg:w-1/2 animate-slide-in-left">
-                            <div className="bg-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-20">
+                        <div className="lg:w-1/2 animate-slide-in-right">
+                            <div className="bg-gray-50 p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-40 h-40 bg-blue-50 rounded-br-full z-0"></div>
+                                <div className="text-blue-800 text-7xl mb-10 relative z-10">
                                     <i className="fas fa-industry"></i>
                                 </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{ t("manufacturing_sector") }</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">{ t("manufacturing_desc") }</p>
+                                <h2 className="text-5xl font-bold text-gray-800 mb-8 relative z-10">{t("manufacturing_sector")}</h2>
+                                <p className="text-xl text-gray-600 mb-8 relative z-10 leading-relaxed">{t("manufacturing_desc")}</p>
 
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{ t("key_focus_areas") }</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("manufacturing_focus1") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("manufacturing_focus2") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("manufacturing_focus3") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("manufacturing_focus4") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("manufacturing_focus5") }</span>
+                                <div className="mb-8 relative z-10">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-6">{t("our_companies_title")}</h3>
+                                    <ul className="text-lg text-gray-600 space-y-4">
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("manufacturing_companies.lo_uniforms")}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p className="text-gray-600 mb-6 relative z-10">
-                                    { t("manufacturing_summary") }
+                                <p className="text-xl text-gray-600 mb-6 relative z-10 leading-relaxed">
+                                    {t("manufacturing_summary")}
                                 </p>
-
-                                <Link 
-                                    href="/subsidiaries?sector=manufacturing" 
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
-                                >
-                                    { t("view_manufacturing_companies") }
-                                </Link>
                             </div>
                         </div>
-                        <div className="lg:w-1/2 animate-slide-in-right">
+                        <div className="lg:w-1/2 animate-slide-in-left">
                             <img
                                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3"
                                 alt="Manufacturing Facilities"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500 object-cover h-[600px]"
                             />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Healthcare Sector */ }
-            <section id="healthcare" className="py-20 bg-white">
+            {/* Healthcare Sector */}
+            <section id="healthcare" className="py-24 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
                         <div className="lg:w-1/2 animate-slide-in-right">
-                            <div className="bg-gray-50 p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-32 h-32 bg-blue-50 rounded-br-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                            <div className="bg-white p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-bl-full z-0"></div>
+                                <div className="text-blue-800 text-7xl mb-10 relative z-10">
                                     <i className="fas fa-heartbeat"></i>
                                 </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{ t("healthcare_title") }</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">
-                                    { t("healthcare_desc") }
-                                </p>
+                                <h2 className="text-5xl font-bold text-gray-800 mb-8 relative z-10">{t("healthcare_title")}</h2>
+                                <p className="text-xl text-gray-600 mb-8 relative z-10 leading-relaxed">{t("healthcare_desc")}</p>
 
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{ t("key_focus_areas") }</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("healthcare_focus1") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("healthcare_focus2") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("healthcare_focus3") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("healthcare_focus4") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("healthcare_focus5") }</span>
+                                <div className="mb-8 relative z-10">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-6">{t("our_companies_title")}</h3>
+                                    <ul className="text-lg text-gray-600 space-y-4">
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("healthcare_companies.graston")}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p className="text-gray-600 mb-6 relative z-10">
-                                    { t("healthcare_summary") }
+                                <p className="text-xl text-gray-600 mb-6 relative z-10 leading-relaxed">
+                                    {t("healthcare_summary")}
                                 </p>
-
-                                <Link 
-                                    href="/subsidiaries?sector=healthcare" 
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
-                                >
-                                    { t("view_healthcare_companies") }
-                                </Link>
                             </div>
                         </div>
                         <div className="lg:w-1/2 animate-slide-in-left">
                             <img
                                 src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3"
                                 alt="Healthcare Facilities"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500 object-cover h-[600px]"
                             />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Automotive Sector */ }
-            <section id="automotive" className="py-20 bg-gray-50">
+            {/* Automotive Sector */}
+            <section id="automotive" className="py-24 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
-                        <div className="lg:w-1/2 animate-slide-in-left">
-                            <div className="bg-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-20">
+                        <div className="lg:w-1/2 animate-slide-in-right">
+                            <div className="bg-gray-50 p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-40 h-40 bg-blue-50 rounded-br-full z-0"></div>
+                                <div className="text-blue-800 text-7xl mb-10 relative z-10">
                                     <i className="fas fa-car"></i>
                                 </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{ t("automotive_sector") }</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">{ t("automotive_desc") }</p>
+                                <h2 className="text-5xl font-bold text-gray-800 mb-8 relative z-10">{t("automotive_sector")}</h2>
+                                <p className="text-xl text-gray-600 mb-8 relative z-10 leading-relaxed">{t("automotive_desc")}</p>
 
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{ t("key_focus_areas") }</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("automotive_focus1") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("automotive_focus2") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("automotive_focus3") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("automotive_focus4") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("automotive_focus5") }</span>
+                                <div className="mb-8 relative z-10">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-6">{t("our_companies_title")}</h3>
+                                    <ul className="text-lg text-gray-600 space-y-4">
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("automotive_companies.power_mark")}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p className="text-gray-600 mb-6 relative z-10">
-                                    { t("automotive_summary") }
+                                <p className="text-xl text-gray-600 mb-6 relative z-10 leading-relaxed">
+                                    {t("automotive_summary")}
                                 </p>
-
-                                <Link 
-                                    href="/subsidiaries?sector=automotive" 
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
-                                >
-                                    { t("view_automotive_companies") }
-                                </Link>
                             </div>
                         </div>
-                        <div className="lg:w-1/2 animate-slide-in-right">
+                        <div className="lg:w-1/2 animate-slide-in-left">
                             <img
                                 src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3"
                                 alt="Automotive Solutions"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500 object-cover h-[600px]"
                             />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Hospitality Sector */ }
-            <section id="hospitality" className="py-20 bg-white">
+            {/* Hospitality Sector */}
+            <section id="hospitality" className="py-24 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
                         <div className="lg:w-1/2 animate-slide-in-right">
-                            <div className="bg-gray-50 p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-32 h-32 bg-blue-50 rounded-br-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                            <div className="bg-white p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-bl-full z-0"></div>
+                                <div className="text-blue-800 text-7xl mb-10 relative z-10">
                                     <i className="fas fa-utensils"></i>
                                 </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{ t("hospitality_sector") }</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">{ t("hospitality_desc") }</p>
+                                <h2 className="text-5xl font-bold text-gray-800 mb-8 relative z-10">{t("hospitality_sector")}</h2>
+                                <p className="text-xl text-gray-600 mb-8 relative z-10 leading-relaxed">{t("hospitality_desc")}</p>
 
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{ t("key_focus_areas") }</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("hospitality_focus1") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("hospitality_focus2") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("hospitality_focus3") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("hospitality_focus4") }</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{ t("hospitality_focus5") }</span>
+                                <div className="mb-8 relative z-10">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-6">{t("our_companies_title")}</h3>
+                                    <ul className="text-lg text-gray-600 space-y-4">
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("hospitality_companies.ramadan")}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p className="text-gray-600 mb-6 relative z-10">
-                                    { t("hospitality_summary") }
+                                <p className="text-xl text-gray-600 mb-6 relative z-10 leading-relaxed">
+                                    {t("hospitality_summary")}
                                 </p>
-
-                                <Link 
-                                    href="/subsidiaries?sector=hospitality" 
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
-                                >
-                                    { t("view_hospitality_companies") }
-                                </Link>
                             </div>
                         </div>
                         <div className="lg:w-1/2 animate-slide-in-left">
                             <img
                                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3"
                                 alt="Hospitality Services"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500 object-cover h-[600px]"
                             />
                         </div>
                     </div>
@@ -426,63 +316,50 @@ export default function SectorsPage() {
             </section>
 
             {/* Services Sector */}
-            <section id="services" className="py-20 bg-white">
+            <section id="services" className="py-24 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                    <div className="flex flex-col lg:flex-row items-center gap-20">
                         <div className="lg:w-1/2 animate-slide-in-right">
-                            <div className="bg-gray-50 p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-32 h-32 bg-blue-50 rounded-br-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                            <div className="bg-gray-50 p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 left-0 w-40 h-40 bg-blue-50 rounded-br-full z-0"></div>
+                                <div className="text-blue-800 text-7xl mb-10 relative z-10">
                                     <i className="fas fa-cogs"></i>
                                 </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{t("services_sector")}</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">
-                                    {t("services_desc")}
-                                </p>
+                                <h2 className="text-5xl font-bold text-gray-800 mb-8 relative z-10">{t("services_sector")}</h2>
+                                <p className="text-xl text-gray-600 mb-8 relative z-10 leading-relaxed">{t("services_desc")}</p>
 
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{t("key_focus_areas")}</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("services_focus1")}</span>
+                                <div className="mb-8 relative z-10">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-6">{t("our_companies_title")}</h3>
+                                    <ul className="text-lg text-gray-600 space-y-4">
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("services_companies.asap")}</span>
                                         </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("services_focus2")}</span>
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("services_companies.peak_time")}</span>
                                         </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("services_focus3")}</span>
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("services_companies.all_plans")}</span>
                                         </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("services_focus4")}</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("services_focus5")}</span>
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("services_companies.completed_tasks")}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p className="text-gray-600 mb-6 relative z-10">
+                                <p className="text-xl text-gray-600 mb-6 relative z-10 leading-relaxed">
                                     {t("services_summary")}
                                 </p>
-
-                                <Link 
-                                    href="/subsidiaries?sector=services" 
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
-                                >
-                                    {t("view_services_companies")}
-                                </Link>
                             </div>
                         </div>
                         <div className="lg:w-1/2 animate-slide-in-left">
                             <img
                                 src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3"
                                 alt="Business Services"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500 object-cover h-[600px]"
                             />
                         </div>
                     </div>
@@ -490,63 +367,42 @@ export default function SectorsPage() {
             </section>
 
             {/* Retail Sector */}
-            <section id="retail" className="py-20 bg-gray-50">
+            <section id="retail" className="py-24 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
-                        <div className="lg:w-1/2 animate-slide-in-left">
-                            <div className="bg-white p-10 rounded-2xl shadow-xl relative overflow-hidden">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full z-0"></div>
-                                <div className="text-blue-800 text-6xl mb-8 relative z-10">
+                    <div className="flex flex-col lg:flex-row-reverse items-center gap-20">
+                        <div className="lg:w-1/2 animate-slide-in-right">
+                            <div className="bg-white p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-bl-full z-0"></div>
+                                <div className="text-blue-800 text-7xl mb-10 relative z-10">
                                     <i className="fas fa-shopping-bag"></i>
                                 </div>
-                                <h2 className="text-4xl font-bold text-gray-800 mb-6 relative z-10">{t("retail_sector")}</h2>
-                                <p className="text-gray-600 mb-4 relative z-10">
-                                    {t("retail_desc")}
-                                </p>
+                                <h2 className="text-5xl font-bold text-gray-800 mb-8 relative z-10">{t("retail_sector")}</h2>
+                                <p className="text-xl text-gray-600 mb-8 relative z-10 leading-relaxed">{t("retail_desc")}</p>
 
-                                <div className="mb-6 relative z-10">
-                                    <h3 className="text-xl font-bold text-gray-800 mb-3">{t("key_focus_areas")}</h3>
-                                    <ul className="text-gray-600 space-y-2">
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("retail_focus1")}</span>
+                                <div className="mb-8 relative z-10">
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-6">{t("our_companies_title")}</h3>
+                                    <ul className="text-lg text-gray-600 space-y-4">
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("retail_companies.seven_eleven")}</span>
                                         </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("retail_focus2")}</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("retail_focus3")}</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("retail_focus4")}</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <i className="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                            <span>{t("retail_focus5")}</span>
+                                        <li className="flex items-start transform hover:scale-105 transition-transform duration-300">
+                                            <i className="fas fa-building text-blue-600 mt-1.5 mr-4 text-xl"></i>
+                                            <span className="flex-1">{t("retail_companies.alrawaq")}</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <p className="text-gray-600 mb-6 relative z-10">
+                                <p className="text-xl text-gray-600 mb-6 relative z-10 leading-relaxed">
                                     {t("retail_summary")}
                                 </p>
-
-                                <Link 
-                                    href="/subsidiaries?sector=retail" 
-                                    className="inline-block bg-blue-800 text-white hover:bg-blue-700 px-6 py-3 rounded-md font-medium transition duration-300 relative z-10"
-                                >
-                                    {t("view_retail_companies")}
-                                </Link>
                             </div>
                         </div>
-                        <div className="lg:w-1/2 animate-slide-in-right">
+                        <div className="lg:w-1/2 animate-slide-in-left">
                             <img
                                 src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3"
                                 alt="Retail Solutions"
-                                className="rounded-2xl shadow-2xl w-full transform hover:scale-105 transition duration-500"
+                                className="rounded-3xl shadow-2xl w-full transform hover:scale-105 transition duration-500 object-cover h-[600px]"
                             />
                         </div>
                     </div>
@@ -663,9 +519,6 @@ export default function SectorsPage() {
                         <div className="flex flex-wrap justify-center gap-6">
                             <Link href="/contact" className="bg-blue-800 text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-medium transition duration-300 transform hover:scale-105">
                                 { t("contact_btn") }
-                            </Link>
-                            <Link href="/subsidiaries" className="bg-gray-100 text-blue-800 hover:bg-gray-200 px-10 py-4 rounded-lg font-medium transition duration-300 transform hover:scale-105">
-                                { t("explore_subsidiaries_btn") }
                             </Link>
                         </div>
                     </div>

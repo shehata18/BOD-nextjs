@@ -49,6 +49,20 @@ export default function Contact() {
 
             {/* Hero Banner */ }
             <section className="relative hero-background min-h-[90vh] flex items-center justify-center overflow-hidden">
+                {/* Page Title */}
+                <div className="absolute top-20 md:top-24 left-0 right-0 text-center z-20">
+                    <h1 className="text-5xl md:text-6xl font-bold mb-2 tracking-wide 
+                        bg-gradient-to-r from-white/90 via-white to-white/90 bg-clip-text text-transparent
+                        drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]
+                        [text-shadow:_3px_3px_6px_rgb(0_0_0_/_30%),_0_-1px_2px_rgb(255_255_255_/_40%)]
+                        transition-all duration-300 hover:scale-105"
+                    >
+                        {t("contact_us")}
+                    </h1>
+                    <div className="w-32 h-1 mx-auto bg-gradient-to-r from-transparent via-blue-500 to-transparent 
+                        shadow-lg opacity-80"></div>
+                </div>
+
                 {/* Curved lines */ }
                 <div className="curved-line"></div>
                 <div className="curved-line" style={ { transform: "rotate(180deg)" } }></div>
@@ -111,14 +125,6 @@ export default function Contact() {
                                     <i className="fas fa-paper-plane mr-3 relative z-10"></i>
                                     <span className="relative z-10">{ t("send_message") }</span>
                                 </a>
-                                <a
-                                    href="#global-presence"
-                                    className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white border-2 border-white rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                                >
-                                    <span className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                                    <i className="fas fa-globe mr-3"></i>
-                                    <span>{ t("global_offices") }</span>
-                                </a>
                             </div>
                             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                                 <div className="flex items-center justify-center space-x-4 text-white/80 hover:text-white transition-colors duration-300">
@@ -163,8 +169,8 @@ export default function Contact() {
             {/* Contact Information */ }
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-                        {/* Contact Card 1 */ }
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                        {/* Contact Card 1 */}
                         <div
                             data-aos="fade-up"
                             data-aos-delay="0"
@@ -173,94 +179,83 @@ export default function Contact() {
                             <div className="text-blue-600 text-4xl mb-6 flex justify-center float-animation">
                                 <i className="fas fa-map-marked-alt"></i>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-800 mb-4">{ t("visit_us") }</h3>
+                            <h3 className="text-3xl font-bold text-gray-800 mb-4">{t("visit_us")}</h3>
                             <div className="space-y-2 text-gray-600">
-                                <p className="flex items-center justify-center">
+                                <p className="flex items-center justify-center text-lg">
                                     <i className="fas fa-building mr-2"></i>
-                                    { t("headquarters_address1") }
+                                    {t("headquarters_address1")}
                                 </p>
-                                <p className="flex items-center justify-center">
+                                <p className="flex items-center justify-center text-lg">
                                     <i className="fas fa-city mr-2"></i>
-                                    { t("headquarters_address2") }
+                                    {t("headquarters_address2")}
                                 </p>
-                                <p className="flex items-center justify-center">
+                                <p className="flex items-center justify-center text-lg">
                                     <i className="fas fa-globe-americas mr-2"></i>
-                                    { t("headquarters_address3") }
+                                    {t("headquarters_address3")}
                                 </p>
-                                <p className="flex items-center justify-center">
+                                <p className="flex items-center justify-center text-lg">
                                     <i className="fas fa-mail-bulk mr-2"></i>
-                                    { t("headquarters_postal") }
+                                    {t("headquarters_postal")}
                                 </p>
                             </div>
                         </div>
 
-                        {/* Contact Card 2 */ }
+                        {/* Combined Contact Card */}
                         <div
                             data-aos="fade-up"
                             data-aos-delay="100"
                             className="contact-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
                         >
-                            <div className="text-blue-600 text-4xl mb-6 flex justify-center float-animation">
+                            <div className="text-blue-600 text-4xl mb-6 flex justify-center gap-4 float-animation">
                                 <i className="fas fa-headset"></i>
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-800 mb-4">{ t("call_us") }</h3>
-                            <div className="space-y-2 text-gray-600">
-                                <p className="flex items-center justify-center">
-                                    <i className="fas fa-phone-alt mr-2"></i>
-                                    { t("main_phone") }
-                                </p>
-                                <p className="flex items-center justify-center">
-                                    <i className="fas fa-comments mr-2"></i>
-                                    { t("support_phone") }
-                                </p>
-                                <p className="flex items-center justify-center">
-                                    <i className="fas fa-chart-line mr-2"></i>
-                                    { t("investors_phone") }
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Contact Card 3 */ }
-                        <div
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                            className="contact-card bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300"
-                        >
-                            <div className="text-blue-600 text-4xl mb-6 flex justify-center float-animation">
                                 <i className="fas fa-envelope-open-text"></i>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-800 mb-4">{ t("email_us") }</h3>
-                            <div className="space-y-2 text-gray-600">
-                                <p className="flex items-center justify-center">
-                                    <i className="fas fa-envelope mr-2"></i>
-                                    { t("main_email") }
-                                </p>
-                                <p className="flex items-center justify-center">
-                                    <i className="fas fa-life-ring mr-2"></i>
-                                    { t("support_email") }
-                                </p>
-                                <p className="flex items-center justify-center">
-                                    <i className="fas fa-briefcase mr-2"></i>
-                                    { t("careers_email") }
-                                </p>
+                            <div className="space-y-4 text-gray-600">
+                                <div className="border-b pb-4">
+                                    <h4 className="font-semibold mb-2 text-blue-600 text-xl">
+                                        <i className="fas fa-phone-alt mr-2"></i>
+                                        {t("call_us")}
+                                    </h4>
+                                    <p className="flex items-center justify-center text-lg">
+                                        0126606621
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-semibold mb-2 text-blue-600 text-xl">
+                                        <i className="fas fa-envelope mr-2"></i>
+                                        {t("email_us")}
+                                    </h4>
+                                    <p className="flex items-center justify-center text-lg">
+                                        <i className="fas fa-envelope mr-2"></i>
+                                        {t("main_email")}
+                                    </p>
+                                    <p className="flex items-center justify-center text-lg">
+                                        <i className="fas fa-life-ring mr-2"></i>
+                                        {t("support_email")}
+                                    </p>
+                                    <p className="flex items-center justify-center text-lg">
+                                        <i className="fas fa-briefcase mr-2"></i>
+                                        {t("careers_email")}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Contact Form & Map */ }
+                    {/* Contact Form & Map */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Contact Form */ }
+                        {/* Contact Form */}
                         <div data-aos="fade-right" data-aos-duration="1000" id="contact-form">
                             <div className="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 className="text-3xl font-bold text-gray-800 mb-2">{ t("send_us_message") }</h2>
+                                <h2 className="text-4xl font-bold text-gray-800 mb-2">{t("send_us_message")}</h2>
                                 <div className="w-20 h-1 bg-blue-600 mb-6"></div>
-                                <p className="text-gray-600 mb-8">{ t("form_description") }</p>
+                                <p className="text-gray-600 mb-8 text-lg">{t("form_description")}</p>
 
                                 <form className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="form-group">
-                                            <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 mb-2">
-                                                <i className="fas fa-user mr-2 text-blue-600"></i>{ t("first_name") } *
+                                            <label htmlFor="first-name" className="block text-lg font-medium text-gray-700 mb-2">
+                                                <i className="fas fa-user mr-2 text-blue-600"></i>{t("first_name")} *
                                             </label>
                                             <input
                                                 type="text"
@@ -271,8 +266,8 @@ export default function Contact() {
                                             />
                                         </div>
                                         <div className="form-group">
-                                            <label htmlFor="last-name" className="block text-sm font-medium text-gray-700 mb-2">
-                                                <i className="fas fa-user mr-2 text-blue-600"></i>{ t("last_name") } *
+                                            <label htmlFor="last-name" className="block text-lg font-medium text-gray-700 mb-2">
+                                                <i className="fas fa-user mr-2 text-blue-600"></i>{t("last_name")} *
                                             </label>
                                             <input
                                                 type="text"
@@ -285,8 +280,8 @@ export default function Contact() {
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                                            <i className="fas fa-envelope mr-2 text-blue-600"></i>{ t("email_address") } *
+                                        <label htmlFor="email" className="block text-lg font-medium text-gray-700 mb-2">
+                                            <i className="fas fa-envelope mr-2 text-blue-600"></i>{t("email_address")} *
                                         </label>
                                         <input
                                             type="email"
@@ -298,8 +293,8 @@ export default function Contact() {
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                                            <i className="fas fa-phone mr-2 text-blue-600"></i>{ t("phone_number") }
+                                        <label htmlFor="phone" className="block text-lg font-medium text-gray-700 mb-2">
+                                            <i className="fas fa-phone mr-2 text-blue-600"></i>{t("phone_number")}
                                         </label>
                                         <input
                                             type="tel"
@@ -310,8 +305,8 @@ export default function Contact() {
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                                            <i className="fas fa-tag mr-2 text-blue-600"></i>{ t("subject") } *
+                                        <label htmlFor="subject" className="block text-lg font-medium text-gray-700 mb-2">
+                                            <i className="fas fa-tag mr-2 text-blue-600"></i>{t("subject")} *
                                         </label>
                                         <input
                                             type="text"
@@ -323,8 +318,8 @@ export default function Contact() {
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                                            <i className="fas fa-comment mr-2 text-blue-600"></i>{ t("message") } *
+                                        <label htmlFor="message" className="block text-lg font-medium text-gray-700 mb-2">
+                                            <i className="fas fa-comment mr-2 text-blue-600"></i>{t("message")} *
                                         </label>
                                         <textarea
                                             id="message"
@@ -357,7 +352,7 @@ export default function Contact() {
 
                                 <div className="h-[400px] bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.7307911762034!2d-122.41941548371092!3d37.77492957975935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1648581626437!5m2!1sen!2sus"
+                                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=21.510332,39.201832&zoom=15"
                                         width="100%"
                                         height="100%"
                                         style={ { border: 0 } }
@@ -367,181 +362,16 @@ export default function Contact() {
                                         className="rounded-lg"
                                     ></iframe>
                                 </div>
-
-                                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="flex-shrink-0">
-                                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                <i className="fas fa-clock text-blue-600 text-xl"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-gray-800 mb-1">{ t("business_hours") }</h3>
-                                            <p className="text-gray-600">{ t("weekday_hours") }</p>
-                                            <p className="text-gray-600">{ t("weekend_hours") }</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start space-x-4">
-                                        <div className="flex-shrink-0">
-                                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                <i className="fas fa-parking text-blue-600 text-xl"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-gray-800 mb-1">{ t("parking") }</h3>
-                                            <p className="text-gray-600">{ t("free_parking") }</p>
-                                            <p className="text-gray-600">{ t("accessible_parking") }</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Global Presence */ }
-            <section className="py-20 bg-gray-50" id="global-presence">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16" data-aos="fade-up">
-                        <h2 className="text-4xl font-bold text-gray-800 mb-4">{ t("global_presence_title") }</h2>
-                        <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">{ t("global_presence_desc") }</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Office 1 */ }
-                        <div className="global-office-card" data-aos="fade-up" data-aos-delay="0">
-                            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                <div className="relative h-64">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1522083165195-3424ed129620"
-                                        alt="New York Office"
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="office-overlay">
-                                        <div className="text-center p-4">
-                                            <i className="fas fa-building text-4xl mb-4"></i>
-                                            <p className="text-lg font-semibold">{ t("visit_newyork_office") }</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="flex-shrink-0">
-                                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                <i className="fas fa-city text-blue-600 text-xl"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-gray-800 mb-2">{ t("new_york_office") }</h3>
-                                            <div className="space-y-2 text-gray-600">
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-map-marker-alt mr-2 text-blue-600"></i>
-                                                    { t("new_york_address") }
-                                                </p>
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-phone-alt mr-2 text-blue-600"></i>
-                                                    { t("new_york_phone") }
-                                                </p>
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-envelope mr-2 text-blue-600"></i>
-                                                    { t("new_york_email") }
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Office 2 */ }
-                        <div className="global-office-card" data-aos="fade-up" data-aos-delay="100">
-                            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                <div className="relative h-64">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad"
-                                        alt="London Office"
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="office-overlay">
-                                        <div className="text-center p-4">
-                                            <i className="fas fa-building text-4xl mb-4"></i>
-                                            <p className="text-lg font-semibold">{ t("visit_london_office") }</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="flex-shrink-0">
-                                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                <i className="fas fa-city text-blue-600 text-xl"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-gray-800 mb-2">{ t("london_office") }</h3>
-                                            <div className="space-y-2 text-gray-600">
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-map-marker-alt mr-2 text-blue-600"></i>
-                                                    { t("london_address") }
-                                                </p>
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-phone-alt mr-2 text-blue-600"></i>
-                                                    { t("london_phone") }
-                                                </p>
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-envelope mr-2 text-blue-600"></i>
-                                                    { t("london_email") }
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Office 3 */ }
-                        <div className="global-office-card" data-aos="fade-up" data-aos-delay="200">
-                            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                <div className="relative h-64">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c"
-                                        alt="Dubai Office"
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="office-overlay">
-                                        <div className="text-center p-4">
-                                            <i className="fas fa-building text-4xl mb-4"></i>
-                                            <p className="text-lg font-semibold">{ t("visit_dubai_office") }</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="flex-shrink-0">
-                                            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                                <i className="fas fa-city text-blue-600 text-xl"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-gray-800 mb-2">{ t("dubai_office") }</h3>
-                                            <div className="space-y-2 text-gray-600">
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-map-marker-alt mr-2 text-blue-600"></i>
-                                                    { t("dubai_address") }
-                                                </p>
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-phone-alt mr-2 text-blue-600"></i>
-                                                    { t("dubai_phone") }
-                                                </p>
-                                                <p className="flex items-center">
-                                                    <i className="fas fa-envelope mr-2 text-blue-600"></i>
-                                                    { t("dubai_email") }
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="mt-4 text-center">
+                                    <a
+                                        href="https://maps.google.com/?q=21.510332,39.201832"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300"
+                                    >
+                                        <i className="fas fa-external-link-alt mr-2"></i>
+                                        {t("view_larger_map")}
+                                    </a>
                                 </div>
                             </div>
                         </div>

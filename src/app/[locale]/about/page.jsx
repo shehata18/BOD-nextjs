@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import StatCounter from "@/components/about/StatCounter";
 import AnimationObserver from "@/components/AnimationObserver";
 import "@/app/styles/about.css";
 
@@ -42,17 +41,11 @@ export default function About() {
               >
                 { t("discover_journey") }
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
               </a>
-              <a
-                href="#leadership"
-                className="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white border-2 border-white rounded-full hover:bg-white hover:text-blue-900 transition duration-300"
-              >
-                { t("meet_team") }
-              </a>
             </div>
-          </div>
+            </div>
         </div>
 
         {/* Decorative Elements */ }
@@ -175,78 +168,7 @@ export default function About() {
               </div>
             </div>
           </div>
-
-          {/* Leadership Team */ }
-          <div id="leadership">
-            <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">{ t("leadership_title") }</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Team Member 1 */ }
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                  alt={ t("leader1_name") }
-                  className="w-full h-64 object-cover object-center"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-1">{ t("leader1_name") }</h3>
-                  <p className="text-blue-600 mb-4">{ t("leader1_position") }</p>
-                  <p className="text-gray-600 mb-4">{ t("leader1_bio") }</p>
-                  <div className="flex space-x-3">
-                    <a href="#" className="text-blue-800 hover:text-blue-600">
-                      <i className="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="#" className="text-blue-800 hover:text-blue-600">
-                      <i className="fa-brands fa-twitter"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Team Member 2 */ }
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
-                  alt={ t("leader2_name") }
-                  className="w-full h-64 object-cover object-center"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-1">{ t("leader2_name") }</h3>
-                  <p className="text-blue-600 mb-4">{ t("leader2_position") }</p>
-                  <p className="text-gray-600 mb-4">{ t("leader2_bio") }</p>
-                  <div className="flex space-x-3">
-                    <a href="#" className="text-blue-800 hover:text-blue-600">
-                      <i className="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="#" className="text-blue-800 hover:text-blue-600">
-                      <i className="fa-brands fa-twitter"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Team Member 3 */ }
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
-                <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                  alt={ t("leader3_name") }
-                  className="w-full h-64 object-cover object-center"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-1">{ t("leader3_name") }</h3>
-                  <p className="text-blue-600 mb-4">{ t("leader3_position") }</p>
-                  <p className="text-gray-600 mb-4">{ t("leader3_bio") }</p>
-                  <div className="flex space-x-3">
-                    <a href="#" className="text-blue-800 hover:text-blue-600">
-                      <i className="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="#" className="text-blue-800 hover:text-blue-600">
-                      <i className="fa-brands fa-twitter"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -363,43 +285,6 @@ export default function About() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics */ }
-      <section className="statistics py-16 bg-blue-800 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">{ t("stats_title") }</h2>
-            <p className="text-xl max-w-3xl mx-auto">{ t("stats_subtitle") }</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">
-                <StatCounter target={ t("stat1_value") } />
-              </div>
-              <p className="text-xl">{ t("stat1_title") }</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">
-                <StatCounter target={ t("stat2_value") } />
-              </div>
-              <p className="text-xl">{ t("stat2_title") }</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">
-                <StatCounter target={ t("stat3_value") } />
-              </div>
-              <p className="text-xl">{ t("stat3_title") }</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">
-                <StatCounter target={ t("stat4_value") } />
-                <span className="text-2xl">+</span>
-              </div>
-              <p className="text-xl">{ t("stat4_title") }</p>
             </div>
           </div>
         </div>

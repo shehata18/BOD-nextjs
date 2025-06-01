@@ -7,9 +7,9 @@
     "news": "News",
     "careers": "Careers",
     "contact": "Contact",
-    "language_switch": "عربي",
+    "language_switch": "AR",
     "language_en": "EN",
-    "language_ar": "عربي"
+    "language_ar": "AR"
   },
   "footer": {
     "company_name": "BOD Holdings",
@@ -25,7 +25,7 @@
     "contact_info": "Contact Info",
     "address": "Emaar Square, King Abdullah Road\nJeddah\nKingdom of Saudi Arabia\nPostal Code: 27543",
     "phone": "+1 (123) 456-7890",
-    "email": "info@bodholdings.com",
+    "email": "info@bod.sa",
     "subscribe": "Subscribe",
     "subscribe_desc": "Stay updated with our latest news and announcements.",
     "email_placeholder": "Your Email",
@@ -33,7 +33,12 @@
     "copyright": "All rights reserved.",
     "privacy_policy": "Privacy Policy",
     "terms_of_service": "Terms of Service",
-    "business_hours": "Business Hours"
+    "sectors_title": "Our Sectors",
+    "tech_sector": "Technology",
+    "manufacturing_sector": "Manufacturing",
+    "healthcare_sector": "Healthcare",
+    "automotive_sector": "Automotive",
+    "hospitality_sector": "Hospitality"
   },
   "subsidiaries": {
     "page_title": "Our",
@@ -649,9 +654,9 @@
     "page_subtitle": "A leading investment company with diverse subsidiaries across multiple sectors",
     "discover_journey": "Discover Our Journey",
     "meet_team": "Meet Our Team",
-    "established": "Established 2003",
+    "established": "Established 2011",
     "our_story_title": "Our Story",
-    "our_story_p1": "Founded in 2003, BOD Holdings began as a small investment firm with a vision to create a diversified portfolio of successful businesses. Over the years, we've grown into a respected holding company with interests spanning multiple industries and regions.",
+    "our_story_p1": "Founded in 2011, BOD Holdings began as a small investment firm with a vision to create a diversified portfolio of successful businesses. Over the years, we've grown into a respected holding company with interests spanning multiple industries and regions.",
     "our_story_p2": "Our journey has been marked by strategic acquisitions, technological innovation, and a commitment to developing our people and communities. Today, we manage a diverse portfolio of subsidiaries across various sectors, including manufacturing, technology, healthcare, and more.",
     "our_story_p3": "What sets BOD Holdings apart is our unique approach to investing and management. We provide not just capital, but strategic guidance, operational expertise, and a global network that helps our subsidiaries thrive in their respective markets.",
     "learn_more_mission": "Learn More About Our Mission",
@@ -679,19 +684,19 @@
     "leader3_position": "Chief Strategy Officer",
     "leader3_bio": "As a former management consultant and business professor, Dr. Rahman leads our strategic planning and business development initiatives.",
     "milestones_title": "Our Milestones",
-    "milestones_subtitle": "Our journey of growth and innovation through the years",
-    "milestone1_year": "2003",
-    "milestone1_title": "Company Founded",
-    "milestone1_desc": "BOD Holdings was established with an initial focus on local real estate investments.",
-    "milestone2_year": "2008",
-    "milestone2_title": "First Major Acquisition",
-    "milestone2_desc": "Acquired LO Uniforms, marking our expansion into the manufacturing sector.",
-    "milestone3_year": "2013",
-    "milestone3_title": "International Expansion",
-    "milestone3_desc": "Established presence in neighboring countries, starting with UAE and Saudi Arabia.",
-    "milestone4_year": "2020",
-    "milestone4_title": "Digital Transformation",
-    "milestone4_desc": "Launched major technological initiatives across all subsidiaries to enhance operations and customer experience.",
+    "milestones_subtitle": "A journey of continuous growth and innovation",
+    "milestone1_year": "Phase 1",
+    "milestone1_title": "Foundation",
+    "milestone1_desc": "Established strong foundations with initial focus on core business development and market research.",
+    "milestone2_year": "Phase 2",
+    "milestone2_title": "Market Expansion",
+    "milestone2_desc": "Strategic expansion into new markets and sectors, diversifying our portfolio and capabilities.",
+    "milestone3_year": "Phase 3",
+    "milestone3_title": "Service Excellence",
+    "milestone3_desc": "Enhanced service quality and operational efficiency through advanced systems and professional development.",
+    "milestone4_year": "Phase 4",
+    "milestone4_title": "Digital Innovation",
+    "milestone4_desc": "Embraced digital transformation across operations to enhance efficiency and customer experience.",
     "stats_title": "BOD Holdings at a Glance",
     "stats_subtitle": "Our impact in numbers showcases our growth and reach across industries and regions.",
     "stat1_value": "5",
@@ -859,6 +864,7 @@
     "intro_title": "Diverse Portfolio, Focused Expertise",
     "intro_description": "BOD Holdings has strategically expanded its operations into various industries, allowing us to diversify our investment portfolio while maintaining specialized expertise in each sector.",
     "key_focus_areas": "Key Focus Areas:",
+    "explore_all_sectors_btn": "Explore Sectors",
 
     "tech_sector": "Technology",
     "tech_desc": "Digital innovation and IT services including software development, cybersecurity, and cloud solutions.",
@@ -946,7 +952,35 @@
     "cta_title": "Interested in Working with BOD Holdings?",
     "cta_desc": "Whether you're looking to partner with us, invest in our ventures, or join our team, we'd love to hear from you.",
     "contact_btn": "Contact Us",
-    "explore_subsidiaries_btn": "Explore Our Subsidiaries"
+    "explore_subsidiaries_btn": "Explore Our Subsidiaries",
+    "our_companies_title": "Our Companies",
+    "tech_companies": {
+      "bod_united": "BOD United - AI, mobile applications, and immersive technologies",
+      "hr_login": "HR Login - Digital HR solutions and workforce management",
+      "reach": "REACH - Programming and Marketing Agency"
+    },
+    "manufacturing_companies": {
+      "lo_uniforms": "LO Uniforms - High-quality uniform manufacturing"
+    },
+    "healthcare_companies": {
+      "graston": "Graston - Healthcare services and medical facilities"
+    },
+    "automotive_companies": {
+      "power_mark": "Power Mark - Premium automotive sales and services"
+    },
+    "hospitality_companies": {
+      "ramadan": "Ramadan - Premium dining and catering services"
+    },
+    "services_companies": {
+      "asap": "ASAP Maintenance - Facility management and maintenance services",
+      "peak_time": "Peak Time Logistics - Delivery services and customer support",
+      "all_plans": "All Plans - Event management and exhibition organization",
+      "completed_tasks": "Completed Tasks - Business solutions and commercial services"
+    },
+    "retail_companies": {
+      "seven_eleven": "Seven-Eleven Grocery Supplies - Food products and grocery supplies",
+      "alrawaq": "Alrawaq Alfareed - Specialized retail solutions"
+    }
   },
   "careers": {
     "page_title": "Careers",
@@ -1038,6 +1072,7 @@
     "submit_resume": "Submit Your Resume"
   },
   "contact": {
+    "contact_us": "Contact Us",
     "page_title": "Contact Us",
     "page_subtitle": "Get in touch with BOD Holdings - We're here to help you succeed",
     "send_message": "Send Message",
@@ -1056,9 +1091,9 @@
     "support_phone": "Support: +1 (123) 456-7891",
     "investors_phone": "Investors: +1 (123) 456-7892",
     "email_us": "Email Us",
-    "main_email": "info@bodholdings.com",
-    "support_email": "support@bodholdings.com",
-    "careers_email": "careers@bodholdings.com",
+    "main_email": "info@bod.sa",
+    "support_email": "support@bod.sa",
+    "careers_email": "careers@bod.sa",
     "send_us_message": "Send Us a Message",
     "form_description": "Fill out the form below and we'll get back to you as soon as possible.",
     "first_name": "First Name",
@@ -1080,29 +1115,32 @@
     "new_york_office": "New York",
     "new_york_address": "123 Business Avenue, NY 10001",
     "new_york_phone": "+1 (123) 456-7890",
-    "new_york_email": "newyork@bodholdings.com",
+    "new_york_email": "newyork@bod.sa",
     "visit_newyork_office": "Visit Our New York Office",
     "london_office": "London",
     "london_address": "456 Business Street, London WC2N 5DU",
     "london_phone": "+44 20 1234 5678",
-    "london_email": "london@bodholdings.com",
+    "london_email": "london@bod.sa",
     "visit_london_office": "Visit Our London Office",
     "dubai_office": "Dubai",
     "dubai_address": "789 Business Bay, Dubai 12345",
     "dubai_phone": "+971 4 123 4567",
-    "dubai_email": "dubai@bodholdings.com",
+    "dubai_email": "dubai@bod.sa",
     "visit_dubai_office": "Visit Our Dubai Office",
     "faq_title": "Frequently Asked Questions",
     "faq_description": "Find answers to the most common questions about BOD Holdings.",
     "faq1_question": "How can I invest in BOD Holdings?",
-    "faq1_answer": "For investment opportunities, please contact our investor relations department at investors@bodholdings.com or call +1 (123) 456-7892. Our team will provide you with all necessary information about current investment opportunities.",
+    "faq1_answer": "For investment opportunities, please contact our investor relations department at investors@bod.sa or call +1 (123) 456-7892. Our team will provide you with all necessary information about current investment opportunities.",
     "faq2_question": "How can I become a partner or supplier?",
-    "faq2_answer": "We're always looking for strategic partnerships and reliable suppliers. Please send your company profile and partnership proposal to partnerships@bodholdings.com. Our business development team will review your information and get back to you.",
+    "faq2_answer": "We're always looking for strategic partnerships and reliable suppliers. Please send your company profile and partnership proposal to partnerships@bod.sa. Our business development team will review your information and get back to you.",
     "faq3_question": "What subsidiaries are part of BOD Holdings?",
     "faq3_answer": "BOD Holdings manages a diverse portfolio of subsidiaries across multiple sectors including real estate, technology, finance, manufacturing, and more. Visit our Subsidiaries page for detailed information about each company in our portfolio.",
     "faq4_question": "Are there job opportunities at BOD Holdings?",
-    "faq4_answer": "Yes, we regularly have openings across our various subsidiaries and corporate offices. Visit our Careers page to see current openings and submit your application. You can also send your resume to careers@bodholdings.com for future opportunities."
+    "faq4_answer": "Yes, we regularly have openings across our various subsidiaries and corporate offices. Visit our Careers page to see current openings and submit your application. You can also send your resume to careers@bod.sa for future opportunities.",
+    "view_larger_map": "View in Larger Map"
+  
   },
+
   "peak-time-logistics": {
     "hero_title": "Peak Time Logistics",
     "hero_subtitle": "Reliable delivery services and exceptional customer support solutions.",
